@@ -134,7 +134,7 @@ public class Entity {
     }
     public int getRightX()
     {
-        return worldX + solidArea.width + solidArea.width;
+        return worldX + solidArea.x + solidArea.width;
     }
     public int getTopY()
     {
@@ -208,11 +208,11 @@ public class Entity {
     {
 
     }
-    public void setAction()
+    public  void  setAction()
     {
 
     }
-    public void move(String direction)
+    public  void move(String direction)
     {
 
     }

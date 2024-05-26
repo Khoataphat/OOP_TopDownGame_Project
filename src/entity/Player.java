@@ -43,8 +43,8 @@ public class Player extends Entity{
     public void setDefaultValues()
     {
         //Default Starting Positions
-        worldX = gp.tileSize * 23;
-        worldY = gp.tileSize * 21;
+        worldX = gp.tileSize * 30;
+        worldY = gp.tileSize * 30;
         gp.currentMap = 0;
         gp.currentArea = gp.outside;
 
@@ -59,7 +59,7 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 10;
+        maxLife = 6;
         life = maxLife;
         maxMana = 8;
         mana = maxMana;
@@ -87,8 +87,8 @@ public class Player extends Entity{
     public void setDefaultPositions()
     {
         gp.currentMap = 0;
-        worldX = gp.tileSize * 23;
-        worldY = gp.tileSize * 21;
+//        worldX = gp.tileSize * 25;
+//        worldY = gp.tileSize * 21;
         direction = "down";
     }
     public void setDialogue()
@@ -820,4 +820,5 @@ public class Player extends Entity{
         g2.setStroke(new BasicStroke(1));
         g2.drawRect(tempScreenX, tempScreenY, attackArea.width, attackArea.height);*/
     }
+
 }

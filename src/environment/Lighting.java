@@ -45,17 +45,17 @@ public class Lighting {
             Color color[] = new Color[12];
             float fraction[] = new float[12];
             color[0] = new Color(0,0,0.08f,0.1f);    //Center
-            color[1] = new Color(0,0,0.08f,0.42f);
-            color[2] = new Color(0,0,0.08f,0.52f);
-            color[3] = new Color(0,0,0.08f,0.61f);
-            color[4] = new Color(0,0,0.08f,0.69f);
-            color[5] = new Color(0,0,0.08f,0.76f);
-            color[6] = new Color(0,0,0.08f,0.82f);
-            color[7] = new Color(0,0,0.08f,0.87f);
-            color[8] = new Color(0,0,0.08f,0.91f);
-            color[9] = new Color(0,0,0.08f,0.92f);
-            color[10] = new Color(0,0,0.08f,0.93f);
-            color[11] = new Color(0,0,0.08f,0.94f);  //Edge
+            color[1] = new Color(0,0,0.08f,0.3f);
+            color[2] = new Color(0,0,0.08f,0.32f);
+            color[3] = new Color(0,0,0.08f,0.34f);
+            color[4] = new Color(0,0,0.08f,0.40f);
+            color[5] = new Color(0,0,0.08f,0.45f);
+            color[6] = new Color(0,0,0.08f,0.50f);
+            color[7] = new Color(0,0,0.08f,0.55f);
+            color[8] = new Color(0,0,0.08f,0.60f);
+            color[9] = new Color(0,0,0.08f,0.65f);
+            color[10] = new Color(0,0,0.08f,0.70f);
+            color[11] = new Color(0,0,0.08f,0.75f);  //Edge
 
             //Distance between gradation
             fraction[0] = 0f;    //Center
@@ -108,16 +108,16 @@ public class Lighting {
         if(dayState == dusk)
         {
             filterAlpha += 0.0005f;   //0.0005f x 2000 = 1f, 2000/60 = 32 seconds
-            if(filterAlpha > 1f)
+            if(filterAlpha > 0.7f)
             {
-                filterAlpha = 1f;
+                filterAlpha = 0.7f;
                 dayState = night;
             }
         }
         if(dayState == night)
         {
             dayCounter++;
-            if(dayCounter > 3600) //1 min night
+            if(dayCounter > 900) //15s night
             {
                 dayState = dawn;
                 dayCounter = 0;

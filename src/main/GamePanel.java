@@ -133,7 +133,7 @@ public class GamePanel extends JPanel implements Runnable{
         currentArea = outside;
         removeTempEntity();
         bossBattleOn = false;
-        player.setDefaultPositions();
+//        player.setDefaultPositions();
         player.restoreStatus();
         aSetter.setMonster();
         aSetter.setNPC();
