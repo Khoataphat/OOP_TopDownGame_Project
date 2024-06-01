@@ -59,12 +59,12 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 9;
+        maxLife = 10;
         life = maxLife;
-        maxMana = 5;
+        maxMana = 8;
         mana = maxMana;
         ammo = 10;
-        strength = 100000000;           // The more strenght he has, the more damage he gives.
+        strength = 99999999;           // The more strenght he has, the more damage he gives.
         dexterity = 1;          // The more dexterity he has, the less damage he receives.
         exp = 0;
         nextLevelExp = 4;
@@ -87,8 +87,8 @@ public class Player extends Entity{
     public void setDefaultPositions()
     {
         gp.currentMap = 0;
-        worldX = gp.tileSize * 23;
-        worldY = gp.tileSize * 21;
+//        worldX = gp.tileSize * 25;
+//        worldY = gp.tileSize * 21;
         direction = "down";
     }
     public void setDialogue()
@@ -162,14 +162,14 @@ public class Player extends Entity{
 
     public void getImage()
     {
-        up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
-        up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
-        down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
-        down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
-        left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
-        left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
-        right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
-        right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
+            up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
+            up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
+            down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
+            down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
+            left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
+            left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
+            right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
+            right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
     }
     public void getSleepingImage(BufferedImage image)
     {
@@ -358,16 +358,16 @@ public class Player extends Entity{
             guarding = false;
             guardCounter = 0;
 
-            spriteCounter++;
-            if (spriteCounter > 12) {
-                if (spriteNum == 1)                  //spriteNum changes every 12 frames
-                {
-                    spriteNum = 2;
-                } else if (spriteNum == 2) {
-                    spriteNum = 1;
+                spriteCounter++;
+                if (spriteCounter > 12) {
+                    if (spriteNum == 1)                  //spriteNum changes every 12 frames
+                    {
+                        spriteNum = 2;
+                    } else if (spriteNum == 2) {
+                        spriteNum = 1;
+                    }
+                    spriteCounter = 0;                  // spriteCounter reset
                 }
-                spriteCounter = 0;                  // spriteCounter reset
-            }
         }
         else        // This is for: If you release the key when you walking, change sprite num to 1 and use player's not-walking sprite.
         {

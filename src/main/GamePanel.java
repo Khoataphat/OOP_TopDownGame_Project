@@ -1,13 +1,12 @@
 package main;
 import ai.PathFinder;
-import data.SaveLoad;
 import entity.Entity;
 import entity.Player;
 import environment.EnvironmentManager;
 import tile.Map;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
-
+import data.*;
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.image.BufferedImage;

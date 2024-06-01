@@ -12,7 +12,7 @@ public class NPC_OldMan extends Entity{
     {
         super(gp);
         direction = "down";
-        speed = 1;
+        speed = 0;
 
         solidArea = new Rectangle();
         solidArea.x = 8;
@@ -30,29 +30,30 @@ public class NPC_OldMan extends Entity{
     }
     public void getImage()
     {
-        up1 = setup("/npc/oldman_up_1",gp.tileSize,gp.tileSize);
-        up2 = setup("/npc/oldman_up_2",gp.tileSize,gp.tileSize);
+        //up1 = setup("/npc/oldman_up_1",gp.tileSize,gp.tileSize);
+        //up2 = setup("/npc/oldman_up_1",gp.tileSize,gp.tileSize);
         down1 = setup("/npc/oldman_down_1",gp.tileSize,gp.tileSize);
-        down2 = setup("/npc/oldman_down_2",gp.tileSize,gp.tileSize);
-        left1 = setup("/npc/oldman_left_1",gp.tileSize,gp.tileSize);
-        left2 = setup("/npc/oldman_left_2",gp.tileSize,gp.tileSize);
-        right1 = setup("/npc/oldman_right_1",gp.tileSize,gp.tileSize);
-        right2 = setup("/npc/oldman_right_2",gp.tileSize,gp.tileSize);
+        down2 = setup("/npc/oldman_down_1",gp.tileSize,gp.tileSize);
+        //left1 = setup("/npc/oldman_left_1",gp.tileSize,gp.tileSize);
+        //left2 = setup("/npc/oldman_left_1",gp.tileSize,gp.tileSize);
+        //right1 = setup("/npc/oldman_right_1",gp.tileSize,gp.tileSize);
+        //right2 = setup("/npc/oldman_right_1",gp.tileSize,gp.tileSize);
     }
     public void setDialogue()
     {
-        dialogues[0][0] = "Hello, lad.";
-        dialogues[0][1] = "So you've come to this island to find the treasure?";
-        dialogues[0][2] = "I used to be a great wizard but now... \nI'm a bit too old for taking an adventure.";
-        dialogues[0][4] = "Well, good luck on you.";
-        dialogues[0][3] = "You can talk with me again when you're stuck.";
+        dialogues[0][0] = "Hello, gà.";
+        dialogues[0][1] = "Đi farm quái up level lên đi ba";
+        dialogues[0][2] = "Không m còn solo thua con ys 0175. \n";
+        dialogues[0][3] = "Well, good luck on you.";
+        //dialogues[0][3] = "You can talk with me again when you're stuck.";
 
-        dialogues[1][0] = "If you become tired, rest at the water.";
-        dialogues[1][1] = "However, the monsters reappear if you rest.\nI don't know why but that's how it works.";
-        dialogues[1][2] = "In any case, don't push yourself too hard.";
+        //dialogues[1][0] = "If you become tired, rest at the water.";
+        //dialogues[1][1] = "However, the monsters reappear if you rest.\nI don't know why but that's how it works.";
+        //dialogues[1][2] = "In any case, don't push yourself too hard.";
 
-        dialogues[2][0] = "I wonder how to open that door...";
+        //dialogues[2][0] = "I wonder how to open that door...";
     }
+/*
     public void setAction()
     {
         if(onPath == true)
@@ -93,6 +94,8 @@ public class NPC_OldMan extends Entity{
             }
         }
     }
+
+ */
     public void speak()
     {
         //ENTITY CLASS SPEAK()
