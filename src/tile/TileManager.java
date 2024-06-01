@@ -1,6 +1,5 @@
 package tile;
 
-import entity.Entity;
 import main.GamePanel;
 import main.UtilityTool;
 
@@ -48,7 +47,7 @@ public class TileManager  {
         getTileImage();
 
         //GET THE maxWorldCol & Row
-        is = getClass().getResourceAsStream("/maps/dungeon02.txt");
+        is = getClass().getResourceAsStream("/maps/maptest1.txt");
         br = new BufferedReader(new InputStreamReader(is));
 
         try
@@ -69,10 +68,10 @@ public class TileManager  {
         }
 
 
-        loadMap("/maps/worldmap.txt",0); // To change maps easily.
-        loadMap("/maps/indoor01.txt",1);
-        loadMap("/maps/dungeon01.txt",2);
-        loadMap("/maps/dungeon02.txt",3);
+        loadMap("/maps/maptest1.txt",0); // To change maps easily.
+        //loadMap("/maps/indoor01.txt",1);
+        //loadMap("/maps/dungeon01.txt",2);
+        //loadMap("/maps/dungeon02.txt",3);
 
     }
     public void getTileImage()
@@ -156,7 +155,7 @@ public class TileManager  {
         try                                                                 // I use g2.drawImage(tile[tileNum].image, screenX, screenY,null);
         {
             tile[index] = new Tile();
-            tile[index].image = ImageIO.read(getClass().getResourceAsStream("/tiles/"+ imageName));
+            tile[index].image = ImageIO.read(getClass().getResourceAsStream("/tiles/" + imageName));
             tile[index].image = uTool.scaleImage(tile[index].image, gp.tileSize, gp.tileSize);
             tile[index].collision = collision;
         }

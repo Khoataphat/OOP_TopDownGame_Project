@@ -144,68 +144,68 @@ public class AssetSetter {
         int i = 0;
         gp.monster[mapNum][i] = new MON_GreenSlime(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*23;
-        gp.monster[mapNum][i].worldY = gp.tileSize*36;
+        gp.monster[mapNum][i].worldY = gp.tileSize*10;
         i++;
 
         gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*23;
-        gp.monster[mapNum][i].worldY = gp.tileSize*37;
+        gp.monster[mapNum][i].worldX = gp.tileSize*31;
+        gp.monster[mapNum][i].worldY = gp.tileSize*10;
         i++;
 
         gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*24;
-        gp.monster[mapNum][i].worldY = gp.tileSize*37;
+        gp.monster[mapNum][i].worldX = gp.tileSize*27;
+        gp.monster[mapNum][i].worldY = gp.tileSize*6;
         i++;
 
         gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*34;
-        gp.monster[mapNum][i].worldY = gp.tileSize*42;
+        gp.monster[mapNum][i].worldX = gp.tileSize*21;
+        gp.monster[mapNum][i].worldY = gp.tileSize*6;
         i++;
 
         gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*38;
-        gp.monster[mapNum][i].worldY = gp.tileSize*42;
+        gp.monster[mapNum][i].worldX = gp.tileSize*26;
+        gp.monster[mapNum][i].worldY = gp.tileSize*6;
         i++;
 
         gp.monster[mapNum][i] = new MON_Orc(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*12;
+        gp.monster[mapNum][i].worldX = gp.tileSize*8;
         gp.monster[mapNum][i].worldY = gp.tileSize*33;
         i++;
 
 
         gp.monster[mapNum][i] = new MON_RedSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*34;
-        gp.monster[mapNum][i].worldY = gp.tileSize*11;
+        gp.monster[mapNum][i].worldX = gp.tileSize*24;
+        gp.monster[mapNum][i].worldY = gp.tileSize*30;
         i++;
 
         gp.monster[mapNum][i] = new MON_RedSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*38;
-        gp.monster[mapNum][i].worldY = gp.tileSize*7;
+        gp.monster[mapNum][i].worldX = gp.tileSize*23;
+        gp.monster[mapNum][i].worldY = gp.tileSize*33;
         i++;
 
         gp.monster[mapNum][i] = new MON_RedSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*37;
-        gp.monster[mapNum][i].worldY = gp.tileSize*9;
+        gp.monster[mapNum][i].worldX = gp.tileSize*27;
+        gp.monster[mapNum][i].worldY = gp.tileSize*26;
         i++;
 
-        mapNum = 2;
-        i = 0;
-
+        //mapNum = 2;
+        //i = 0;
+/*
         gp.monster[mapNum][i] = new MON_Bat(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*34;
-        gp.monster[mapNum][i].worldY = gp.tileSize*39;
-        i++;
-
-        gp.monster[mapNum][i] = new MON_Bat(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*36;
-        gp.monster[mapNum][i].worldY = gp.tileSize*25;
+        gp.monster[mapNum][i].worldX = gp.tileSize*43;
+        gp.monster[mapNum][i].worldY = gp.tileSize*47;
         i++;
 
         gp.monster[mapNum][i] = new MON_Bat(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*39;
-        gp.monster[mapNum][i].worldY = gp.tileSize*26;
+        gp.monster[mapNum][i].worldY = gp.tileSize*47;
         i++;
 
+        gp.monster[mapNum][i] = new MON_Bat(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*47;
+        gp.monster[mapNum][i].worldY = gp.tileSize*7;
+        i++;
+/*
         gp.monster[mapNum][i] = new MON_Bat(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*28;
         gp.monster[mapNum][i].worldY = gp.tileSize*11;
@@ -216,22 +216,22 @@ public class AssetSetter {
         gp.monster[mapNum][i].worldY = gp.tileSize*19;
         i++;
 
-        mapNum = 3;
-        i = 0;
-
-        if(Progress.skeletonLordDefeated == false)
-        {
+        //mapNum = 3;
+        //i = 0;
+*/
+        //if(Progress.skeletonLordDefeated == false)
+        //{
             gp.monster[mapNum][i] = new MON_SkeletonLord(gp);
-            gp.monster[mapNum][i].worldX = gp.tileSize*23;
-            gp.monster[mapNum][i].worldY = gp.tileSize*16;
+            gp.monster[mapNum][i].worldX = gp.tileSize*24;
+            gp.monster[mapNum][i].worldY = gp.tileSize*29;
             i++;
-        }
+        //}
 
 
     }
     public void setInteractiveTile()
     {
-        int mapNum = 0;
+/*        int mapNum = 0;
         int i = 0;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,27,12);i++;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,28,12);i++;
@@ -277,6 +277,6 @@ public class AssetSetter {
         gp.iTile[mapNum][i] = new IT_MetalPlate(gp,8,17);i++;
         gp.iTile[mapNum][i] = new IT_MetalPlate(gp,39,31);i++;
 
-
+*/
     }
 }

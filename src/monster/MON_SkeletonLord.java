@@ -31,7 +31,7 @@ public class MON_SkeletonLord extends Entity {
         knockBackPower = 5;
         sleep = true;
 
-        int size = gp.tileSize * 5;
+        int size = gp.tileSize * 2;
         solidArea.x = 48;
         solidArea.y = 48;
         solidArea.width = size - 48*2;
