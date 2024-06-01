@@ -13,7 +13,7 @@ public class Main {
         window.setResizable(false); // Cant Resizable
         window.setTitle("Blue Boy Adventure\n"); // Window Name
         new Main().setIcon();
-        GamePanel gamePanel = new GamePanel();
+----------------------------------        GamePanel gamePanel = new GamePanel();
         window.add(gamePanel);
 
         gamePanel.config.loadConfig();
