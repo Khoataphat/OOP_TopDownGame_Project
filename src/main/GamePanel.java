@@ -31,7 +31,7 @@ public class GamePanel extends JPanel implements Runnable{
     public int maxWorldCol;
     public int maxWorldRow;
     public final int maxMap = 10;
-    public int currentMap = 10;
+    public int currentMap = 0;
 
     //FOR FULLSCREEN
     int screenWidth2 = screenWidth;
@@ -88,6 +88,7 @@ public class GamePanel extends JPanel implements Runnable{
     public final int sleepState = 9;
     public final int mapState = 10;
     public final int cutsceneState = 11;
+    public final int levelupState = 12;
 
     //OTHERS
     public boolean bossBattleOn = false;
@@ -133,7 +134,7 @@ public class GamePanel extends JPanel implements Runnable{
         currentArea = outside;
         removeTempEntity();
         bossBattleOn = false;
-//        player.setDefaultPositions();
+        player.setDefaultPositions();
         player.restoreStatus();
         aSetter.setMonster();
         aSetter.setNPC();

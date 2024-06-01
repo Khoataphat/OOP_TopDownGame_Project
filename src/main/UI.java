@@ -4,7 +4,7 @@ import entity.Entity;
 import object.OBJ_Coin_Bronze;
 import object.OBJ_Heart;
 import object.OBJ_ManaCrystal;
-
+import entity.Player;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -379,6 +379,54 @@ public class UI {
             gp.eHandler.previousEventX = gp.player.worldX;
             gp.eHandler.previousEventY = gp.player.worldY;
             gp.changeArea();
+        }
+    }
+    //BaoAnh
+    public void drawLevelUpScreen() {
+        g2.setColor(new Color(0, 0, 0, 150)); // Half-black
+        g2.fillRect(0, 0, gp.screenWidth, gp.screenHeight);
+
+        int x;
+        int y;
+        String text;
+        g2.setFont(g2.getFont().deriveFont(Font.BOLD, 80f));
+        text = "Select the skill upgrade";
+
+        // Shadow
+        g2.setColor(Color.BLACK);
+        x = getXforCenteredText(text);
+        y = gp.tileSize * 4;
+        g2.drawString(text, x, y);
+        // Text
+        g2.setColor(Color.white);
+        g2.drawString(text, x - 4, y - 4);
+
+        // Max Life
+        g2.setFont(g2.getFont().deriveFont(50f));
+        text = "Max Life";
+        x = getXforCenteredText(text);
+        y += gp.tileSize * 4;
+        g2.drawString(text, x, y);
+        if (commandNum == 0) {
+            g2.drawString(">", x - 40, y);
+        }
+
+        // Strength
+        text = "Strength";
+        x = getXforCenteredText(text);
+        y += 55;
+        g2.drawString(text, x, y);
+        if (commandNum == 1) {
+            g2.drawString(">", x - 40, y);
+        }
+
+        // Dexterity
+        text = "Dexterity";
+        x = getXforCenteredText(text);
+        y += 55;
+        g2.drawString(text, x, y);
+        if (commandNum == 2) {
+            g2.drawString(">", x - 40, y);
         }
     }
     public void drawTradeScreen()
@@ -1266,6 +1314,10 @@ public class UI {
             if(gp.gameState == gp.sleepState)
             {
                 drawSleepScreen();
+            }
+            if(gp.gameState == gp.levelupState)
+            {
+                drawLevelUpScreen();
             }
         }
     }

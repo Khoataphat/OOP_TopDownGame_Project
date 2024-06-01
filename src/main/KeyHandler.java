@@ -25,47 +25,62 @@ public class KeyHandler implements KeyListener {
 
         //TITLE STATE
         if(gp.gameState == gp.titleState) {
+            System.out.println("titleState");
             titleState(code);
         }
         // PLAY STATE
         else if(gp.gameState == gp.playState)
         {
+            System.out.println("playState");
             playState(code);
         }
         // PAUSE STATE
         else if(gp.gameState == gp.pauseState)
         {
+            System.out.println("pauseState");
             pauseState(code);
         }
         //DIALOGUE STATE
         else if(gp.gameState == gp.dialogueState || gp.gameState == gp.cutsceneState)
         {
+            System.out.println("dialogueState");
             dialogueState(code);
         }
         // CHARACTER STATE
         else if(gp.gameState == gp.characterState)
         {
+            System.out.println("characterState");
             characterState(code);
         }
         // OPTIONS STATE
         else if(gp.gameState == gp.optionsState)
         {
+            System.out.println("optionState");
             optionsState(code);
         }
         // GAMEOVER STATE
         else if(gp.gameState == gp.gameOverState)
         {
+            System.out.println("gameoverState");
             gameOverState(code);
         }
         // TRADE STATE
         else if(gp.gameState == gp.tradeState)
         {
+            System.out.println("tradeState");
             tradeState(code);
         }
         // MAP STATE
         else if(gp.gameState == gp.mapState)
         {
+            System.out.println("mapState");
             mapState(code);
+        }
+        // Level up state
+        else if(gp.gameState == gp.levelupState)
+        {
+            System.out.println("levelState");
+            levelupState(code);
         }
     }
 
@@ -366,6 +381,47 @@ public class KeyHandler implements KeyListener {
             }
         }
     }
+    public void levelupState(int code){
+        if(code == KeyEvent.VK_W)
+        {
+            gp.ui.commandNum--;
+            if(gp.ui.commandNum < 0)
+            {
+                gp.ui.commandNum = 2;
+            }
+            gp.playSE(9);
+        }
+        if(code == KeyEvent.VK_S)
+        {
+            gp.ui.commandNum++;
+            if(gp.ui.commandNum > 2)
+            {
+                gp.ui.commandNum = 0;
+            }
+            gp.playSE(9);
+        }
+        if(code == KeyEvent.VK_ENTER)
+        {
+            if(gp.ui.commandNum == 0) //RETRY, reset position, life, mana, monsters, npcs...
+            {
+                gp.player.maxLife += 2;
+                gp.gameState = gp.playState;
+                gp.playMusic(0);
+            }
+            else if(gp.ui.commandNum == 1) //QUIT, reset everything
+            {
+                gp.player.strength++;
+                gp.gameState = gp.playState;
+                gp.playMusic(0);
+            }
+            else if(gp.ui.commandNum == 2) //QUIT, reset everything
+            {
+                gp.player.dexterity++;
+                gp.gameState = gp.playState;
+                gp.playMusic(0);
+            }
+        }
+    }
     public void tradeState(int code)
     {
         if(code == KeyEvent.VK_ENTER)
@@ -412,10 +468,10 @@ public class KeyHandler implements KeyListener {
     }
     public void mapState(int code)
     {
-       if(code == KeyEvent.VK_M)
-       {
-           gp.gameState = gp.playState;
-       }
+        if(code == KeyEvent.VK_M)
+        {
+            gp.gameState = gp.playState;
+        }
     }
     public void playerInventory(int code)
     {

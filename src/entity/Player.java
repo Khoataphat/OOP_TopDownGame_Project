@@ -3,7 +3,6 @@ package entity;
 import main.GamePanel;
 import main.KeyHandler;
 import object.*;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -17,6 +16,7 @@ public class Player extends Entity{
     int standCounter = 0;
     public boolean attackCanceled = false;
     public boolean lightUpdated = false;
+    private boolean levelUp = false;
 
     public Player(GamePanel gp, KeyHandler keyH)
     {
@@ -59,12 +59,12 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 10;
+        maxLife = 9;
         life = maxLife;
-        maxMana = 8;
+        maxMana = 5;
         mana = maxMana;
         ammo = 10;
-        strength = 99999999;           // The more strenght he has, the more damage he gives.
+        strength = 100000000;           // The more strenght he has, the more damage he gives.
         dexterity = 1;          // The more dexterity he has, the less damage he receives.
         exp = 0;
         nextLevelExp = 4;
@@ -87,8 +87,8 @@ public class Player extends Entity{
     public void setDefaultPositions()
     {
         gp.currentMap = 0;
-//        worldX = gp.tileSize * 25;
-//        worldY = gp.tileSize * 21;
+        worldX = gp.tileSize * 23;
+        worldY = gp.tileSize * 21;
         direction = "down";
     }
     public void setDialogue()
@@ -162,14 +162,14 @@ public class Player extends Entity{
 
     public void getImage()
     {
-            up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
-            up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
-            down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
-            down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
-            left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
-            left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
-            right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
-            right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
+        up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
+        up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
+        down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
+        down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
+        left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
+        left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
+        right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
+        right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
     }
     public void getSleepingImage(BufferedImage image)
     {
@@ -358,16 +358,16 @@ public class Player extends Entity{
             guarding = false;
             guardCounter = 0;
 
-                spriteCounter++;
-                if (spriteCounter > 12) {
-                    if (spriteNum == 1)                  //spriteNum changes every 12 frames
-                    {
-                        spriteNum = 2;
-                    } else if (spriteNum == 2) {
-                        spriteNum = 1;
-                    }
-                    spriteCounter = 0;                  // spriteCounter reset
+            spriteCounter++;
+            if (spriteCounter > 12) {
+                if (spriteNum == 1)                  //spriteNum changes every 12 frames
+                {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 1;
                 }
+                spriteCounter = 0;                  // spriteCounter reset
+            }
         }
         else        // This is for: If you release the key when you walking, change sprite num to 1 and use player's not-walking sprite.
         {
@@ -442,6 +442,11 @@ public class Player extends Entity{
                 gp.stopMusic();
                 gp.playSE(12);
             }
+            else if (levelUp == true){
+                gp.gameState = gp.levelupState;
+                gp.playSE(8); //levelup.wav
+            }
+            levelUp = false;
         }
     }
 
@@ -582,29 +587,28 @@ public class Player extends Entity{
     }
     public void checkLevelUp()
     {
-         while(exp >= nextLevelExp)
-         {
-             level++;
-             exp = exp - nextLevelExp;          //Example: Your exp is 4 and nextLevelExp is 5. You killed a monster and receive 2exp. So, your exp is now 6. Your 1 extra xp will be recovered for the next level.
-             if(level <= 4)
-             {
-                 nextLevelExp = nextLevelExp + 4;   //Level 2 to 6: 4xp- 8xp- 12xp- 16xp- 20xp
-             }
-             else
-             {
-                 nextLevelExp = nextLevelExp + 8;  //After Level 6: 28xp- 36xp- 44xp- 52xp- 60xp
-             }
-             maxLife += 2;
-             strength++;
-             dexterity++;
-             attack = getAttack();
-             defense = getDefense();
-             gp.playSE(8); //levelup.wav
+        while(exp >= nextLevelExp)
+        {
+            level++;
+            exp = exp - nextLevelExp;
+            //Example: Your exp is 4 and nextLevelExp is 5. You killed a monster and receive 2exp. So, your exp is now 6. Your 1 extra xp will be recovered for the next level.
+            if(level <= 4)
+            {
+                nextLevelExp = nextLevelExp + 4;   //Level 2 to 6: 4xp- 8xp- 12xp- 16xp- 20xp
+            }
+            else
+            {
+                nextLevelExp = nextLevelExp + 8;  //After Level 6: 28xp- 36xp- 44xp- 52xp- 60xp
+            }
+            attack = getAttack();
+            defense = getDefense();
 
-             dialogues[0][0] = "You are level " + level + " now!\n" + "You feel stronger!";
-             setDialogue();
-             startDialogue(this,0);
-         }
+            dialogues[0][0] = "You are level " + level + " now!\n" + "You feel stronger!";
+            setDialogue();
+            startDialogue(this,100);
+            levelUp = true;
+            System.out.println("Leveluptrue");
+        }
     }
     public void selectItem()
     {
@@ -820,5 +824,4 @@ public class Player extends Entity{
         g2.setStroke(new BasicStroke(1));
         g2.drawRect(tempScreenX, tempScreenY, attackArea.width, attackArea.height);*/
     }
-
 }
