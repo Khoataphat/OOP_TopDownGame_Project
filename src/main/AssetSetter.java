@@ -1,6 +1,6 @@
 package main;
 
-import data.Progress;
+
 import entity.NPC_BigRock;
 import entity.NPC_Merchant;
 import entity.NPC_OldMan;
@@ -24,7 +24,7 @@ public class AssetSetter {
     {
         int mapNum = 0;
         int i = 0;
-
+/*
         gp.obj[mapNum][i] = new OBJ_Axe(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 33;
         gp.obj[mapNum][i].worldY = gp.tileSize * 7;
@@ -99,6 +99,8 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
         gp.obj[mapNum][i].worldY = gp.tileSize * 8;
         i++;
+
+ */
     }
 
     public void setNPC()
@@ -108,19 +110,19 @@ public class AssetSetter {
 
         //MAP = 0
         gp.npc[mapNum][i] = new NPC_OldMan(gp);
-        gp.npc[mapNum][i].worldX = gp.tileSize*21;
-        gp.npc[mapNum][i].worldY = gp.tileSize*21;
-        i++;
-
-        //MAP = 1
-        mapNum = 1;
-        i = 0;
-
-        gp.npc[mapNum][i] = new NPC_Merchant(gp);
-        gp.npc[mapNum][i].worldX = gp.tileSize*12;
+        gp.npc[mapNum][i].worldX = gp.tileSize*9;
         gp.npc[mapNum][i].worldY = gp.tileSize*7;
         i++;
 
+        //MAP = 1
+        //mapNum = 1;
+        //i = 0;
+
+        gp.npc[mapNum][i] = new NPC_Merchant(gp);
+        gp.npc[mapNum][i].worldX = gp.tileSize*42;
+        gp.npc[mapNum][i].worldY = gp.tileSize*44;
+        i++;
+/*
         mapNum = 2;
         i = 0;
 
@@ -136,7 +138,7 @@ public class AssetSetter {
         gp.npc[mapNum][i].worldX = gp.tileSize*23;
         gp.npc[mapNum][i].worldY = gp.tileSize*14;
         i++;
-
+*/
     }
     public void setMonster()
     {
@@ -187,7 +189,10 @@ public class AssetSetter {
         gp.monster[mapNum][i].worldX = gp.tileSize*27;
         gp.monster[mapNum][i].worldY = gp.tileSize*26;
         i++;
-
+        gp.monster[mapNum][i] = new MON_SkeletonLord(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*24;
+        gp.monster[mapNum][i].worldY = gp.tileSize*29;
+        i++;
         //mapNum = 2;
         //i = 0;
 /*
@@ -218,7 +223,7 @@ public class AssetSetter {
 
         //mapNum = 3;
         //i = 0;
-*/
+
         //if(Progress.skeletonLordDefeated == false)
         //{
             gp.monster[mapNum][i] = new MON_SkeletonLord(gp);
@@ -226,7 +231,7 @@ public class AssetSetter {
             gp.monster[mapNum][i].worldY = gp.tileSize*29;
             i++;
         //}
-
+*/
 
     }
     public void setInteractiveTile()
