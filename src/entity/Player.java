@@ -64,7 +64,7 @@ public class Player extends Entity{
         maxMana = 8;
         mana = maxMana;
         ammo = 10;
-        strength = 3;           // The more strenght he has, the more damage he gives.
+        strength = 99999999;           // The more strenght he has, the more damage he gives.
         dexterity = 1;          // The more dexterity he has, the less damage he receives.
         exp = 0;
         nextLevelExp = 4;
@@ -162,60 +162,100 @@ public class Player extends Entity{
 
     public void getImage()
     {
-            up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
-            up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
-            down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
-            down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
-            left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
-            left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
-            right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
-            right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
+    	 up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
+         up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
+         up3 = setup("/player/boy_up_3",gp.tileSize,gp.tileSize);
+         up4 = setup("/player/boy_up_4",gp.tileSize,gp.tileSize);
+         down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
+         down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
+         down3 = setup("/player/boy_down_3",gp.tileSize,gp.tileSize);
+         down4 = setup("/player/boy_down_4",gp.tileSize,gp.tileSize);
+         left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
+         left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
+         left3 = setup("/player/boy_left_3",gp.tileSize,gp.tileSize);
+         left4 = setup("/player/boy_left_4",gp.tileSize,gp.tileSize);
+         right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
+         right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
+         right3 = setup("/player/boy_right_3",gp.tileSize,gp.tileSize);
+         right4 = setup("/player/boy_right_4",gp.tileSize,gp.tileSize);
     }
     public void getSleepingImage(BufferedImage image)
     {
-        up1 = image;
+    	up1 = image;
         up2 = image;
+        up3 = image;
+        up4 = image;
         down1 = image;
         down2 = image;
+        down3 = image;
+        down4 = image;
         left1 = image;
         left2 = image;
+        left3 = image;
+        left4 = image;
         right1 = image;
         right2 = image;
+        right3 = image;
+        right4 = image;
     }
     public void getAttackImage()
     {
         if(currentWeapon.type == type_sword)
         {
-            attackUp1 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
-            attackUp2 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2);         // 16x32 px
-            attackDown1 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
-            attackDown2 = setup("/player/boy_attack_down_2",gp.tileSize, gp.tileSize * 2);     // 16x32 px
-            attackLeft1 = setup("/player/boy_attack_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
-            attackLeft2 = setup("/player/boy_attack_left_2",gp.tileSize * 2, gp.tileSize);      // 32x16 px
-            attackRight1 = setup("/player/boy_attack_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
-            attackRight2 = setup("/player/boy_attack_right_2",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+        	 attackUp1 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
+             attackUp2 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2); 
+             attackUp3 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
+             attackUp4 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2);
+             attackDown1 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
+             attackDown2 = setup("/player/boy_attack_down_2",gp.tileSize, gp.tileSize * 2); 
+             attackDown3 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
+             attackDown4 = setup("/player/boy_attack_down_2",gp.tileSize, gp.tileSize * 2); 
+             attackLeft1 = setup("/player/boy_attack_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
+             attackLeft2 = setup("/player/boy_attack_left_2",gp.tileSize * 2, gp.tileSize);  
+             attackLeft3 = setup("/player/boy_attack_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
+             attackLeft4 = setup("/player/boy_attack_left_2",gp.tileSize * 2, gp.tileSize); 
+             attackRight1 = setup("/player/boy_attack_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+             attackRight2 = setup("/player/boy_attack_right_2",gp.tileSize * 2, gp.tileSize); 
+             attackRight3 = setup("/player/boy_attack_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+             attackRight4 = setup("/player/boy_attack_right_2",gp.tileSize * 2, gp.tileSize);    // 32x16 px
         }
         else if(currentWeapon.type == type_axe)
         {
-            attackUp1 = setup("/player/boy_axe_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
-            attackUp2 = setup("/player/boy_axe_up_2",gp.tileSize, gp.tileSize * 2);         // 16x32 px
-            attackDown1 = setup("/player/boy_axe_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
-            attackDown2 = setup("/player/boy_axe_down_2",gp.tileSize, gp.tileSize * 2);     // 16x32 px
-            attackLeft1 = setup("/player/boy_axe_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
-            attackLeft2 = setup("/player/boy_axe_left_2",gp.tileSize * 2, gp.tileSize);      // 32x16 px
-            attackRight1 = setup("/player/boy_axe_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
-            attackRight2 = setup("/player/boy_axe_right_2",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+        	attackUp1 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
+            attackUp2 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2); 
+            attackUp3 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
+            attackUp4 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2);
+            attackDown1 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
+            attackDown2 = setup("/player/boy_attack_down_2",gp.tileSize, gp.tileSize * 2); 
+            attackDown3 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
+            attackDown4 = setup("/player/boy_attack_down_2",gp.tileSize, gp.tileSize * 2); 
+            attackLeft1 = setup("/player/boy_attack_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
+            attackLeft2 = setup("/player/boy_attack_left_2",gp.tileSize * 2, gp.tileSize);  
+            attackLeft3 = setup("/player/boy_attack_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
+            attackLeft4 = setup("/player/boy_attack_left_2",gp.tileSize * 2, gp.tileSize); 
+            attackRight1 = setup("/player/boy_attack_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+            attackRight2 = setup("/player/boy_attack_right_2",gp.tileSize * 2, gp.tileSize); 
+            attackRight3 = setup("/player/boy_attack_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+            attackRight4 = setup("/player/boy_attack_right_2",gp.tileSize * 2, gp.tileSize);    // 32x16 px
         }
         else if(currentWeapon.type == type_pickaxe)
         {
-            attackUp1 = setup("/player/boy_pick_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
-            attackUp2 = setup("/player/boy_pick_up_2",gp.tileSize, gp.tileSize * 2);         // 16x32 px
-            attackDown1 = setup("/player/boy_pick_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
-            attackDown2 = setup("/player/boy_pick_down_2",gp.tileSize, gp.tileSize * 2);     // 16x32 px
-            attackLeft1 = setup("/player/boy_pick_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
-            attackLeft2 = setup("/player/boy_pick_left_2",gp.tileSize * 2, gp.tileSize);      // 32x16 px
-            attackRight1 = setup("/player/boy_pick_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
-            attackRight2 = setup("/player/boy_pick_right_2",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+        	attackUp1 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
+            attackUp2 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2); 
+            attackUp3 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
+            attackUp4 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2);
+            attackDown1 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
+            attackDown2 = setup("/player/boy_attack_down_2",gp.tileSize, gp.tileSize * 2); 
+            attackDown3 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
+            attackDown4 = setup("/player/boy_attack_down_2",gp.tileSize, gp.tileSize * 2); 
+            attackLeft1 = setup("/player/boy_attack_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
+            attackLeft2 = setup("/player/boy_attack_left_2",gp.tileSize * 2, gp.tileSize);  
+            attackLeft3 = setup("/player/boy_attack_left_1",gp.tileSize * 2, gp.tileSize);      // 32x16 px
+            attackLeft4 = setup("/player/boy_attack_left_2",gp.tileSize * 2, gp.tileSize); 
+            attackRight1 = setup("/player/boy_attack_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+            attackRight2 = setup("/player/boy_attack_right_2",gp.tileSize * 2, gp.tileSize); 
+            attackRight3 = setup("/player/boy_attack_right_1",gp.tileSize * 2, gp.tileSize);    // 32x16 px
+            attackRight4 = setup("/player/boy_attack_right_2",gp.tileSize * 2, gp.tileSize);    // 32x16 px
         }
 
     }
@@ -358,15 +398,19 @@ public class Player extends Entity{
             guarding = false;
             guardCounter = 0;
 
-                spriteCounter++;
-                if (spriteCounter > 12) {
-                    if (spriteNum == 1)                  //spriteNum changes every 12 frames
-                    {
-                        spriteNum = 2;
-                    } else if (spriteNum == 2) {
-                        spriteNum = 1;
-                    }
-                    spriteCounter = 0;                  // spriteCounter reset
+            spriteCounter++;
+            if (spriteCounter > 24) {
+                if (spriteNum == 4)                  //spriteNum changes every 12 frames
+                {
+                    spriteNum = 3;
+                } else if (spriteNum == 3) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 1;
+                } else if (spriteNum == 1) {
+                    spriteNum = 4;
+                }
+                spriteCounter = 0;                    // spriteCounter reset
                 }
         }
         else        // This is for: If you release the key when you walking, change sprite num to 1 and use player's not-walking sprite.
@@ -724,12 +768,16 @@ public class Player extends Entity{
                 {
                     if(spriteNum == 1){image = up1;}
                     if(spriteNum == 2) {image = up2;}
+                    if(spriteNum == 3){image = up3;}
+                    if(spriteNum == 4) {image = up4;}
                 }
                 if(attacking == true)  //Attacking sprites
                 {
                     tempScreenY = screenY - gp.tileSize;    //Adjusted the player's position one tile to up. Explained why I did it at where I call attacking() in update().
                     if(spriteNum == 1) {image = attackUp1;}
                     if(spriteNum == 2) {image = attackUp2;}
+                    if(spriteNum == 3) {image = attackUp3;}
+                    if(spriteNum == 4) {image = attackUp4;}
                 }
                 if(guarding == true)
                 {
@@ -742,11 +790,15 @@ public class Player extends Entity{
                 {
                     if(spriteNum == 1){image = down1;}
                     if(spriteNum == 2){image = down2;}
+                    if(spriteNum == 3){image = down3;}
+                    if(spriteNum == 4){image = down4;}
                 }
                 if(attacking == true)  //Attacking sprites
                 {
                     if(spriteNum == 1){image = attackDown1;}
                     if(spriteNum == 2){image = attackDown2;}
+                    if(spriteNum == 3){image = attackDown3;}
+                    if(spriteNum == 4){image = attackDown4;}
                 }
                 if(guarding == true)
                 {
@@ -759,12 +811,16 @@ public class Player extends Entity{
                 {
                     if(spriteNum == 1) {image = left1;}
                     if(spriteNum == 2) {image = left2;}
+                    if(spriteNum == 3) {image = left3;}
+                    if(spriteNum == 4) {image = left4;}
                 }
                 if(attacking == true)  //Attacking sprites
                 {
                     tempScreenX = screenX - gp.tileSize;    //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
                     if(spriteNum == 1) {image = attackLeft1;}
                     if(spriteNum == 2) {image = attackLeft2;}
+                    if(spriteNum == 3) {image = attackLeft3;}
+                    if(spriteNum == 4) {image = attackLeft4;}
                 }
                 if(guarding == true)
                 {
@@ -777,11 +833,15 @@ public class Player extends Entity{
                 {
                     if(spriteNum == 1) {image = right1;}
                     if(spriteNum == 2) {image = right2;}
+                    if(spriteNum == 3) {image = right3;}
+                    if(spriteNum == 4) {image = right4;}
                 }
                 if(attacking == true)  //Attacking sprites
                 {
                     if(spriteNum == 1) {image = attackRight1;}
                     if(spriteNum == 2) {image = attackRight2;}
+                    if(spriteNum == 3) {image = attackRight3;}
+                    if(spriteNum == 4) {image = attackRight4;}
                 }
                 if(guarding == true)
                 {
