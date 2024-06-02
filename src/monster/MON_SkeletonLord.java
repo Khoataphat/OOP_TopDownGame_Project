@@ -11,9 +11,12 @@ import object.OBJ_ManaCrystal;
 import java.util.Random;
 
 public class MON_SkeletonLord extends Entity {
+    private static MON_SkeletonLord instance = null; // Singleton instance
+    private static boolean instantiated = false; // Flag to track if the instance has been created
+
     GamePanel gp; // cuz of different package
     public static final String monName = "Skeleton Lord";
-    public MON_SkeletonLord(GamePanel gp) {
+    private MON_SkeletonLord(GamePanel gp) {
         super(gp);
 
         this.gp = gp;
@@ -46,6 +49,13 @@ public class MON_SkeletonLord extends Entity {
         getImage();
         getAttackImage();
         setDialogue();
+    }
+    public static MON_SkeletonLord getInstance(GamePanel gp){
+        if (!instantiated) {
+            instance = new MON_SkeletonLord(gp);
+            instantiated = true;
+        }
+        return instance;
     }
 
     public void getImage()
