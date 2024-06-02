@@ -9,17 +9,28 @@ import object.*;
 import tile_interactive.IT_DestructibleWall;
 import tile_interactive.IT_DryTree;
 import tile_interactive.IT_MetalPlate;
+import java.util.Random;
 
 
 public class AssetSetter {
+    private static AssetSetter instance;
 
     GamePanel gp;
+    MON_SkeletonLord boss;
 
-    public AssetSetter(GamePanel gp)
+    private AssetSetter(GamePanel gp)
     {
         this.gp = gp;
     }
 
+    private int i_Mon = 1;
+
+    public static AssetSetter getInstance(GamePanel gp) {
+        if (instance == null) {
+            instance = new AssetSetter(gp); // Only create a new instance if one doesn't exist
+        }
+        return instance;
+    }
     public void setObject()
     {
         int mapNum = 0;
@@ -143,57 +154,57 @@ public class AssetSetter {
     public void setMonster()
     {
         int mapNum = 0;
-        int i = 0;
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*23;
-        gp.monster[mapNum][i].worldY = gp.tileSize*10;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*23;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*10;
+        i_Mon++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*31;
-        gp.monster[mapNum][i].worldY = gp.tileSize*10;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*31;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*10;
+        i_Mon++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*27;
-        gp.monster[mapNum][i].worldY = gp.tileSize*6;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*27;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*6;
+        i_Mon++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*21;
-        gp.monster[mapNum][i].worldY = gp.tileSize*6;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*21;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*6;
+        i_Mon++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*26;
-        gp.monster[mapNum][i].worldY = gp.tileSize*6;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*26;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*6;
+        i_Mon++;
 
-        gp.monster[mapNum][i] = new MON_Orc(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*8;
-        gp.monster[mapNum][i].worldY = gp.tileSize*33;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_Orc(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*8;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*33;
+        i_Mon++;
 
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*24;
-        gp.monster[mapNum][i].worldY = gp.tileSize*30;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*24;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*30;
+        i_Mon++;
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*23;
-        gp.monster[mapNum][i].worldY = gp.tileSize*33;
-        i++;
+        gp.monster[mapNum][i_Mon] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*23;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*33;
+        i_Mon++;
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*27;
-        gp.monster[mapNum][i].worldY = gp.tileSize*26;
-        i++;
-        gp.monster[mapNum][i] = MON_SkeletonLord.getInstance(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*24;
-        gp.monster[mapNum][i].worldY = gp.tileSize*29;
-        i++;
-        //mapNum = 2;
+        gp.monster[mapNum][i_Mon] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*27;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*26;
+        i_Mon++;
+        gp.monster[mapNum][i_Mon] = MON_SkeletonLord.getInstance(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*24;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*29;
+
+        i_Mon++;
+        //mapNum = 2
         //i = 0;
 /*
         gp.monster[mapNum][i] = new MON_Bat(gp);
@@ -233,6 +244,39 @@ public class AssetSetter {
         //}
 */
 
+    }
+    private static int[] randomLocation() {
+        Random generator = new Random();
+        int worldX = generator.nextInt(20) + 15;
+        int worldY = generator.nextInt(17) + 30;
+        int[] coordinates = {worldX, worldY};
+        return coordinates;
+    }
+    public void setMonsterforBossState1() {
+        if (i_Mon <= 50) {
+            int mapNum = 0;
+            int[] location = randomLocation();
+            Random random = new Random();
+            int monsterType = random.nextInt(3); // Generate a random number between 0 and 2
+
+            switch (monsterType) {
+                case 0:
+                    gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+                    break;
+                case 1:
+                    gp.monster[mapNum][i_Mon] = new MON_Orc(gp);
+                    break;
+                case 2:
+                    gp.monster[mapNum][i_Mon] = new MON_RedSlime(gp);
+                    break;
+            }
+
+            gp.monster[mapNum][i_Mon].worldX = gp.tileSize * location[0];
+            gp.monster[mapNum][i_Mon].worldY = gp.tileSize * location[1];
+            i_Mon++;
+        } else {
+            // Handle the else case if needed
+        }
     }
     public void setInteractiveTile()
     {

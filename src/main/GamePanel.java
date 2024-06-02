@@ -50,7 +50,7 @@ public class GamePanel extends JPanel implements Runnable{
     Sound music = new Sound(); // Created 2 different objects for Sound Effect and Music. If you use 1 object SE or Music stops sometimes.
     Sound se = new Sound();
     public CollisionChecker cChecker = new CollisionChecker(this);
-    public AssetSetter  aSetter = new AssetSetter(this);
+    public AssetSetter  aSetter = AssetSetter.getInstance(this); // Get the instance of AssetSetter
     public UI ui = new UI(this);
     Config config = new Config(this);
     public PathFinder pFinder = new PathFinder(this);
@@ -64,8 +64,8 @@ public class GamePanel extends JPanel implements Runnable{
     //ENTITY AND OBJECT
     public Player player = new Player(this,keyH);
     public Entity obj[][] = new Entity[maxMap][20]; // display 10 objects same time
-    public Entity npc[][] = new Entity[maxMap][10];
-    public Entity monster[][] = new Entity[maxMap][20];
+    public Entity npc[][] = new Entity[maxMap][50];
+    public Entity monster[][] = new Entity[maxMap][100];
     public InteractiveTile iTile[][] = new InteractiveTile[maxMap][50];
     public Entity projectile[][] = new Entity[maxMap][20]; // cut projectile
     //public ArrayList<Entity> projectileList = new ArrayList<>();
@@ -138,7 +138,6 @@ public class GamePanel extends JPanel implements Runnable{
         aSetter.setMonster();
         aSetter.setNPC();
         player.resetCounter();
-
         if(restart == true)
         {
             player.setDefaultValues();

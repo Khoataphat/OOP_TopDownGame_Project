@@ -25,61 +25,51 @@ public class KeyHandler implements KeyListener {
 
         //TITLE STATE
         if(gp.gameState == gp.titleState) {
-            System.out.println("titleState");
             titleState(code);
         }
         // PLAY STATE
         else if(gp.gameState == gp.playState)
         {
-            System.out.println("playState");
             playState(code);
         }
         // PAUSE STATE
         else if(gp.gameState == gp.pauseState)
         {
-            System.out.println("pauseState");
             pauseState(code);
         }
         //DIALOGUE STATE
         else if(gp.gameState == gp.dialogueState || gp.gameState == gp.cutsceneState)
         {
-            System.out.println("dialogueState");
             dialogueState(code);
         }
         // CHARACTER STATE
         else if(gp.gameState == gp.characterState)
         {
-            System.out.println("characterState");
             characterState(code);
         }
         // OPTIONS STATE
         else if(gp.gameState == gp.optionsState)
         {
-            System.out.println("optionState");
             optionsState(code);
         }
         // GAMEOVER STATE
         else if(gp.gameState == gp.gameOverState)
         {
-            System.out.println("gameoverState");
             gameOverState(code);
         }
         // TRADE STATE
         else if(gp.gameState == gp.tradeState)
         {
-            System.out.println("tradeState");
             tradeState(code);
         }
         // MAP STATE
         else if(gp.gameState == gp.mapState)
         {
-            System.out.println("mapState");
             mapState(code);
         }
         // Level up state
         else if(gp.gameState == gp.levelupState)
         {
-            System.out.println("levelState");
             levelupState(code);
         }
     }

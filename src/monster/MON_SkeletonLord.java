@@ -2,6 +2,7 @@ package monster;
 
 import data.Progress;
 import entity.Entity;
+import main.AssetSetter;
 import main.GamePanel;
 import object.OBJ_Coin_Bronze;
 import object.OBJ_Door_Iron;
@@ -11,11 +12,12 @@ import object.OBJ_ManaCrystal;
 import java.util.Random;
 
 public class MON_SkeletonLord extends Entity {
-    private static MON_SkeletonLord instance = null; // Singleton instance
-    private static boolean instantiated = false; // Flag to track if the instance has been created
-
+    private static MON_SkeletonLord instance;
     GamePanel gp; // cuz of different package
+    public AssetSetter  aSetter = AssetSetter.getInstance(gp); // Get the instance of AssetSetter
+
     public static final String monName = "Skeleton Lord";
+
     private MON_SkeletonLord(GamePanel gp) {
         super(gp);
 
@@ -51,9 +53,8 @@ public class MON_SkeletonLord extends Entity {
         setDialogue();
     }
     public static MON_SkeletonLord getInstance(GamePanel gp){
-        if (!instantiated) {
+        if (instance == null) {
             instance = new MON_SkeletonLord(gp);
-            instantiated = true;
         }
         return instance;
     }
@@ -123,16 +124,31 @@ public class MON_SkeletonLord extends Entity {
     public void setAction()
     {
 
-        if(inRage==false && life < maxLife/2)
+        if(inRage==false && life < 20 && life > 18)
         {
-            inRage = true;
-            getImage();
-            getAttackImage();
-            defaultSpeed++;
-            speed = defaultSpeed;
-            attack *= 2;
+            aSetter.setMonsterforBossState1();
+        } else if (inRage == false && life <= maxLife/3){
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         if(getTileDistance(gp.player) < 10)
         {
             moveTowardPlayer(60);

@@ -59,13 +59,13 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 10;
+        maxLife = 50;
         life = maxLife;
         maxMana = 8;
         mana = maxMana;
         ammo = 10;
-        strength = 99999999;           // The more strenght he has, the more damage he gives.
-        dexterity = 1;          // The more dexterity he has, the less damage he receives.
+        strength = 10;           // The more strenght he has, the more damage he gives.
+        dexterity = 99;          // The more dexterity he has, the less damage he receives.
         exp = 0;
         nextLevelExp = 4;
         coin = 40;
@@ -605,7 +605,7 @@ public class Player extends Entity{
 
             dialogues[0][0] = "You are level " + level + " now!\n" + "You feel stronger!";
             setDialogue();
-            startDialogue(this,100);
+            startDialogue(this,0);
             levelUp = true;
             System.out.println("Leveluptrue");
         }
