@@ -95,9 +95,9 @@ public class GamePanel extends JPanel implements Runnable{
     //AREA
     public int currentArea;
     public int nextArea;
-    public final int outside = 50;
-    public final int indoor = 51;
-    public final int dungeon = 52;
+    public final int outside = 100;
+    public final int indoor = 100;
+    public final int dungeon = 100;
 
 
     public GamePanel() // constructor
@@ -143,7 +143,7 @@ public class GamePanel extends JPanel implements Runnable{
             player.setDefaultValues();
             aSetter.setObject();
             aSetter.setInteractiveTile();
-            eManager.lighting.resetDay();
+//            eManager.lighting.resetDay();
         }
 
     }
@@ -276,7 +276,7 @@ public class GamePanel extends JPanel implements Runnable{
                 }
             }
 
-            eManager.update();
+//            eManager.update();
         }
 
         if(gameState == pauseState)

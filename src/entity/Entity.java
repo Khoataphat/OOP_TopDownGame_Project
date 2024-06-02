@@ -13,8 +13,8 @@ import java.util.Random;
 public class Entity {
 
     GamePanel gp;
-    public BufferedImage up1,up2,down1,down2,left1,left2,right1,right2;
-    public BufferedImage attackUp1,attackUp2,attackDown1,attackDown2,attackLeft1,attackLeft2,attackRight1,attackRight2,guardUp,guardDown,guardLeft,guardRight;
+    public BufferedImage up1,up2,up3,up4,down1,down2,down3,down4,left1,left2,left3,left4,right1,right2,right3,right4;
+    public BufferedImage attackUp1,attackUp2,attackUp3,attackUp4,attackDown1,attackDown2,attackDown3,attackDown4,attackLeft1,attackLeft2,attackLeft3,attackLeft4,attackRight1,attackRight2,attackRight3,attackRight4,guardUp,guardDown,guardLeft,guardRight;
     public BufferedImage image, image2, image3;
     public Rectangle solidArea = new Rectangle(0,0, 48, 48);
     public Rectangle attackArea = new Rectangle(0,0, 0, 0);
@@ -404,13 +404,17 @@ public class Entity {
                 }
                 spriteCounter++;
                 if (spriteCounter > 24) {
-                    if (spriteNum == 1)                  //Every 12 frames sprite num changes.
+                    if (spriteNum == 4)                  //Every 12 frames sprite num changes.
                     {
+                        spriteNum = 3;
+                    } else if (spriteNum == 3) {
                         spriteNum = 2;
                     } else if (spriteNum == 2) {
                         spriteNum = 1;
-                    }
-                    spriteCounter = 0;                  // spriteCounter reset
+                    } else if (spriteNum == 1) {
+                        spriteNum = 4;
+                    } 
+                    spriteCounter = 0;                 // spriteCounter reset
                 }
             }
             //Like player's invincible method
@@ -734,12 +738,17 @@ public class Entity {
                     {
                         if(spriteNum == 1){image = up1;}
                         if(spriteNum == 2) {image = up2;}
+                        if(spriteNum == 3){image = up3;}
+                        if(spriteNum == 4) {image = up4;}
+                        
                     }
                     if(attacking == true)  //Attacking sprites
                     {
                         tempScreenY = getScreenY() - up1.getHeight();    //Adjusted the player's position one tile to up. Explained why I did it at where I call attacking() in update().
                         if(spriteNum == 1) {image = attackUp1;}
                         if(spriteNum == 2) {image = attackUp2;}
+                        if(spriteNum == 3) {image = attackUp3;}
+                        if(spriteNum == 4) {image = attackUp4;}
                     }
                     break;
 
@@ -748,11 +757,15 @@ public class Entity {
                     {
                         if(spriteNum == 1){image = down1;}
                         if(spriteNum == 2){image = down2;}
+                        if(spriteNum == 3){image = down1;}
+                        if(spriteNum == 4){image = down2;}
                     }
                     if(attacking == true)  //Attacking sprites
                     {
                         if(spriteNum == 1){image = attackDown1;}
                         if(spriteNum == 2){image = attackDown2;}
+                        if(spriteNum == 3){image = attackDown3;}
+                        if(spriteNum == 4){image = attackDown4;}
                     }
                     break;
 
@@ -761,12 +774,16 @@ public class Entity {
                     {
                         if(spriteNum == 1) {image = left1;}
                         if(spriteNum == 2) {image = left2;}
+                        if(spriteNum == 3) {image = left1;}
+                        if(spriteNum == 4) {image = left2;}
                     }
                     if(attacking == true)  //Attacking sprites
                     {
                         tempScreenX = getScreenX() - up1.getWidth();    //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
                         if(spriteNum == 1) {image = attackLeft1;}
                         if(spriteNum == 2) {image = attackLeft2;}
+                        if(spriteNum == 3) {image = attackLeft3;}
+                        if(spriteNum == 4) {image = attackLeft4;}
                     }
                     break;
 
@@ -775,11 +792,15 @@ public class Entity {
                     {
                         if(spriteNum == 1) {image = right1;}
                         if(spriteNum == 2) {image = right2;}
+                        if(spriteNum == 3) {image = right1;}
+                        if(spriteNum == 4) {image = right2;}
                     }
                     if(attacking == true)  //Attacking sprites
                     {
                         if(spriteNum == 1) {image = attackRight1;}
                         if(spriteNum == 2) {image = attackRight2;}
+                        if(spriteNum == 3) {image = attackRight3;}
+                        if(spriteNum == 4) {image = attackRight4;}
                     }
                     break;
             }
