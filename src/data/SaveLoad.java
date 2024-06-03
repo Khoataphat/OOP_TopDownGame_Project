@@ -113,7 +113,7 @@ public class SaveLoad {
             gp.player.currentShield = gp.player.inventory.get(ds.currentShieldSlot);
             gp.player.getAttack();
             gp.player.getDefense();
-            gp.player.getAttackImage();
+            //gp.player.getAttackImage(characterChoice);
 
             //OBJECTS ON MAP
             for(int mapNum = 0; mapNum < gp.maxMap; mapNum++)

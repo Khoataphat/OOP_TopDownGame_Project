@@ -917,7 +917,7 @@ public class UI {
                 //gp.setCharacterChoice(2);
             }
 
-            text = "Sorcerer";
+            text = "Grandma's Anger";
             x = getXforCenteredText(text);
             y += gp.tileSize;
             g2.drawString(text,x,y);
