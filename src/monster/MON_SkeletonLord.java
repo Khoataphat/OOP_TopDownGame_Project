@@ -155,10 +155,9 @@ public class MON_SkeletonLord extends Entity {
     }
     public void setAction()
     {
-
         if(inRage==false && life < 20 && life > 18)
         {
-            aSetter.setMonsterforBossState1();
+            aSetter.setSummonCreeps(MON_SkeletonLord.instance.worldX/gp.tileSize, MON_SkeletonLord.instance.worldY/gp.tileSize);
         } else if (inRage == false && life <= maxLife/3){
 
         }

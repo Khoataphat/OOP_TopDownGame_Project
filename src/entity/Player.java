@@ -17,6 +17,7 @@ public class Player extends Entity{
     public boolean attackCanceled = false;
     public boolean lightUpdated = false;
     private boolean levelUp = false;
+    private int countTime = 0;
 
     public Player(GamePanel gp, KeyHandler keyH)
     {
@@ -59,7 +60,7 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 50;
+        maxLife = 10;
         life = maxLife;
         maxMana = 8;
         mana = maxMana;
@@ -491,6 +492,12 @@ public class Player extends Entity{
                 gp.playSE(8); //levelup.wav
             }
             levelUp = false;
+        }
+        if (countTime <= 3600){
+            countTime++;
+        }else{
+            mana ++;
+            countTime = 0;
         }
     }
 
