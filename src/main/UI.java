@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import main.GamePanel.*;
 
 public class UI {
 
@@ -647,7 +648,8 @@ public class UI {
                 gp.eManager.lighting.dayState = gp.eManager.lighting.day;
                 gp.eManager.lighting.dayCounter = 0;
                 gp.gameState = gp.playState;
-                gp.player.getImage();
+                //Khoa
+                //gp.player.getImage();
             }
         }
     }
@@ -829,6 +831,7 @@ public class UI {
         g2.setColor(new Color(0,0,0));             // FILL BACKGROUND BLACK
         g2.fillRect(0,0, gp.screenWidth, gp.screenHeight);
         //MAIN MENU
+
         if(titleScreenState == 0)
         {
 
@@ -844,10 +847,12 @@ public class UI {
             g2.setColor(Color.white);
             g2.drawString(text, x, y);
 
+
             //BLUE BOY IMAGE
             x = gp.screenWidth/2 - (gp.tileSize * 2) / 2;
             y += gp.tileSize*2;
             g2.drawImage(gp.player.down1,x,y,gp.tileSize*2,gp.tileSize*2,null);
+
 
             //MENU
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 48F));
@@ -899,6 +904,7 @@ public class UI {
             if(commandNum == 0)
             {
                 g2.drawString(">",x-gp.tileSize,y);
+                //gp.setCharacterChoice(1);
             }
 
             text = "Thief";
@@ -908,6 +914,7 @@ public class UI {
             if(commandNum == 1)
             {
                 g2.drawString(">",x-gp.tileSize,y);
+                //gp.setCharacterChoice(2);
             }
 
             text = "Sorcerer";
@@ -917,6 +924,7 @@ public class UI {
             if(commandNum == 2)
             {
                 g2.drawString(">",x-gp.tileSize,y);
+                //gp.setCharacterChoice(3);
             }
 
             text = "Back";

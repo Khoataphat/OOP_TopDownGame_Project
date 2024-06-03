@@ -21,6 +21,8 @@ public class CollisionChecker {
         int entityTopRow = entityTopWorldY/gp.tileSize;
         int entityBottomRow = entityBottomWorldY/gp.tileSize;
 
+        System.out.println(entity+"   "+ entityLeftWorldX+" "+" "+entity.worldX +" "+entity.solidArea.x+" "+entityLeftCol);
+
         int tileNum1 , tileNum2;
 
         //Use a temporal direction when it's being knockbacked
@@ -54,7 +56,7 @@ public class CollisionChecker {
 
             case "left" :
                 entityLeftCol = (entityLeftWorldX - entity.speed)/gp.tileSize;
-                tileNum1 =  gp.tileM.mapTileNum[gp.currentMap][entityLeftCol][entityTopRow];  //Check Left Hand
+                tileNum1 =  gp.tileM.mapTileNum[gp.currentMap][entityLeftCol][entityTopRow];//Check Left Hand
                 tileNum2 =  gp.tileM.mapTileNum[gp.currentMap][entityLeftCol][entityBottomRow]; //Check Right Hand
                 if(gp.tileM.tile[tileNum1].collision == true || gp.tileM.tile[tileNum2].collision == true)
                 {

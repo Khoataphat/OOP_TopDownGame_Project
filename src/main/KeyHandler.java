@@ -1,5 +1,7 @@
 package main;
 
+import entity.Player;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -126,19 +128,37 @@ public class KeyHandler implements KeyListener {
                 //FIGHTER
                 if (gp.ui.commandNum == 0) {
                     System.out.println("Do some fighter specific stuff!");
+                    gp.player = new Player(gp,this,1);
                     gp.gameState = gp.playState;
+                    //Khoa
+                    //gp.setCharacterChoice(1);
+                    //System.out.println("KeyHandler "+gp.setCharacterChoice(1));
+                    //
+                    //gp.gameState = gp.playState;
                     gp.playMusic(0);
                 }
                 //THIEF
                 if (gp.ui.commandNum == 1) {
                     System.out.println("Do some thief specific stuff!");
+                    gp.player = new Player(gp,this,2);
                     gp.gameState = gp.playState;
+                    //Khoa
+                    //gp.setCharacterChoice(2);
+                    //System.out.println("KeyHandler "+gp.setCharacterChoice(2));
+                    //
+                    //gp.gameState = gp.playState;
                     gp.playMusic(0);
                 }
                 //SORCERER
                 if (gp.ui.commandNum == 2) {
                     System.out.println("Do some sorcerer specific stuff!");
+                    gp.player = new Player(gp,this,3);
                     gp.gameState = gp.playState;
+                    //Khoa
+                    //gp.setCharacterChoice(3);
+                    //System.out.println("KeyHandler "+gp.setCharacterChoice(3));
+                    //
+                    //gp.gameState = gp.playState;
                     gp.playMusic(0);
                 }
                 //BACK
