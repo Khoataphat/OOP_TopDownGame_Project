@@ -61,8 +61,17 @@ public class GamePanel extends JPanel implements Runnable{
     public CutsceneManager csManager = new CutsceneManager(this);
     Thread gameThread;
 
+    //Khoa
+
+    public int characterChoice;
+    //public int setCharacterChoice(int choice) {
+        //this.characterChoice = choice;
+        //return choice;
+    //}
+    //
+
     //ENTITY AND OBJECT
-    public Player player = new Player(this,keyH);
+    public Player player = new Player(this,keyH, characterChoice);
     public Entity obj[][] = new Entity[maxMap][20]; // display 10 objects same time
     public Entity npc[][] = new Entity[maxMap][50];
     public Entity monster[][] = new Entity[maxMap][100];
@@ -98,7 +107,6 @@ public class GamePanel extends JPanel implements Runnable{
     public final int outside = 100;
     public final int indoor = 100;
     public final int dungeon = 100;
-
 
     public GamePanel() // constructor
     {

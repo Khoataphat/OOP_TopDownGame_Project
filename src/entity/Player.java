@@ -5,11 +5,11 @@ import main.KeyHandler;
 import object.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
 
 public class Player extends Entity{
 
+    private final int characterChoice;
     KeyHandler keyH;
     public final int screenX;
     public final int screenY;
@@ -18,11 +18,11 @@ public class Player extends Entity{
     public boolean lightUpdated = false;
     private boolean levelUp = false;
 
-    public Player(GamePanel gp, KeyHandler keyH)
+    public Player(GamePanel gp, KeyHandler keyH, int characterChoice)
     {
         super(gp); // calling constructor of super class(from entity class)
         this.keyH=keyH;
-
+        this.characterChoice = characterChoice;
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
         screenY = gp.screenHeight/2- (gp.tileSize/2);
 
@@ -34,6 +34,8 @@ public class Player extends Entity{
         solidAreaDefaultX = 8;
         solidAreaDefaultY = 16;
 
+        //
+//        System.out.println("Player "+ characterChoice);
 //      attackArea.width = 36;  //For test sword
 //      attackArea.height = 36;
 
@@ -77,8 +79,23 @@ public class Player extends Entity{
         //projectile = new OBJ_Rock(gp);
         attack = getAttack();   // The total attack value is decided by strength and weapon
         defense = getDefense(); // The total defense value is decided by dexterity and shield
+        /*
+        switch (characterChoice) {
+            case 1:
+                getImage();
+                break;
+            case 2:
+                getImage2();
+                break;
+            case 3:
+                getImage3();
+                break;
+        }
 
-        getImage();
+         */
+        getImage(characterChoice);
+
+        System.out.println(characterChoice);
         getAttackImage();
         getGuardImage();
         setItems();
@@ -160,25 +177,112 @@ public class Player extends Entity{
         return currentShieldSlot;
     }
 
-    public void getImage()
+    public void getImage(int characterChoice )
     {
-    	 up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
-         up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
-         up3 = setup("/player/boy_up_3",gp.tileSize,gp.tileSize);
-         up4 = setup("/player/boy_up_4",gp.tileSize,gp.tileSize);
-         down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
-         down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
-         down3 = setup("/player/boy_down_3",gp.tileSize,gp.tileSize);
-         down4 = setup("/player/boy_down_4",gp.tileSize,gp.tileSize);
-         left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
-         left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
-         left3 = setup("/player/boy_left_3",gp.tileSize,gp.tileSize);
-         left4 = setup("/player/boy_left_4",gp.tileSize,gp.tileSize);
-         right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
-         right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
-         right3 = setup("/player/boy_right_3",gp.tileSize,gp.tileSize);
-         right4 = setup("/player/boy_right_4",gp.tileSize,gp.tileSize);
+        switch(characterChoice){
+            case 1:
+                up1 = setup("/player/boy_up_1",gp.tileSize,gp.tileSize);
+                up2 = setup("/player/boy_up_2",gp.tileSize,gp.tileSize);
+                up3 = setup("/player/boy_up_3",gp.tileSize,gp.tileSize);
+                up4 = setup("/player/boy_up_4",gp.tileSize,gp.tileSize);
+                down1 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
+                down2 = setup("/player/boy_down_2",gp.tileSize,gp.tileSize);
+                down3 = setup("/player/boy_down_3",gp.tileSize,gp.tileSize);
+                down4 = setup("/player/boy_down_4",gp.tileSize,gp.tileSize);
+                left1 = setup("/player/boy_left_1",gp.tileSize,gp.tileSize);
+                left2 = setup("/player/boy_left_2",gp.tileSize,gp.tileSize);
+                left3 = setup("/player/boy_left_3",gp.tileSize,gp.tileSize);
+                left4 = setup("/player/boy_left_4",gp.tileSize,gp.tileSize);
+                right1 = setup("/player/boy_right_1",gp.tileSize,gp.tileSize);
+                right2 = setup("/player/boy_right_2",gp.tileSize,gp.tileSize);
+                right3 = setup("/player/boy_right_3",gp.tileSize,gp.tileSize);
+                right4 = setup("/player/boy_right_4",gp.tileSize,gp.tileSize);
+                break;
+            case 2:
+                up1 = setup("/player/03",gp.tileSize,gp.tileSize);
+                up2 = setup("/player/03",gp.tileSize,gp.tileSize);
+                up3 = setup("/player/03",gp.tileSize,gp.tileSize);
+                up4 = setup("/player/03",gp.tileSize,gp.tileSize);
+                down1 = setup("/player/03",gp.tileSize,gp.tileSize);
+                down2 = setup("/player/03",gp.tileSize,gp.tileSize);
+                down3 = setup("/player/03",gp.tileSize,gp.tileSize);
+                down4 = setup("/player/03",gp.tileSize,gp.tileSize);
+                left1 = setup("/player/03",gp.tileSize,gp.tileSize);
+                left2 = setup("/player/03",gp.tileSize,gp.tileSize);
+                left3 = setup("/player/03",gp.tileSize,gp.tileSize);
+                left4 = setup("/player/03",gp.tileSize,gp.tileSize);
+                right1 = setup("/player/03",gp.tileSize,gp.tileSize);
+                right2 = setup("/player/03",gp.tileSize,gp.tileSize);
+                right3 = setup("/player/03",gp.tileSize,gp.tileSize);
+                right4 = setup("/player/03",gp.tileSize,gp.tileSize);
+                break;
+            case 3:
+                up1 = setup("/player/06",gp.tileSize,gp.tileSize);
+                up2 = setup("/player/06",gp.tileSize,gp.tileSize);
+                up3 = setup("/player/06",gp.tileSize,gp.tileSize);
+                up4 = setup("/player/06",gp.tileSize,gp.tileSize);
+                down1 = setup("/player/06",gp.tileSize,gp.tileSize);
+                down2 = setup("/player/06",gp.tileSize,gp.tileSize);
+                down3 = setup("/player/06",gp.tileSize,gp.tileSize);
+                down4 = setup("/player/06",gp.tileSize,gp.tileSize);
+                left1 = setup("/player/06",gp.tileSize,gp.tileSize);
+                left2 = setup("/player/06",gp.tileSize,gp.tileSize);
+                left3 = setup("/player/06",gp.tileSize,gp.tileSize);
+                left4 = setup("/player/06",gp.tileSize,gp.tileSize);
+                right1 = setup("/player/06",gp.tileSize,gp.tileSize);
+                right2 = setup("/player/06",gp.tileSize,gp.tileSize);
+                right3 = setup("/player/06",gp.tileSize,gp.tileSize);
+                right4 = setup("/player/06",gp.tileSize,gp.tileSize);
+                break;
+            default:
+                // Handle invalid character choice
+                System.err.println("Invalid character choice: " + characterChoice);
+                break;
+
+        }
+
     }
+
+    public void getImage2()
+    {
+        up1 = setup("/player/boy_axe_up_1",gp.tileSize,gp.tileSize);
+        up2 = setup("/player/boy_axe_up_2",gp.tileSize,gp.tileSize);
+        up3 = setup("/player/boy_axe_up_1",gp.tileSize,gp.tileSize);
+        up4 = setup("/player/boy_axe_up_3",gp.tileSize,gp.tileSize);
+        down1 = setup("/player/boy_axe_down_1",gp.tileSize,gp.tileSize);
+        down2 = setup("/player/boy_axe_down_2",gp.tileSize,gp.tileSize);
+        down3 = setup("/player/boy_axe_down_3",gp.tileSize,gp.tileSize);
+        down4 = setup("/player/boy_axe_down_4",gp.tileSize,gp.tileSize);
+        left1 = setup("/player/boy_axe_left_1",gp.tileSize,gp.tileSize);
+        left2 = setup("/player/boy_axe_left_2",gp.tileSize,gp.tileSize);
+        left3 = setup("/player/boy_axe_left_3",gp.tileSize,gp.tileSize);
+        left4 = setup("/player/boy_axe_left_4",gp.tileSize,gp.tileSize);
+        right1 = setup("/player/boy_axe_right_1",gp.tileSize,gp.tileSize);
+        right2 = setup("/player/boy_axe_right_2",gp.tileSize,gp.tileSize);
+        right3 = setup("/player/boy_axe_right_3",gp.tileSize,gp.tileSize);
+        right4 = setup("/player/boy_axe_right_4",gp.tileSize,gp.tileSize);
+    }
+
+    public void getImage3()
+    {
+        up1 = setup("/player/06",gp.tileSize,gp.tileSize);
+        up2 = setup("/player/06",gp.tileSize,gp.tileSize);
+        up3 = setup("/player/06",gp.tileSize,gp.tileSize);
+        up4 = setup("/player/06",gp.tileSize,gp.tileSize);
+        down1 = setup("/player/06",gp.tileSize,gp.tileSize);
+        down2 = setup("/player/06",gp.tileSize,gp.tileSize);
+        down3 = setup("/player/06",gp.tileSize,gp.tileSize);
+        down4 = setup("/player/06",gp.tileSize,gp.tileSize);
+        left1 = setup("/player/06",gp.tileSize,gp.tileSize);
+        left2 = setup("/player/06",gp.tileSize,gp.tileSize);
+        left3 = setup("/player/06",gp.tileSize,gp.tileSize);
+        left4 = setup("/player/06",gp.tileSize,gp.tileSize);
+        right1 = setup("/player/06",gp.tileSize,gp.tileSize);
+        right2 = setup("/player/06",gp.tileSize,gp.tileSize);
+        right3 = setup("/player/06",gp.tileSize,gp.tileSize);
+        right4 = setup("/player/06",gp.tileSize,gp.tileSize);
+    }
+
     public void getSleepingImage(BufferedImage image)
     {
     	up1 = image;
@@ -222,7 +326,7 @@ public class Player extends Entity{
         else if(currentWeapon.type == type_axe)
         {
         	attackUp1 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
-            attackUp2 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2); 
+            attackUp2 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2);
             attackUp3 = setup("/player/boy_attack_up_1",gp.tileSize, gp.tileSize * 2);         // 16x32 px
             attackUp4 = setup("/player/boy_attack_up_2",gp.tileSize, gp.tileSize * 2);
             attackDown1 = setup("/player/boy_attack_down_1",gp.tileSize, gp.tileSize * 2);     // 16x32 px
