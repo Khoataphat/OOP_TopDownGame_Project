@@ -4,7 +4,7 @@ package main;
 import entity.NPC_Merchant;
 import entity.NPC_OldMan;
 import monster.*;
-import object.OBJ_BlueHeart;
+import object.*;
 
 import java.util.Random;
 
@@ -106,10 +106,72 @@ public class AssetSetter {
 */
 
         //Khoa
-        gp.obj[mapNum][i] = new OBJ_BlueHeart(gp);
+        //door
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 20.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 91;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 22.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 91;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 48.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 64.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 83.5);
+        i++;
+
+        //key
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 46;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 6;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 10;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 31;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 76;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 9;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 42;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 55;
+        i++;
+        //chest
+        gp.obj[mapNum][i] = new OBJ_Chest(gp);
+        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp)); //mở rương sẽ đc cái này
+        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 43;
+
+        gp.obj[mapNum][i] = new OBJ_Chest(gp);
+        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
         gp.obj[mapNum][i].worldX = gp.tileSize * 91;
         gp.obj[mapNum][i].worldY = gp.tileSize * 9;
-        //i++;
+
+        gp.obj[mapNum][i] = new OBJ_Chest(gp);
+        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 49;
+
+        //blueheart
+        gp.obj[mapNum][i] = new OBJ_BlueHeart(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 92;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 84;
+        i++;
+
+
 
 
     }
@@ -206,7 +268,17 @@ public class AssetSetter {
         i_Mon++;
 
         //Khoa
+        int i = 0;
 
+
+        //boss
+        gp.monster[mapNum][i] = MON_SkeletonLord.getInstance(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*58;
+        gp.monster[mapNum][i].worldY = gp.tileSize*86;
+        i++;
+        gp.monster[mapNum][i] = MON_SkeletonLord.getInstance(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*58;
+        gp.monster[mapNum][i].worldY = gp.tileSize*92;
 
 
 
