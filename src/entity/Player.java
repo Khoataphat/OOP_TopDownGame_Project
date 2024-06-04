@@ -331,21 +331,21 @@ public class Player extends Entity{
                 break;
             case 2:
                 attackUp1 = setup("/player/ninja_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
-                attackUp2 = setup("/player/ninja_attack_up_2", gp.tileSize, gp.tileSize * 2);
+                attackUp2 = setup("/player/ninja_attack_up_2", gp.tileSize, gp.tileSize*2 );
                 attackUp3 = setup("/player/ninja_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
-                attackUp4 = setup("/player/ninja_attack_up_2", gp.tileSize, gp.tileSize * 2);
+                attackUp4 = setup("/player/ninja_attack_up_2", gp.tileSize, gp.tileSize *2);
                 attackDown1 = setup("/player/ninja_attack_down_1", gp.tileSize, gp.tileSize * 2);     // 16x32 px
-                attackDown2 = setup("/player/ninja_attack_down_2", gp.tileSize, gp.tileSize * 2);
+                attackDown2 = setup("/player/ninja_attack_down_2", gp.tileSize, gp.tileSize*2 );
                 attackDown3 = setup("/player/ninja_attack_down_1", gp.tileSize, gp.tileSize * 2);     // 16x32 px
-                attackDown4 = setup("/player/ninja_attack_down_2", gp.tileSize, gp.tileSize * 2);
+                attackDown4 = setup("/player/ninja_attack_down_2", gp.tileSize, gp.tileSize *2);
                 attackLeft1 = setup("/player/ninja_attack_left_1", gp.tileSize * 2, gp.tileSize);      // 32x16 px
-                attackLeft2 = setup("/player/ninja_attack_left_2", gp.tileSize * 2, gp.tileSize);
+                attackLeft2 = setup("/player/ninja_attack_left_2", gp.tileSize*2 , gp.tileSize);
                 attackLeft3 = setup("/player/ninja_attack_left_1", gp.tileSize * 2, gp.tileSize);      // 32x16 px
-                attackLeft4 = setup("/player/ninja_attack_left_2", gp.tileSize * 2, gp.tileSize);
+                attackLeft4 = setup("/player/ninja_attack_left_2", gp.tileSize*2 , gp.tileSize);
                 attackRight1 = setup("/player/ninja_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
-                attackRight2 = setup("/player/ninja_attack_right_2", gp.tileSize * 2, gp.tileSize);
+                attackRight2 = setup("/player/ninja_attack_right_2", gp.tileSize*2 , gp.tileSize);
                 attackRight3 = setup("/player/ninja_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
-                attackRight4 = setup("/player/ninja_attack_right_2", gp.tileSize * 2, gp.tileSize);
+                attackRight4 = setup("/player/ninja_attack_right_2", gp.tileSize*2 , gp.tileSize);
                 break;
             case 3:
                 if (currentWeapon.type == type_sword) {
@@ -877,40 +877,49 @@ public class Player extends Entity{
         int tempScreenY = screenY;
 
 
-        switch (direction)
-        {
-            case "up" :
-                if(attacking == false) //Normal walking sprites
-                {
-                    if(spriteNum == 1){image = up1;}
-                    if(spriteNum == 2) {image = up2;}
-                    if(spriteNum == 3){image = up3;}
-                    if(spriteNum == 4) {image = up4;}
-                }
-                if(attacking == true)  //Attacking sprites
-                {
-                    if(characterChoice == 3){
+        switch (direction) {
 
-                        tempScreenY = screenY ;
-                        if(spriteNum == 1) {image = attackUp1;}
-                        if (spriteNum == 2) {image = attackUp2;}
-                        if(spriteNum == 3) {image = attackUp3;}
-                        if(spriteNum == 4) {image = attackUp4;}
+            case "up":
+                if (attacking == false) //Normal walking sprites
+                {
+
+                    if (spriteNum == 1) {
+                        image = up1;
                     }
-                    else {
-                        tempScreenY = screenY - gp.tileSize;    //Adjusted the player's position one tile to up. Explained why I did it at where I call attacking() in update().
-                        if (spriteNum == 1) {
-                            image = attackUp1;
-                        }
-                        if (spriteNum == 2) {
-                            image = attackUp2;
-                        }
-                        if (spriteNum == 3) {
-                            image = attackUp3;
-                        }
-                        if (spriteNum == 4) {
-                            image = attackUp4;
-                        }
+                    if (spriteNum == 2) {
+                        image = up2;
+                    }
+                    if (spriteNum == 3) {
+                        image = up3;
+                    }
+                    if (spriteNum == 4) {
+                        image = up4;
+                    }
+                }
+                if (attacking == true)  //Attacking sprites
+                {
+//                    if (characterChoice == 2) {
+//                        tempScreenY = screenY-gp.tileSize*2;
+//                    } else
+                    if (characterChoice == 3) {
+
+                        tempScreenY = screenY;
+
+                    } else {
+                        tempScreenY = screenY - gp.tileSize;
+                    }   //Adjusted the player's position one tile to up. Explained why I did it at where I call attacking() in update().
+                    if (spriteNum == 1) {
+                        image = attackUp1;
+                    }
+                    if (spriteNum == 2) {
+                        image = attackUp2;
+                    }
+                    if (spriteNum == 3) {
+                        image = attackUp3;
+                    }
+                    if (spriteNum == 4) {
+                        image = attackUp4;
+
                     }
                 }
                 if(guarding == true)
@@ -929,6 +938,9 @@ public class Player extends Entity{
                 }
                 if(attacking == true)  //Attacking sprites
                 {
+//                    if(characterChoice ==2){
+//                        tempScreenY = screenY - gp.tileSize;
+//                    }
                     if(spriteNum == 1){image = attackDown1;}
                     if(spriteNum == 2){image = attackDown2;}
                     if(spriteNum == 3){image = attackDown3;}
@@ -950,19 +962,20 @@ public class Player extends Entity{
                 }
                 if(attacking == true)  //Attacking sprites
                 {
-                    if(characterChoice == 3){
+//                    if(characterChoice == 2){
+//                        tempScreenX = screenX + gp.tileSize;
+//                    }
+//                    else
+                        if(characterChoice == 3){
 //                        //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
 
                         tempScreenX = screenX ;
-                        if(spriteNum == 1) {image = attackLeft1;}
-                        if(spriteNum == 2) {image = attackLeft2;}
-                        if(spriteNum == 3) {image = attackLeft3;}
-                        if(spriteNum == 4) {image = attackLeft4;}
+
                     }
                     else {
-                        tempScreenX = screenX - gp.tileSize;    //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
+                        tempScreenX = screenX - gp.tileSize; }   //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
 
-                        tempScreenX = screenX;
+                        ;
                         if (spriteNum == 1) {
                             image = attackLeft1;
                         }
@@ -974,7 +987,7 @@ public class Player extends Entity{
                         }
                         if (spriteNum == 4) {
                             image = attackLeft4;
-                        }
+
                     }
                 }
                 if(guarding == true)
@@ -993,6 +1006,9 @@ public class Player extends Entity{
                 }
                 if(attacking == true)  //Attacking sprites
                 {
+//                    if(characterChoice ==2){
+//                        tempScreenX = screenX - gp.tileSize;
+//                    }
                     if(spriteNum == 1) {image = attackRight1;}
                     if(spriteNum == 2) {image = attackRight2;}
                     if(spriteNum == 3) {image = attackRight3;}
