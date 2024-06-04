@@ -889,11 +889,29 @@ public class Player extends Entity{
                 }
                 if(attacking == true)  //Attacking sprites
                 {
-                    tempScreenY = screenY - gp.tileSize;    //Adjusted the player's position one tile to up. Explained why I did it at where I call attacking() in update().
-                    if(spriteNum == 1) {image = attackUp1;}
-                    if(spriteNum == 2) {image = attackUp2;}
-                    if(spriteNum == 3) {image = attackUp3;}
-                    if(spriteNum == 4) {image = attackUp4;}
+                    if(characterChoice == 3){
+
+                        tempScreenY = screenY ;
+                        if(spriteNum == 1) {image = attackUp1;}
+                        if (spriteNum == 2) {image = attackUp2;}
+                        if(spriteNum == 3) {image = attackUp3;}
+                        if(spriteNum == 4) {image = attackUp4;}
+                    }
+                    else {
+                        tempScreenY = screenY - gp.tileSize;    //Adjusted the player's position one tile to up. Explained why I did it at where I call attacking() in update().
+                        if (spriteNum == 1) {
+                            image = attackUp1;
+                        }
+                        if (spriteNum == 2) {
+                            image = attackUp2;
+                        }
+                        if (spriteNum == 3) {
+                            image = attackUp3;
+                        }
+                        if (spriteNum == 4) {
+                            image = attackUp4;
+                        }
+                    }
                 }
                 if(guarding == true)
                 {
@@ -932,11 +950,32 @@ public class Player extends Entity{
                 }
                 if(attacking == true)  //Attacking sprites
                 {
-                    tempScreenX = screenX - gp.tileSize;    //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
-                    if(spriteNum == 1) {image = attackLeft1;}
-                    if(spriteNum == 2) {image = attackLeft2;}
-                    if(spriteNum == 3) {image = attackLeft3;}
-                    if(spriteNum == 4) {image = attackLeft4;}
+                    if(characterChoice == 3){
+//                        //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
+
+                        tempScreenX = screenX ;
+                        if(spriteNum == 1) {image = attackLeft1;}
+                        if(spriteNum == 2) {image = attackLeft2;}
+                        if(spriteNum == 3) {image = attackLeft3;}
+                        if(spriteNum == 4) {image = attackLeft4;}
+                    }
+                    else {
+                        tempScreenX = screenX - gp.tileSize;    //Adjusted the player's position one tile left. Explained why I did it at where I call attacking() in update().
+
+                        tempScreenX = screenX;
+                        if (spriteNum == 1) {
+                            image = attackLeft1;
+                        }
+                        if (spriteNum == 2) {
+                            image = attackLeft2;
+                        }
+                        if (spriteNum == 3) {
+                            image = attackLeft3;
+                        }
+                        if (spriteNum == 4) {
+                            image = attackLeft4;
+                        }
+                    }
                 }
                 if(guarding == true)
                 {
