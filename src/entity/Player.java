@@ -199,22 +199,22 @@ public class Player extends Entity{
                 right4 = setup("/player/boy_right_4",gp.tileSize,gp.tileSize);
                 break;
             case 2:
-                up1 = setup("/player/03",gp.tileSize,gp.tileSize);
-                up2 = setup("/player/03",gp.tileSize,gp.tileSize);
-                up3 = setup("/player/03",gp.tileSize,gp.tileSize);
-                up4 = setup("/player/03",gp.tileSize,gp.tileSize);
-                down1 = setup("/player/03",gp.tileSize,gp.tileSize);
-                down2 = setup("/player/03",gp.tileSize,gp.tileSize);
-                down3 = setup("/player/03",gp.tileSize,gp.tileSize);
-                down4 = setup("/player/03",gp.tileSize,gp.tileSize);
-                left1 = setup("/player/03",gp.tileSize,gp.tileSize);
-                left2 = setup("/player/03",gp.tileSize,gp.tileSize);
-                left3 = setup("/player/03",gp.tileSize,gp.tileSize);
-                left4 = setup("/player/03",gp.tileSize,gp.tileSize);
-                right1 = setup("/player/03",gp.tileSize,gp.tileSize);
-                right2 = setup("/player/03",gp.tileSize,gp.tileSize);
-                right3 = setup("/player/03",gp.tileSize,gp.tileSize);
-                right4 = setup("/player/03",gp.tileSize,gp.tileSize);
+                up1 = setup("/player/ninja_up_1",gp.tileSize,gp.tileSize);
+                up2 = setup("/player/ninja_up_2",gp.tileSize,gp.tileSize);
+                up3 = setup("/player/ninja_up_3",gp.tileSize,gp.tileSize);
+                up4 = setup("/player/ninja_up_4",gp.tileSize,gp.tileSize);
+                down1 = setup("/player/ninja_down_1",gp.tileSize,gp.tileSize);
+                down2 = setup("/player/ninja_down_2",gp.tileSize,gp.tileSize);
+                down3 = setup("/player/ninja_down_3",gp.tileSize,gp.tileSize);
+                down4 = setup("/player/ninja_down_4",gp.tileSize,gp.tileSize);
+                left1 = setup("/player/ninja_left_1",gp.tileSize,gp.tileSize);
+                left2 = setup("/player/ninja_left_2",gp.tileSize,gp.tileSize);
+                left3 = setup("/player/ninja_left_3",gp.tileSize,gp.tileSize);
+                left4 = setup("/player/ninja_left_4",gp.tileSize,gp.tileSize);
+                right1 = setup("/player/ninja_right_1",gp.tileSize,gp.tileSize);
+                right2 = setup("/player/ninja_right_2",gp.tileSize,gp.tileSize);
+                right3 = setup("/player/ninja_right_3",gp.tileSize,gp.tileSize);
+                right4 = setup("/player/ninja_right_4",gp.tileSize,gp.tileSize);
                 break;
             case 3:
                 up1 = setup("/player/walk_08",gp.tileSize,gp.tileSize);
@@ -321,22 +321,22 @@ public class Player extends Entity{
                 }
                 break;
             case 2:
-                attackUp1 = setup("/player/boy_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
-                attackUp2 = setup("/player/boy_attack_up_2", gp.tileSize, gp.tileSize * 2);
-                attackUp3 = setup("/player/boy_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
-                attackUp4 = setup("/player/boy_attack_up_2", gp.tileSize, gp.tileSize * 2);
-                attackDown1 = setup("/player/boy_attack_down_1", gp.tileSize, gp.tileSize * 2);     // 16x32 px
-                attackDown2 = setup("/player/boy_attack_down_2", gp.tileSize, gp.tileSize * 2);
-                attackDown3 = setup("/player/boy_attack_down_1", gp.tileSize, gp.tileSize * 2);     // 16x32 px
-                attackDown4 = setup("/player/boy_attack_down_2", gp.tileSize, gp.tileSize * 2);
-                attackLeft1 = setup("/player/boy_attack_left_1", gp.tileSize * 2, gp.tileSize);      // 32x16 px
-                attackLeft2 = setup("/player/boy_attack_left_2", gp.tileSize * 2, gp.tileSize);
-                attackLeft3 = setup("/player/boy_attack_left_1", gp.tileSize * 2, gp.tileSize);      // 32x16 px
-                attackLeft4 = setup("/player/boy_attack_left_2", gp.tileSize * 2, gp.tileSize);
-                attackRight1 = setup("/player/boy_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
-                attackRight2 = setup("/player/boy_attack_right_2", gp.tileSize * 2, gp.tileSize);
-                attackRight3 = setup("/player/boy_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
-                attackRight4 = setup("/player/boy_attack_right_2", gp.tileSize * 2, gp.tileSize);
+                attackUp1 = setup("/player/ninja_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
+                attackUp2 = setup("/player/ninja_attack_up_2", gp.tileSize, gp.tileSize * 2);
+                attackUp3 = setup("/player/ninja_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
+                attackUp4 = setup("/player/ninja_attack_up_2", gp.tileSize, gp.tileSize * 2);
+                attackDown1 = setup("/player/ninja_attack_down_1", gp.tileSize, gp.tileSize * 2);     // 16x32 px
+                attackDown2 = setup("/player/ninja_attack_down_2", gp.tileSize, gp.tileSize * 2);
+                attackDown3 = setup("/player/ninja_attack_down_1", gp.tileSize, gp.tileSize * 2);     // 16x32 px
+                attackDown4 = setup("/player/ninja_attack_down_2", gp.tileSize, gp.tileSize * 2);
+                attackLeft1 = setup("/player/ninja_attack_left_1", gp.tileSize * 2, gp.tileSize);      // 32x16 px
+                attackLeft2 = setup("/player/ninja_attack_left_2", gp.tileSize * 2, gp.tileSize);
+                attackLeft3 = setup("/player/ninja_attack_left_1", gp.tileSize * 2, gp.tileSize);      // 32x16 px
+                attackLeft4 = setup("/player/ninja_attack_left_2", gp.tileSize * 2, gp.tileSize);
+                attackRight1 = setup("/player/ninja_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
+                attackRight2 = setup("/player/ninja_attack_right_2", gp.tileSize * 2, gp.tileSize);
+                attackRight3 = setup("/player/ninja_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
+                attackRight4 = setup("/player/ninja_attack_right_2", gp.tileSize * 2, gp.tileSize);
                 break;
             case 3:
                 if (currentWeapon.type == type_sword) {
