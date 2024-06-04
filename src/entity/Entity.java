@@ -15,6 +15,8 @@ public class Entity {
     GamePanel gp;
     public BufferedImage up1,up2,up3,up4,down1,down2,down3,down4,left1,left2,left3,left4,right1,right2,right3,right4;
     public BufferedImage attackUp1,attackUp2,attackUp3,attackUp4,attackDown1,attackDown2,attackDown3,attackDown4,attackLeft1,attackLeft2,attackLeft3,attackLeft4,attackRight1,attackRight2,attackRight3,attackRight4,guardUp,guardDown,guardLeft,guardRight;
+    public BufferedImage down11, down12,down13;
+    public BufferedImage mainInterface;
     public BufferedImage image, image2, image3;
     public Rectangle solidArea = new Rectangle(0,0, 48, 48);
     public Rectangle attackArea = new Rectangle(0,0, 0, 0);
@@ -329,6 +331,7 @@ public class Entity {
         {
             damagePlayer(attack);
         }
+
     }
     public void update()
     {
