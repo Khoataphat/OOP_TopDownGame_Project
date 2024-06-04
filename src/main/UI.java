@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import main.GamePanel.*;
 
+
 public class UI {
 
     GamePanel gp;
@@ -848,10 +849,7 @@ public class UI {
             g2.drawString(text, x, y);
 
 
-            //BLUE BOY IMAGE
-            x = gp.screenWidth/2 - (gp.tileSize * 2) / 2;
-            y += gp.tileSize*2;
-            g2.drawImage(gp.player.down1,x,y,gp.tileSize*2,gp.tileSize*2,null);
+
 
 
             //MENU
@@ -894,9 +892,15 @@ public class UI {
 
             String text = "Select your class!";
             int x = getXforCenteredText(text);
-            int y = gp.tileSize * 3;
+            int y = gp.tileSize * 2;
             g2.drawString(text,x,y);
-
+//Khoa
+            //BLUE BOY IMAGE
+            x = gp.screenWidth/2 - (gp.tileSize * 2) / 2;
+            y += gp.tileSize*2;
+            //BufferedImage down1 = setup("/player/boy_down_1", gp.tileSize, gp.tileSize);
+            g2.drawImage(gp.player.down1,x,y,gp.tileSize*2,gp.tileSize*2,null);
+//Khoa
             text = "Fighter";
             x = getXforCenteredText(text);
             y += gp.tileSize * 3;
@@ -904,7 +908,7 @@ public class UI {
             if(commandNum == 0)
             {
                 g2.drawString(">",x-gp.tileSize,y);
-                //gp.setCharacterChoice(1);
+
             }
 
             text = "Thief";

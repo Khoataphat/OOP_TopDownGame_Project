@@ -284,7 +284,9 @@ public class Player extends Entity{
                     attackRight2 = setup("/player/boy_attack_right_2", gp.tileSize * 2, gp.tileSize);
                     attackRight3 = setup("/player/boy_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
                     attackRight4 = setup("/player/boy_attack_right_2", gp.tileSize * 2, gp.tileSize);    // 32x16 px
-                } else if (currentWeapon.type == type_axe) {
+                }
+                /*
+                else if (currentWeapon.type == type_axe) {
                     attackUp1 = setup("/player/boy_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
                     attackUp2 = setup("/player/boy_attack_up_2", gp.tileSize, gp.tileSize * 2);
                     attackUp3 = setup("/player/boy_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
@@ -319,6 +321,8 @@ public class Player extends Entity{
                     attackRight3 = setup("/player/boy_attack_right_1", gp.tileSize * 2, gp.tileSize);    // 32x16 px
                     attackRight4 = setup("/player/boy_attack_right_2", gp.tileSize * 2, gp.tileSize);    // 32x16 px
                 }
+
+                 */
                 break;
             case 2:
                 attackUp1 = setup("/player/ninja_attack_up_1", gp.tileSize, gp.tileSize * 2);         // 16x32 px
@@ -500,7 +504,7 @@ public class Player extends Entity{
             guardCounter = 0;
 
             spriteCounter++;
-            if (spriteCounter > 24) {
+            if (spriteCounter > 12) {
                 if (spriteNum == 4)                  //spriteNum changes every 12 frames
                 {
                     spriteNum = 3;

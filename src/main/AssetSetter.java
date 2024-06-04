@@ -4,6 +4,7 @@ package main;
 import entity.NPC_Merchant;
 import entity.NPC_OldMan;
 import monster.*;
+import object.OBJ_BlueHeart;
 
 import java.util.Random;
 
@@ -102,13 +103,15 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
         gp.obj[mapNum][i].worldY = gp.tileSize * 15;
         i++;
+*/
 
+        //Khoa
         gp.obj[mapNum][i] = new OBJ_BlueHeart(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 8;
-        i++;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 91;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 9;
+        //i++;
 
- */
+
     }
 
     public void setNPC()
@@ -151,6 +154,7 @@ public class AssetSetter {
     public void setMonster()
     {
         int mapNum = 0;
+        //Banh
         gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*23;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*10;
@@ -200,6 +204,12 @@ public class AssetSetter {
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*24;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*29;
         i_Mon++;
+
+        //Khoa
+
+
+
+
         //mapNum = 2
         //i = 0;
 /*
