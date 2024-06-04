@@ -19,6 +19,7 @@ public class Player extends Entity{
     private boolean levelUp = false;
     private int countTime = 0;
 
+
     public Player(GamePanel gp, KeyHandler keyH, int characterChoice)
     {
         super(gp); // calling constructor of super class(from entity class)
@@ -34,6 +35,10 @@ public class Player extends Entity{
         solidArea.height = 32;
         solidAreaDefaultX = 8;
         solidAreaDefaultY = 16;
+        down11 = setup("/player/boy_down_1",gp.tileSize,gp.tileSize);
+        down12 =  setup("/player/ninja_down_1",gp.tileSize,gp.tileSize);
+        down13 = setup("/player/walk_00",gp.tileSize,gp.tileSize);
+        mainInterface = setup("/iu/interface",gp.screenWidth,gp.screenHeight);
 
         //
 //        System.out.println("Player "+ characterChoice);
