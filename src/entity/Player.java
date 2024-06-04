@@ -1006,6 +1006,7 @@ public class Player extends Entity{
                 }
                 if(attacking == true)  //Attacking sprites
                 {
+
 //                    if(characterChoice ==2){
 //                        tempScreenX = screenX - gp.tileSize;
 //                    }
