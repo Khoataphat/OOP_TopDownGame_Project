@@ -333,7 +333,7 @@ public class AssetSetter {
     }
     public void setSummonCreeps(int worldX, int worldY) {
         if(countTime == 30) {
-            if (i_Mon <= 50) {
+            if (i_Mon <= 10) {
                 int mapNum = 0;
                 int[] location = randomLocation(worldX, worldY);
                 Random random = new Random();
@@ -374,7 +374,6 @@ public class AssetSetter {
         if (countAA < 5) {
             int mapNum = 0;
             int[] location = randomLocation(worldX, worldY);
-
             gp.iTile[mapNum][i_IT] = new IT_AreaAttack(gp, location[0], location[1]);
             gp.iTile[mapNum][i_IT].worldX = gp.tileSize * location[0];
             gp.iTile[mapNum][i_IT].worldY = gp.tileSize * location[1];
