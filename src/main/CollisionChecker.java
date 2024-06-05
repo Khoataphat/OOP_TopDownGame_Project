@@ -21,7 +21,7 @@ public class CollisionChecker {
         int entityTopRow = entityTopWorldY/gp.tileSize;
         int entityBottomRow = entityBottomWorldY/gp.tileSize;
 
-        System.out.println(entity+"   "+ entityLeftWorldX+" "+" "+entity.worldX +" "+entity.solidArea.x+" "+entityLeftCol);
+       // System.out.println(entity+"   "+ entityLeftWorldX+" "+" "+entity.worldX +" "+entity.solidArea.x+" "+entityLeftCol);
 
         int tileNum1 , tileNum2;
 

@@ -3,9 +3,11 @@ package entity;
 import main.GamePanel;
 import main.KeyHandler;
 import object.*;
+import tile_interactive.IT_AreaAttack;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
-
+import java.util.ArrayList;
 
 public class Player extends Entity{
 
@@ -17,7 +19,7 @@ public class Player extends Entity{
     public boolean attackCanceled = false;
     public boolean lightUpdated = false;
     private boolean levelUp = false;
-    private int countTime = 0;
+    private int countTime, countTime1 = 0;
 
     public Player(GamePanel gp, KeyHandler keyH, int characterChoice)
     {
@@ -62,7 +64,7 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 10;
+        maxLife = 20;
         life = maxLife;
         maxMana = 8;
         mana = maxMana;
@@ -603,6 +605,17 @@ public class Player extends Entity{
             mana ++;
             countTime = 0;
         }
+
+        if (countTime1 <= 60) {
+            countTime1++;
+        } else{
+            detectPlate();
+            System.out.println(detectPlate());
+            if (detectPlate()) {
+                life--;
+            }
+            countTime1 = 0;
+        }
     }
 
 
@@ -715,22 +728,74 @@ public class Player extends Entity{
     }
     public void damageInteractiveTile(int i)
     {
-        if(i != 999 && gp.iTile[gp.currentMap][i].destructible == true && gp.iTile[gp.currentMap][i].isCorrectItem(this) == true && gp.iTile[gp.currentMap][i].invincible == false)
-        {
-            gp.iTile[gp.currentMap][i].playSE();
-            gp.iTile[gp.currentMap][i].life--;
-            gp.iTile[gp.currentMap][i].invincible = true;
-
-            //Generate Particle
-            generateParticle(gp.iTile[gp.currentMap][i], gp.iTile[gp.currentMap][i]);
-
-            if(gp.iTile[gp.currentMap][i].life == 0)
+        if(i != 999 && gp.iTile[gp.currentMap][i].destructible == true && gp.iTile[gp.currentMap][i].isCorrectItem(this) == true && gp.iTile[gp.currentMap][i].invincible == false && !gp.iTile[gp.currentMap][i].name.equals(IT_AreaAttack.itName))
             {
-                //gp.iTile[gp.currentMap][i].checkDrop();
-                gp.iTile[gp.currentMap][i] = gp.iTile[gp.currentMap][i].getDestroyedForm();
+                gp.iTile[gp.currentMap][i].playSE();
+                gp.iTile[gp.currentMap][i].life--;
+                gp.iTile[gp.currentMap][i].invincible = true;
+
+                //Generate Particle
+                generateParticle(gp.iTile[gp.currentMap][i], gp.iTile[gp.currentMap][i]);
+
+                if(gp.iTile[gp.currentMap][i].life == 0)
+                {
+                    //gp.iTile[gp.currentMap][i].checkDrop();
+                    gp.iTile[gp.currentMap][i] = gp.iTile[gp.currentMap][i].getDestroyedForm();
+                }
+            }
+    }
+
+    public boolean detectPlate() {
+        ArrayList<Entity> playerList = new ArrayList<>();
+        ArrayList<Entity> areaAttackList = new ArrayList<>();
+        boolean check = false;
+        linkedEntity = null;
+        //Create a player list
+
+        if (gp.player != null) {
+            playerList.add(gp.player);
+        }
+
+        //Create a area attack list
+        for (int i = 0; i < gp.iTile[1].length; i++) {
+            if (gp.iTile[gp.currentMap][i] != null && gp.iTile[gp.currentMap][i].name != null && gp.iTile[gp.currentMap][i].name.equals(IT_AreaAttack.itName)) {
+                areaAttackList.add(gp.iTile[gp.currentMap][i]);
             }
         }
+
+        //Scan the player list
+        for (int i = 0; i < areaAttackList.size(); i++) {
+            int xDistance = Math.abs(worldX - areaAttackList.get(i).worldX);
+            int yDistance = Math.abs(worldY - areaAttackList.get(i).worldY);
+            int distance = Math.max(xDistance, yDistance);
+
+            if (distance < 15) {
+                if (linkedEntity == null) {
+                    linkedEntity = areaAttackList.get(i);
+                    gp.playSE(3);
+                }
+            } else {
+                if (linkedEntity == areaAttackList.get(i)) //checking if linked before then u move rock again somewhere else
+                {
+                    linkedEntity = null;
+                }
+            }
+        }
+
+        //Scan the rock list
+        for (int i = 0; i < playerList.size(); i++) {
+            //Count the rock on the plate
+            if (playerList.get(i).linkedEntity != null) {
+                check = true;
+            } else {
+                check = false;
+            }
+        }
+        return check;
     }
+
+
+
     public void damageProjectile(int i)
     {
         if(i != 999)
@@ -765,6 +830,7 @@ public class Player extends Entity{
             System.out.println("Leveluptrue");
         }
     }
+
     public void selectItem()
     {
         int itemIndex = gp.ui.getItemIndexOnSlot(gp.ui.playerSlotCol, gp.ui.playerSlotRow);

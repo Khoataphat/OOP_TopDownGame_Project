@@ -1,9 +1,9 @@
 package main;
 
-
 import entity.NPC_Merchant;
 import entity.NPC_OldMan;
 import monster.*;
+import tile_interactive.IT_AreaAttack;
 
 import java.util.Random;
 
@@ -12,14 +12,15 @@ public class AssetSetter {
     private static AssetSetter instance;
 
     GamePanel gp;
-    MON_SkeletonLord boss;
 
     private AssetSetter(GamePanel gp)
     {
         this.gp = gp;
     }
 
-    private int i_Mon = 1;
+    private int i_Mon = 0;
+    private int i_NPC = 0;
+    private int i_IT = 0;
     private int countTime = 0;
 
     public static AssetSetter getInstance(GamePanel gp) {
@@ -114,22 +115,21 @@ public class AssetSetter {
     public void setNPC()
     {
         int mapNum = 0;
-        int i = 0;
 
         //MAP = 0
-        gp.npc[mapNum][i] = new NPC_OldMan(gp);
-        gp.npc[mapNum][i].worldX = gp.tileSize*9;
-        gp.npc[mapNum][i].worldY = gp.tileSize*7;
-        i++;
+        gp.npc[mapNum][i_NPC] = new NPC_OldMan(gp);
+        gp.npc[mapNum][i_NPC].worldX = gp.tileSize*9;
+        gp.npc[mapNum][i_NPC].worldY = gp.tileSize*7;
+        i_NPC++;
 
         //MAP = 1
         //mapNum = 1;
         //i = 0;
 
-        gp.npc[mapNum][i] = new NPC_Merchant(gp);
-        gp.npc[mapNum][i].worldX = gp.tileSize*42;
-        gp.npc[mapNum][i].worldY = gp.tileSize*44;
-        i++;
+        gp.npc[mapNum][i_NPC] = new NPC_Merchant(gp);
+        gp.npc[mapNum][i_NPC].worldX = gp.tileSize*42;
+        gp.npc[mapNum][i_NPC].worldY = gp.tileSize*44;
+        i_NPC++;
 /*
         mapNum = 2;
         i = 0;
@@ -279,10 +279,31 @@ public class AssetSetter {
             countTime++;
         }
     }
+
+    public void setAreaAttack(int worldX, int worldY)
+    {
+        int countAA = 0;
+        for (int i = 0; i < gp.iTile[1].length; i++) {
+            if (gp.iTile[gp.currentMap][i] != null && gp.iTile[gp.currentMap][i].name != null && gp.iTile[gp.currentMap][i].name.equals(IT_AreaAttack.itName)) {
+                countAA++;
+            }
+        }
+        if (countAA < 5) {
+            int mapNum = 0;
+            int[] location = randomLocation(worldX, worldY);
+
+            gp.iTile[mapNum][i_IT] = new IT_AreaAttack(gp, location[0], location[1]);
+            gp.iTile[mapNum][i_IT].worldX = gp.tileSize * location[0];
+            gp.iTile[mapNum][i_IT].worldY = gp.tileSize * location[1];
+            i_IT++;
+        } else{
+        }
+    }
+
     public void setInteractiveTile()
     {
 /*        int mapNum = 0;
-        int i = 0;
+        int i_IT = 0;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,27,12);i++;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,28,12);i++;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,29,12);i++;

@@ -415,6 +415,7 @@ public class KeyHandler implements KeyListener {
             if(gp.ui.commandNum == 0) //RETRY, reset position, life, mana, monsters, npcs...
             {
                 gp.player.maxLife += 2;
+                gp.player.life += 2;
                 gp.gameState = gp.playState;
                 gp.playMusic(0);
             }
