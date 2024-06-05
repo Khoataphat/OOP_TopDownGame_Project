@@ -36,11 +36,11 @@ public class AssetSetter {
     {
         int mapNum = 0;
         int i = 0;
-/*
-        gp.obj[mapNum][i] = new OBJ_Axe(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 33;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 7;
-        i++;
+
+        gp.obj[mapNum][i] = new OBJ_Torch(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 6;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 12;
+       /* i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 31;
         gp.obj[mapNum][i].worldY = gp.tileSize * 12;
@@ -218,6 +218,7 @@ public class AssetSetter {
     public void setMonster()
     {
         int mapNum = 0;
+        //Banh
         gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*23;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*10;
@@ -333,7 +334,7 @@ public class AssetSetter {
     }
     public void setSummonCreeps(int worldX, int worldY) {
         if(countTime == 30) {
-            if (i_Mon <= 10) {
+            if (i_Mon <= 50) {
                 int mapNum = 0;
                 int[] location = randomLocation(worldX, worldY);
                 Random random = new Random();

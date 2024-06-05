@@ -3,6 +3,7 @@ import ai.PathFinder;
 import entity.Entity;
 import entity.Player;
 import environment.EnvironmentManager;
+import object.OBJ_Torch;
 import tile.Map;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
@@ -55,6 +56,7 @@ public class GamePanel extends JPanel implements Runnable{
     Config config = new Config(this);
     public PathFinder pFinder = new PathFinder(this);
     EnvironmentManager eManager = new EnvironmentManager(this);
+    OBJ_Torch torch = new OBJ_Torch(this);
     Map map = new Map(this);
     SaveLoad saveLoad = new SaveLoad(this);
     public EntityGenerator eGenerator = new EntityGenerator(this);
@@ -386,6 +388,7 @@ public class GamePanel extends JPanel implements Runnable{
                 }
             });
 
+
             //DRAW ENTITIES
             for(int i = 0; i < entityList.size(); i++)
             {
@@ -397,6 +400,7 @@ public class GamePanel extends JPanel implements Runnable{
 
             //ENVIRONMENT
             eManager.draw(g2);
+
 
             //MINI MAP
             map.drawMiniMap(g2);

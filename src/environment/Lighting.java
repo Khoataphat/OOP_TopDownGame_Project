@@ -2,18 +2,23 @@ package environment;
 
 import main.GamePanel;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
 import java.awt.RadialGradientPaint;
+import java.io.File;
 
 
 public class Lighting {
 
     GamePanel gp;
     BufferedImage darknessFilter;
+    private BufferedImage worldImage;
+    private BufferedImage darkenedImage;
+
     public int dayCounter;
     public float filterAlpha = 0f;
 
@@ -27,7 +32,9 @@ public class Lighting {
         darknessFilter = new BufferedImage(gp.screenWidth, gp.screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = (Graphics2D)darknessFilter.getGraphics();
 
+//        Area screenArea = new Area( new Rectangle2D.Double(gp.player.worldX - gp.tileSize*10,gp.player.worldY - gp.tileSize*5,gp.screenWidth/2,gp.screenHeight/2));
         Area screenArea = new Area( new Rectangle2D.Double(0,0,gp.screenWidth,gp.screenHeight));
+
 
         int centerX = gp.player.screenX +(gp.tileSize)/2;
         int centerY = gp.player.screenY +(gp.tileSize)/2;
@@ -37,9 +44,15 @@ public class Lighting {
         double y = centerY - (circleSize/2);
         Shape  circleShape = new Ellipse2D.Double(x,y,circleSize,circleSize);
 
+        Shape lightCircle =  new Ellipse2D.Double(gp.tileSize*6,gp.tileSize*12,circleSize,circleSize);
+
         Area lightingArea = new Area(circleShape);
+        Area lightingArea2 = new Area(lightCircle);
+
 
         screenArea.subtract(lightingArea);
+        screenArea.subtract(lightingArea2);
+
 
         Color color[] = new Color[12];
         float fraction[] = new float[12];
@@ -74,7 +87,13 @@ public class Lighting {
 
                 g2.setPaint(gPaint);
                 g2.fill(lightingArea);
-        g2.setColor(new Color(0,0,0,0.85f));
+//        g2.setColor(new Color(0,0,0,0.85f));
+        RadialGradientPaint gPaint1 = new RadialGradientPaint(gp.tileSize*3,gp.tileSize*10,(circleSize/4),fraction,color);
+
+        g2.setPaint(gPaint1);
+        g2.fill(lightingArea2);
+//        g2.setColor(new Color(0,0,0,0.85f));
+
 
         g2.fill(screenArea);
 
@@ -83,4 +102,10 @@ public class Lighting {
     public  void draw(Graphics2D g2){
         g2.drawImage(darknessFilter,0,0,null);
     }
+//    public void removeLight(int currentMap,){
+//
+//    }
+
+
+
 }
