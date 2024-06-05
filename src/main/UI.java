@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import main.GamePanel.*;
 
+
 public class UI {
 
     GamePanel gp;
@@ -37,6 +38,7 @@ public class UI {
     public Entity npc;
     int charIndex = 0;
     String combinedText = "";
+
 
     public UI(GamePanel gp)
     {
@@ -837,6 +839,7 @@ public class UI {
 
             //TITLE NAME
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 96F));
+            g2.drawImage(gp.player.mainInterface,0,0,gp.screenWidth,gp.screenHeight,null);
             String text = "Blue Boy Adventure\n";
             int x = getXforCenteredText(text);
             int y = gp.tileSize * 3;
@@ -848,32 +851,31 @@ public class UI {
             g2.drawString(text, x, y);
 
 
-            //BLUE BOY IMAGE
-            x = gp.screenWidth/2 - (gp.tileSize * 2) / 2;
-            y += gp.tileSize*2;
-            g2.drawImage(gp.player.down1,x,y,gp.tileSize*2,gp.tileSize*2,null);
+
 
 
             //MENU
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 48F));
 
-            text = "NEW GAME";
+            text = "PLAY GAME";
             x = getXforCenteredText(text);
             y += gp.tileSize * 3.5;
             g2.drawString(text,x,y);
             if(commandNum == 0)
             {
                 g2.drawString(">",x - gp.tileSize, y);
+
             }
 
-            text = "LOAD GAME";
-            x = getXforCenteredText(text);
-            y += gp.tileSize;
-            g2.drawString(text,x,y);
-            if(commandNum == 1)
-            {
-                g2.drawString(">",x - gp.tileSize, y);
-            }
+
+//            text = "LOAD GAME";
+//            x = getXforCenteredText(text);
+//            y += gp.tileSize;
+//            g2.drawString(text,x,y);
+//            if(commandNum == 1)
+//            {
+//                g2.drawString(">",x - gp.tileSize, y);
+//            }
 
             text = "QUIT";
             x = getXforCenteredText(text);
@@ -892,10 +894,21 @@ public class UI {
             g2.setColor(Color.white);
             g2.setFont(g2.getFont().deriveFont(42F));
 
+            g2.drawImage(gp.player.mainInterface,0,0,gp.screenWidth,gp.screenHeight,null);
             String text = "Select your class!";
             int x = getXforCenteredText(text);
-            int y = gp.tileSize * 3;
+            int y = gp.tileSize * 2;
             g2.drawString(text,x,y);
+
+//Khoa
+            //BLUE BOY IMAGE
+            x = gp.screenWidth/2 - (gp.tileSize * 2) / 2;
+            y += gp.tileSize*2;
+//            BufferedImage down1 = setup("/player/boy_down_1", gp.tileSize, gp.tileSize);
+//            g2.drawImage(gp.player.down1,x,y,gp.tileSize*2,gp.tileSize*2,null);
+
+
+//Phu
 
             text = "Fighter";
             x = getXforCenteredText(text);
@@ -904,9 +917,11 @@ public class UI {
             if(commandNum == 0)
             {
                 g2.drawString(">",x-gp.tileSize,y);
-                //gp.setCharacterChoice(1);
+                g2.drawImage(gp.player.down11,gp.player.screenX -gp.tileSize/2,gp.player.screenY-gp.tileSize*2,gp.tileSize*2,gp.tileSize*2,null);
+                g2.drawString("I'm turtle ninja!",gp.player.screenX+gp.tileSize*2,gp.player.screenY-gp.tileSize*2);
             }
 
+           ;
             text = "Thief";
             x = getXforCenteredText(text);
             y += gp.tileSize;
@@ -914,18 +929,24 @@ public class UI {
             if(commandNum == 1)
             {
                 g2.drawString(">",x-gp.tileSize,y);
+                g2.drawImage(gp.player.down12,gp.player.screenX-gp.tileSize/2,gp.player.screenY-gp.tileSize*2,gp.tileSize*2,gp.tileSize*2,null);
+                g2.drawString("I'm handsome thief!",gp.player.screenX+gp.tileSize*2,gp.player.screenY-gp.tileSize*2);
                 //gp.setCharacterChoice(2);
             }
 
-            text = "Sorcerer";
+
+            text = "Grandma's Anger";
             x = getXforCenteredText(text);
             y += gp.tileSize;
             g2.drawString(text,x,y);
             if(commandNum == 2)
             {
                 g2.drawString(">",x-gp.tileSize,y);
+                g2.drawImage(gp.player.down13,gp.player.screenX-gp.tileSize/2,gp.player.screenY-gp.tileSize*2,gp.tileSize*2,gp.tileSize*2,null);
+                g2.drawString("I'm your grandma!",gp.player.screenX+gp.tileSize*2,gp.player.screenY-gp.tileSize*2);
                 //gp.setCharacterChoice(3);
             }
+
 
             text = "Back";
             x = getXforCenteredText(text);

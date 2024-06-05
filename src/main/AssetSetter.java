@@ -1,9 +1,11 @@
 package main;
 
+
 import entity.NPC_Merchant;
 import entity.NPC_OldMan;
 import monster.*;
 import tile_interactive.IT_AreaAttack;
+import object.*;
 
 import java.util.Random;
 
@@ -12,6 +14,7 @@ public class AssetSetter {
     private static AssetSetter instance;
 
     GamePanel gp;
+    MON_SkeletonLord boss;
 
     private AssetSetter(GamePanel gp)
     {
@@ -103,13 +106,77 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
         gp.obj[mapNum][i].worldY = gp.tileSize * 15;
         i++;
+*/
 
-        gp.obj[mapNum][i] = new OBJ_BlueHeart(gp);
+        //Khoa
+        //door
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 20.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 91;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 22.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 91;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 48.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 64.5);
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 8;
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 83.5);
         i++;
 
- */
+        //key
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 46;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 6;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 10;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 31;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 76;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 9;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 42;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Key(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 55;
+        i++;
+        //chest
+        gp.obj[mapNum][i] = new OBJ_Chest(gp);
+        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp)); //mở rương sẽ đc cái này
+        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 43;
+
+        gp.obj[mapNum][i] = new OBJ_Chest(gp);
+        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
+        gp.obj[mapNum][i].worldX = gp.tileSize * 91;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 9;
+
+        gp.obj[mapNum][i] = new OBJ_Chest(gp);
+        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
+        gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 49;
+
+        //blueheart
+        gp.obj[mapNum][i] = new OBJ_BlueHeart(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 92;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 84;
+        i++;
+
+
+
+
     }
 
     public void setNPC()
@@ -200,6 +267,22 @@ public class AssetSetter {
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*24;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*29;
         i_Mon++;
+
+        //Khoa
+        int i = 0;
+
+
+        //boss
+        gp.monster[mapNum][i] = MON_SkeletonLord.getInstance(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*58;
+        gp.monster[mapNum][i].worldY = gp.tileSize*86;
+        i++;
+        gp.monster[mapNum][i] = MON_SkeletonLord.getInstance(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*58;
+        gp.monster[mapNum][i].worldY = gp.tileSize*92;
+
+
+
         //mapNum = 2
         //i = 0;
 /*
@@ -303,7 +386,7 @@ public class AssetSetter {
     public void setInteractiveTile()
     {
 /*        int mapNum = 0;
-        int i_IT = 0;
+        int i = 0;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,27,12);i++;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,28,12);i++;
         gp.iTile[mapNum][i] = new IT_DryTree(gp,29,12);i++;
