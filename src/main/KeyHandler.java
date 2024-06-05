@@ -80,7 +80,7 @@ public class KeyHandler implements KeyListener {
     {
         //MAIN MENU
         if (gp.ui.titleScreenState == 0) {
-            if (code == KeyEvent.VK_W) {
+            if (code == KeyEvent.VK_W ) {
                 gp.ui.commandNum--;
                 if (gp.ui.commandNum < 0) {
                     gp.ui.commandNum = 2;

@@ -601,6 +601,7 @@ public class Player extends Entity{
             else if (levelUp == true){
                 gp.gameState = gp.levelupState;
                 gp.playSE(8); //levelup.wav
+                gp.player.getRecovery();
             }
             levelUp = false;
         }
@@ -621,8 +622,15 @@ public class Player extends Entity{
             }
             countTime1 = 0;
         }
+
     }
 
+    public  void getRecovery(){
+//        if(recoveryCounter >= 120){
+            mana +=2;
+            life +=2;
+//        }
+    }
 
     public void pickUpObject(int i)
     {
