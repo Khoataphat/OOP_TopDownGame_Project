@@ -201,9 +201,10 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldY = gp.tileSize * 87;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 53;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 93;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 56;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 87;
         i++;
+        /*
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 53;
         gp.obj[mapNum][i].worldY = gp.tileSize * 89;
@@ -248,6 +249,8 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 91;
         gp.obj[mapNum][i].worldY = gp.tileSize * 87;
         i++;
+
+         */
 /*
         gp.obj[mapNum][i] = new OBJ_Axe(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 33;
