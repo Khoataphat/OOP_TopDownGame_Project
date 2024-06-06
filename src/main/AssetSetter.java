@@ -116,7 +116,7 @@ public class AssetSetter {
         i++;
         gp.obj[mapNum][i] = new OBJ_Door(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 91;
-        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 22.5);
+        gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 23);
         i++;
         gp.obj[mapNum][i] = new OBJ_Door(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 91;
@@ -130,6 +130,10 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
         gp.obj[mapNum][i].worldY = (int) (gp.tileSize * 83.5);
         i++;
+        //gp.obj[mapNum][i] = new OBJ_Door_Iron(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 42;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 88;
+        //i++;
 
         //key
         gp.obj[mapNum][i] = new OBJ_Key(gp);
@@ -157,19 +161,19 @@ public class AssetSetter {
         gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp)); //mở rương sẽ đc cái này
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
         gp.obj[mapNum][i].worldY = gp.tileSize * 43;
-
+        i++;
         gp.obj[mapNum][i] = new OBJ_Chest(gp);
         gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
         gp.obj[mapNum][i].worldX = gp.tileSize * 91;
         gp.obj[mapNum][i].worldY = gp.tileSize * 9;
-
+        i++;
         gp.obj[mapNum][i] = new OBJ_Chest(gp);
         gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
         gp.obj[mapNum][i].worldX = gp.tileSize * 42;
         gp.obj[mapNum][i].worldY = gp.tileSize * 49;
-
+        i++;
         //blueheart
-        gp.obj[mapNum][i] = new OBJ_BlueHeart(gp);
+        gp.obj[mapNum][i] = new OBJ_thay_nghia(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 92;
         gp.obj[mapNum][i].worldY = gp.tileSize * 84;
         i++;
@@ -197,6 +201,7 @@ public class AssetSetter {
         gp.npc[mapNum][i_NPC].worldX = gp.tileSize*42;
         gp.npc[mapNum][i_NPC].worldY = gp.tileSize*44;
         i_NPC++;
+
 /*
         mapNum = 2;
         i = 0;
@@ -218,24 +223,36 @@ public class AssetSetter {
     public void setMonster()
     {
         int mapNum = 0;
-        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*23;
+
+        gp.monster[mapNum][i_Mon] = new MON_Bat(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*25;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*6;
+        i_Mon++;
+        gp.monster[mapNum][i_Mon] = new MON_Bat(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*30;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*10;
+        i_Mon++;
+
+
+
+        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*24;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*30;
         i_Mon++;
 
         gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*31;
-        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*10;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*25;
         i_Mon++;
 
         gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*27;
-        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*6;
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*25;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*40;
         i_Mon++;
 
         gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
-        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*21;
-        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*6;
+        gp.monster[mapNum][i_Mon].worldX = gp.tileSize*14;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*31;
         i_Mon++;
 
         gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
@@ -263,10 +280,13 @@ public class AssetSetter {
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*27;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*26;
         i_Mon++;
+        /*
         gp.monster[mapNum][i_Mon] = MON_SkeletonLord.getInstance(gp);
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*24;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*29;
         i_Mon++;
+
+         */
 
         //Khoa
         int i = 0;
@@ -277,9 +297,6 @@ public class AssetSetter {
         gp.monster[mapNum][i].worldX = gp.tileSize*58;
         gp.monster[mapNum][i].worldY = gp.tileSize*86;
         i++;
-        gp.monster[mapNum][i] = MON_SkeletonLord.getInstance(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize*58;
-        gp.monster[mapNum][i].worldY = gp.tileSize*92;
 
 
 
