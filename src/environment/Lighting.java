@@ -10,7 +10,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.RadialGradientPaint;
 
 
-public class Lighting {
+public class Lighting implements EnvironmentManager  {
 
     GamePanel gp;
     BufferedImage darknessFilter;
@@ -23,15 +23,21 @@ public class Lighting {
     public final int dawn = 3;
     public int dayState = day;
 
-    public Lighting (GamePanel gp, int circleSize){
+
+//    public Lighting (GamePanel gp, int circleSize){
+public Lighting (GamePanel gp ){
+
+        this.gp = gp;
+        int circleSize = 350;
         darknessFilter = new BufferedImage(gp.screenWidth, gp.screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = (Graphics2D)darknessFilter.getGraphics();
 
         Area screenArea = new Area( new Rectangle2D.Double(0,0,gp.screenWidth,gp.screenHeight));
-
-        int centerX = gp.player.screenX +(gp.tileSize)/2;
-        int centerY = gp.player.screenY +(gp.tileSize)/2;
-
+//
+//        int centerX = gp.player.screenX +(gp.tileSize)/2;
+//        int centerY = gp.player.screenY +(gp.tileSize)/2;
+        int centerX = gp.screenWidth / 2;
+        int centerY = gp.screenHeight / 2;
 
         double x = centerX - (circleSize/2);
         double y = centerY - (circleSize/2);
@@ -82,5 +88,8 @@ public class Lighting {
     }
     public  void draw(Graphics2D g2){
         g2.drawImage(darknessFilter,0,0,null);
+    }
+    public  void setup(){
+//        lighting = new Lighting(gp,350);
     }
 }

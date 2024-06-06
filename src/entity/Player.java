@@ -53,8 +53,8 @@ public class Player extends Entity{
     public void setDefaultValues()
     {
         //Default Starting Positions
-        worldX = gp.tileSize * 6;
-        worldY = gp.tileSize * 10;
+        worldX = gp.tileSize * 6;//36;
+        worldY = gp.tileSize * 10;//89;
         gp.currentMap = 0;
         gp.currentArea = gp.outside;
 
@@ -833,6 +833,10 @@ public class Player extends Entity{
             startDialogue(this,0);
             levelUp = true;
             System.out.println("Leveluptrue");
+            life+=2;
+            life+=2;
+            gp.ui.addMessage("You got recovery due to level up!");
+
         }
     }
 

@@ -4,25 +4,25 @@ import main.GamePanel;
 
 import java.awt.*;
 
-public class EnvironmentManager {
+public interface EnvironmentManager {
 
-    GamePanel gp;
-    public Lighting lighting;
+//    GamePanel gp;
+//    public Lighting lighting;
 
-    public EnvironmentManager(GamePanel gp)
+//    public EnvironmentManager(GamePanel gp)
+//    {
+////        this.gp = gp;
+//    }
+    public default void setup()
     {
-        this.gp = gp;
-    }
-    public void setup()
-    {
-        lighting = new Lighting(gp,350);
+//        lighting = new Lighting(gp,350);
     }
 //    public void update()
 //    {
 //        lighting.update();
 //    }
-    public void draw(Graphics2D g2)
+    public default void draw(Graphics2D g2)
     {
-        lighting.draw(g2);
+//        lighting.draw(g2);
     }
 }
