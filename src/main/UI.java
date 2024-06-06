@@ -367,6 +367,7 @@ public class UI {
             }
         }
     }
+    /*
     public void drawTransition()
     {
         counter++;
@@ -385,6 +386,8 @@ public class UI {
             gp.changeArea();
         }
     }
+
+     */
     //BaoAnh
     public void drawLevelUpScreen() {
         g2.setColor(new Color(0, 0, 0, 150)); // Half-black
@@ -1352,11 +1355,14 @@ public class UI {
             {
                 drawGameOverScreen();
             }
+            /*
             //TRANSITION STATE
             if(gp.gameState == gp.transitionState)
             {
                 drawTransition();
             }
+
+             */
             //TRADE STATE
             if(gp.gameState == gp.tradeState)
             {

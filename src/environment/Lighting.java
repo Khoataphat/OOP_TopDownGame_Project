@@ -172,7 +172,7 @@ public class Lighting {
         // Ensure entire screen is initially dark
         Area screenArea = new Area(new Rectangle2D.Double(0, 0, gp.screenWidth, gp.screenHeight));
 
-        int circleSize = 150;
+        int circleSize = 300;
 
         for (Entity lightSource : lightSource) {
             int centerX = lightSource.getScreenX() + (gp.tileSize)/2;

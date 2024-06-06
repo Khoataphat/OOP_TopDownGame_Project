@@ -205,6 +205,7 @@ public class CutsceneManager {
             //Change the music
             gp.stopMusic();
             gp.playMusic(22);
+
         }
     }
     public void scene_ending()
