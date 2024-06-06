@@ -36,15 +36,16 @@ public class AssetSetter {
     {
         int mapNum = 0;
         int i = 0;
+        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 6;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 12;
+        i++;
 /*
         gp.obj[mapNum][i] = new OBJ_Axe(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 33;
         gp.obj[mapNum][i].worldY = gp.tileSize * 7;
         i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 31;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 12;
-        i++;
+
         gp.obj[mapNum][i] = new OBJ_Tent(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 26;
         gp.obj[mapNum][i].worldY = gp.tileSize * 16;

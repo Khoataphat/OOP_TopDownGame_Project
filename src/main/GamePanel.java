@@ -291,6 +291,7 @@ public class GamePanel extends JPanel implements Runnable{
                 }
             }
 
+            lighting.setLightSource();
 //            eManager.update();
         }
 
