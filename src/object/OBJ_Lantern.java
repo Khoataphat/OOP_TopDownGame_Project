@@ -13,12 +13,13 @@ public class OBJ_Lantern extends Entity {
     {
         super(gp);
 
-        type = type_light;
+        type = type_obstacle;
         name = objName;
         down1 = setup("/objects/lantern",gp.tileSize,gp.tileSize);
         description = "[Lantern]\nIlluminates your \nsurroundings.";
         price = 200;
         lightRadius = 350;
+
     }
 
     public void renderLight(Graphics2D g2) {

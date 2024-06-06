@@ -117,6 +117,7 @@ public class EventHandler{
         }
         return hit;
     }
+    /*
     public void teleport(int map, int col, int row, int area)
     {
         gp.gameState = gp.transitionState;
@@ -128,6 +129,9 @@ public class EventHandler{
         canTouchEvent = false;
         gp.playSE(13);
     }
+
+     */
+    /*
     public void damagePit(int gameState)
     {
         gp.gameState = gameState;
@@ -136,7 +140,8 @@ public class EventHandler{
         gp.player.life -= 2;
         canTouchEvent = false;
         //eventRect[col][row].eventDone = true;
-    }
+    }*/
+    /*
     public void healingPool(int gameState)
     {
         if(gp.keyH.enterPressed == true)
@@ -151,7 +156,8 @@ public class EventHandler{
             gp.aSetter.setMonster();
             gp.saveLoad.save();
         }
-    }
+    }*/
+
     public void speak(Entity entity)
     {
         if(gp.keyH.enterPressed == true)

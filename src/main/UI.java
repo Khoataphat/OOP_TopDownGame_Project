@@ -3,6 +3,7 @@ package main;
 import entity.Entity;
 import object.OBJ_Coin_Bronze;
 import object.OBJ_Heart;
+import object.OBJ_Lantern;
 import object.OBJ_ManaCrystal;
 import entity.Player;
 import java.awt.*;
@@ -366,6 +367,7 @@ public class UI {
             }
         }
     }
+    /*
     public void drawTransition()
     {
         counter++;
@@ -384,6 +386,8 @@ public class UI {
             gp.changeArea();
         }
     }
+
+     */
     //BaoAnh
     public void drawLevelUpScreen() {
         g2.setColor(new Color(0, 0, 0, 150)); // Half-black
@@ -1249,6 +1253,27 @@ public class UI {
             }
         }
     }
+    public void drawLightLantern()
+    {
+        for (int i = 0; i < gp.obj[1].length; i++)
+        {
+            if (gp.obj[gp.currentMap][i] != null && gp.obj[gp.currentMap][i].name != null && gp.obj[gp.currentMap][i].name.equals(OBJ_Lantern.objName)) {
+                if (gp.obj[gp.currentMap][i].inCamera()){
+                    if (gp.lighting.getLightSource().contains(gp.obj[gp.currentMap][i])) {
+                    } else {
+                        gp.lighting.lightSource.add(gp.obj[gp.currentMap][i]);
+                        System.out.println("Add light");
+                    }
+                } else {
+                    if (gp.lighting.getLightSource().contains(gp.obj[gp.currentMap][i])) {
+                        gp.lighting.lightSource.remove(gp.obj[gp.currentMap][i]);
+                        System.out.println("Delete light");
+                    } else {
+                    }
+                }
+            }
+        }
+    }
     public void drawSubWindow(int x, int y, int width, int height)
     {
         Color c = new Color(0,0,0,210);  // R,G,B, alfa(opacity)
@@ -1301,6 +1326,7 @@ public class UI {
                 drawPlayerLife();
                 drawMonsterLife();
                 drawMessage();
+                drawLightLantern();
             }
             //PAUSE STATE
             if(gp.gameState == gp.pauseState)
@@ -1329,11 +1355,14 @@ public class UI {
             {
                 drawGameOverScreen();
             }
+            /*
             //TRANSITION STATE
             if(gp.gameState == gp.transitionState)
             {
                 drawTransition();
             }
+
+             */
             //TRADE STATE
             if(gp.gameState == gp.tradeState)
             {
