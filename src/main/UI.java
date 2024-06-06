@@ -91,6 +91,7 @@ public class UI {
         x += gp.tileSize;
         y += gp.tileSize;
 
+        //khoa
         if(npc.dialogues[npc.dialogueSet][npc.dialogueIndex] != null)
         {
             //currentDialogue = npc.dialogues[npc.dialogueSet][npc.dialogueIndex];//For display text once, enable this and disable letter by letter.(Letter by letter: The if statement below there)
@@ -647,8 +648,9 @@ public class UI {
             {
                 gp.eManager.lighting.filterAlpha = 0f;
                 counter = 0;
-                gp.eManager.lighting.dayState = gp.eManager.lighting.day;
-                gp.eManager.lighting.dayCounter = 0;
+                //gp.eManager.lighting.dayState = gp.eManager.lighting.day;
+                //
+                // gp.eManager.lighting.dayCounter = 0;
                 gp.gameState = gp.playState;
                 //Khoa
                 //gp.player.getImage();

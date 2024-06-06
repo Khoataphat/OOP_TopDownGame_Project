@@ -606,6 +606,8 @@ public class Entity {
         {
             spriteNum = 2;
 
+        //K
+
             //Save the current worldX, worldY, solidArea
             int currentWorldX = worldX;
             int currentWorldY = worldY;

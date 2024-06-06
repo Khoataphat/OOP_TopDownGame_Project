@@ -14,14 +14,14 @@ public class Lighting {
 
     GamePanel gp;
     BufferedImage darknessFilter;
-    public int dayCounter;
+    //public int dayCounter;
     public float filterAlpha = 0f;
 
-    public final int day = 0;
-    public final int dusk = 1;
-    public final int night = 2;
-    public final int dawn = 3;
-    public int dayState = day;
+    //public final int day = 0;
+    //public final int dusk = 1;
+    //public final int night = 2;
+    //public final int dawn = 3;
+    //public int dayState = day;
 
     public Lighting (GamePanel gp, int circleSize){
         darknessFilter = new BufferedImage(gp.screenWidth, gp.screenHeight, BufferedImage.TYPE_INT_ARGB);
@@ -72,8 +72,8 @@ public class Lighting {
 
         RadialGradientPaint gPaint = new RadialGradientPaint(centerX,centerY,(circleSize/2),fraction,color);
 
-                g2.setPaint(gPaint);
-                g2.fill(lightingArea);
+        g2.setPaint(gPaint);
+        g2.fill(lightingArea);
         g2.setColor(new Color(0,0,0,0.85f));
 
         g2.fill(screenArea);

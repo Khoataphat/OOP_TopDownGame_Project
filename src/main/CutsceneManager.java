@@ -2,8 +2,7 @@ package main;
 
 import entity.PlayerDummy;
 import monster.MON_SkeletonLord;
-import object.OBJ_BlueHeart;
-import object.OBJ_Door;
+import object.OBJ_thay_nghia;
 import object.OBJ_Door_Iron;
 
 import java.awt.*;
@@ -30,14 +29,14 @@ public class CutsceneManager {
     {
         this.gp = gp;
         endCredit = "Developed by\n"
-                + "Berkayw"
+                + "Group 1m5 plus"
                 + "\n\n\n\n\n\n\n\n\n\n\n"
-                + "Special Thanks\n\n"
-                + "Alperen Aksu\n"
-                + "Ryi Snow\n\n"
-                + "Check his tutorials from RyiSnow YouTube Channel!\n"
+                + "Bao Anh\n\n"
+                + "Dang Khoa\n\n"
+                + "Minh Kha\n\n"
+                + "Thien Phu\n"
                 + "\n\n\n\n\n\n\n"
-                + "Thank you for playing!";
+                + "Thank you for uatching!";
     }
     public void draw(Graphics2D g2)
     {
@@ -59,16 +58,71 @@ public class CutsceneManager {
             //Shut the iron door to trap player
             for(int i = 0; i < gp.obj[1].length; i++) //Search a vacant slot for the iron door
             {
-                if(gp.obj[gp.currentMap][i] == null)
-                {
+                if(gp.obj[gp.currentMap][i] == null) {
+// Tạo cửa sắt thứ nhất
                     gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
-                    gp.obj[gp.currentMap][i].worldX = gp.tileSize * 25;
-                    gp.obj[gp.currentMap][i].worldY = gp.tileSize * 28;
-                    gp.obj[gp.currentMap][i].temp = true; //only need during the boss fight
-                    gp.playSE(21);
-                    break;
+                    gp.obj[gp.currentMap][i].worldX = gp.tileSize * 42;
+                    gp.obj[gp.currentMap][i].worldY = gp.tileSize * 88;
+
+                    // Tìm vị trí trống tiếp theo
+                    i++; // Tăng i lên 1 để tìm vị trí tiếp theo
+                    if (gp.obj[gp.currentMap][i] == null) {
+                        // Tạo cửa sắt thứ hai
+                        gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
+                        gp.obj[gp.currentMap][i].worldX = gp.tileSize * 42;
+                        gp.obj[gp.currentMap][i].worldY = gp.tileSize * 89;
+
+                        // Tìm vị trí trống tiếp theo
+                        i++; // Tăng i lên 1 để tìm vị trí tiếp theo
+                        if (gp.obj[gp.currentMap][i] == null) {
+                            // Tạo cửa sắt thứ ba
+                            gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
+                            gp.obj[gp.currentMap][i].worldX = gp.tileSize * 42;
+                            gp.obj[gp.currentMap][i].worldY = gp.tileSize * 90;
+                            i++; // Tăng i lên 1 để tìm vị trí tiếp theo
+                            if (gp.obj[gp.currentMap][i] == null) {
+                                // Tạo cửa sắt thứ ba
+                                gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
+                                gp.obj[gp.currentMap][i].worldX = gp.tileSize * 42;
+                                gp.obj[gp.currentMap][i].worldY = gp.tileSize * 87;
+                                i++; // Tăng i lên 1 để tìm vị trí tiếp theo
+                                if (gp.obj[gp.currentMap][i] == null) {
+                                    // Tạo cửa sắt thứ ba
+                                    gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
+                                    gp.obj[gp.currentMap][i].worldX = gp.tileSize * 86;
+                                    gp.obj[gp.currentMap][i].worldY = gp.tileSize * 91;
+                                    i++; // Tăng i lên 1 để tìm vị trí tiếp theo
+                                    if (gp.obj[gp.currentMap][i] == null) {
+                                        // Tạo cửa sắt thứ ba
+                                        gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
+                                        gp.obj[gp.currentMap][i].worldX = gp.tileSize * 86;
+                                        gp.obj[gp.currentMap][i].worldY = gp.tileSize * 88;
+                                        i++; // Tăng i lên 1 để tìm vị trí tiếp theo
+                                        if (gp.obj[gp.currentMap][i] == null) {
+                                            // Tạo cửa sắt thứ ba
+                                            gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
+                                            gp.obj[gp.currentMap][i].worldX = gp.tileSize * 86;
+                                            gp.obj[gp.currentMap][i].worldY = gp.tileSize * 89;
+                                            i++; // Tăng i lên 1 để tìm vị trí tiếp theo
+                                            if (gp.obj[gp.currentMap][i] == null) {
+                                                // Tạo cửa sắt thứ ba
+                                                gp.obj[gp.currentMap][i] = new OBJ_Door_Iron(gp);
+                                                gp.obj[gp.currentMap][i].worldX = gp.tileSize * 86;
+                                                gp.obj[gp.currentMap][i].worldY = gp.tileSize * 90;
+                                                gp.obj[gp.currentMap][i].temp = true; //only need during the boss fight
+                                                gp.playSE(21);
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
+
+/*
             for(int i = 0; i < gp.npc[1].length; i++) //Search a vacant slot for the player dummy
             {
                 if(gp.npc[gp.currentMap][i] == null)
@@ -80,27 +134,32 @@ public class CutsceneManager {
                     break;
                 }
             }
+
+
             gp.player.drawing = false;
 
             scenePhase++;
         }
         if(scenePhase == 1)
         {
-            gp.player.worldY -= 2;
-            if(gp.player.worldY < gp.tileSize * 16) //stop camera
+            gp.player.worldX += 2;
+            if(gp.player.worldX > 2850) //stop camera
             {
                 scenePhase++;
-            }
+           }
+            System.out.println(gp.player.worldX);
         }
+
         if(scenePhase == 2)
         {
             //Search for the boss
-            for(int i = 0; i < gp.monster[1].length; i++)
+            for(int i = 0; i < gp.obj[1].length; i++)
             {
                 if(gp.monster[gp.currentMap][i] != null && gp.monster[gp.currentMap][i].name.equals(MON_SkeletonLord.monName))
                 {
-                    gp.monster[gp.currentMap][i].sleep = false;
+                    gp.monster[gp.currentMap][i].sleep = true;
                     gp.ui.npc = gp.monster[gp.currentMap][i];
+                    System.out.println(gp.currentMap);
                     scenePhase++;
                     break;
                 }
@@ -122,7 +181,7 @@ public class CutsceneManager {
                 if(gp.npc[gp.currentMap][i] != null && gp.npc[gp.currentMap][i].name.equals(PlayerDummy.npcName))
                 {
                     //Restore the player position
-                    gp.player.worldX = gp.npc[gp.currentMap][i].worldX;
+                   gp.player.worldX = gp.npc[gp.currentMap][i].worldX;
                     gp.player.worldY = gp.npc[gp.currentMap][i].worldY;
                     gp.player.direction = gp.npc[gp.currentMap][i].direction;
                     //Delete the dummy
@@ -130,8 +189,13 @@ public class CutsceneManager {
                     break;
                 }
             }
+            System.out.println(gp.player.worldX);
+            System.out.println(gp.player.worldY);
+
             //Start drawing the player
             gp.player.drawing = true;
+
+*/
 
             //Reset
             sceneNum = NA;
@@ -148,7 +212,7 @@ public class CutsceneManager {
         if(scenePhase == 0)
         {
             gp.stopMusic();
-            gp.ui.npc = new OBJ_BlueHeart(gp);
+            gp.ui.npc = new OBJ_thay_nghia(gp);
             scenePhase++;
         }
         if(scenePhase == 1)
@@ -201,9 +265,9 @@ public class CutsceneManager {
             alpha = graduallyAlpha(alpha, 0.005f);
 
             String text = "After the fierce battle with the Skeleton Lord,\n"
-                    + "the Blue Boy finally found the legendary treasure.\n"
-                    + "But this is not the end of his journey.\n"
-                    + "The Blue Boy's adventure has just begun.";
+                    + "Teacher Nghia finally found.\n"
+                    + "To thank you for the rescue,\n"
+                    + "Teacher Nghia gave you 100 points for the project.";
 
             drawString(alpha, 38f, 200, text, 70);
 
@@ -220,7 +284,7 @@ public class CutsceneManager {
 
             alpha = graduallyAlpha(alpha, 0.01f);
 
-            drawString(alpha,120f, gp.screenHeight/2, "Blue Boy Adventure", 40);
+            drawString(alpha,120f, gp.screenHeight/2, "Mission complete...", 40);
 
             if(counterReached(480) == true && alpha == 1f)
             {
