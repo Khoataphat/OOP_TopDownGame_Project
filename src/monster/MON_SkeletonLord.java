@@ -32,7 +32,7 @@ public class MON_SkeletonLord extends Entity {
         life = maxLife;
         attack = 16;
         defense = 3;
-        exp = 40;
+        //exp = 40;
         knockBackPower = 5;
         sleep = false;
 
@@ -160,7 +160,18 @@ public class MON_SkeletonLord extends Entity {
             aSetter.setSummonCreeps(MON_SkeletonLord.instance.worldX/gp.tileSize, MON_SkeletonLord.instance.worldY/gp.tileSize);
         } else if (inRage == false && life <15 && life >10){
             aSetter.setAreaAttack(gp.player.worldX/gp.tileSize, gp.player.worldY/gp.tileSize);
+            inRage = true;
+            getImage();
+            getAttackImage();
+            defaultSpeed++;
+            speed = defaultSpeed + 10;
+            attack *= 5;
         }
+        else if (life ==0 ){
+            //gp.stopMusic();
+            Progress.skeletonLordDefeated = true;
+        }
+
 
 
 

@@ -76,7 +76,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     //ENTITY AND OBJECT
     public Player player = new Player(this,keyH, characterChoice);
-    public Entity obj[][] = new Entity[maxMap][50]; // display 10 objects same time
+    public Entity obj[][] = new Entity[maxMap][200]; // display 200 objects same time
     public Entity npc[][] = new Entity[maxMap][15];
     public Entity monster[][] = new Entity[maxMap][100];
     public InteractiveTile iTile[][] = new InteractiveTile[maxMap][50];
@@ -107,10 +107,10 @@ public class GamePanel extends JPanel implements Runnable{
 
     //AREA
     public int currentArea;
-    public int nextArea;
-    public final int outside = 100;
-    public final int indoor = 100;
-    public final int dungeon = 100;
+    //public int nextArea;
+    public final int outside = 50;
+    //public final int indoor = 100;
+    //public final int dungeon = 100;
 
     public GamePanel() // constructor
     {
@@ -417,7 +417,7 @@ public class GamePanel extends JPanel implements Runnable{
             ui.draw(g2);
 
             //DEBUG
-
+/*
             if(keyH.showDebugText == true)
             {
                 long drawEnd = System.nanoTime();
@@ -444,6 +444,8 @@ public class GamePanel extends JPanel implements Runnable{
                 g2.drawString("God Mode: " + keyH.godModeOn, x, y);
 
             }
+
+ */
         }
     }
     public void drawToScreen()
@@ -599,6 +601,7 @@ public class GamePanel extends JPanel implements Runnable{
         se.setFile(i);
         se.play();
     }
+    /*
     public void changeArea()
     {
         if(nextArea != currentArea)
@@ -623,6 +626,8 @@ public class GamePanel extends JPanel implements Runnable{
         currentArea = nextArea;
         aSetter.setMonster();
     }
+
+     */
     public void removeTempEntity()
     {
         for(int mapNum = 0; mapNum < maxMap; mapNum++)

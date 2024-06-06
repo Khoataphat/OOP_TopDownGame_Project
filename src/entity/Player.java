@@ -56,7 +56,7 @@ public class Player extends Entity{
         worldX = gp.tileSize * 6;//36;
         worldY = gp.tileSize * 10;//89;
         gp.currentMap = 0;
-        gp.currentArea = gp.outside;
+        //gp.currentArea = gp.outside;
 
         //Blue Gem Start Position, mapNum = 3;
 //         worldX = gp.tileSize *25;
@@ -352,20 +352,20 @@ public class Player extends Entity{
             case 3:
                 if (currentWeapon.type == type_sword) {
                 attackUp1 = setup("/player/attack_09", gp.tileSize, gp.tileSize);         // 16x32 px
-                attackUp2 = setup("/player/attack_10", gp.tileSize, gp.tileSize);
-                attackUp3 = setup("/player/attack_11", gp.tileSize, gp.tileSize);         // 16x32 px
-                attackUp4 = setup("/player/attack_12", gp.tileSize, gp.tileSize);
+                attackUp2 = setup("/player/attack_11", gp.tileSize, gp.tileSize);
+                attackUp3 = setup("/player/attack_09", gp.tileSize, gp.tileSize);         // 16x32 px
+                attackUp4 = setup("/player/attack_11", gp.tileSize, gp.tileSize);
                 attackDown1 = setup("/player/attack_00", gp.tileSize, gp.tileSize);     // 16x32 px
-                attackDown2 = setup("/player/attack_01", gp.tileSize, gp.tileSize);
-                attackDown3 = setup("/player/attack_02", gp.tileSize, gp.tileSize);     // 16x32 px
+                attackDown2 = setup("/player/attack_03", gp.tileSize, gp.tileSize);
+                attackDown3 = setup("/player/attack_00", gp.tileSize, gp.tileSize);     // 16x32 px
                 attackDown4 = setup("/player/attack_03", gp.tileSize, gp.tileSize);
                 attackLeft1 = setup("/player/attack_04", gp.tileSize , gp.tileSize);      // 32x16 px
-                attackLeft2 = setup("/player/attack_05", gp.tileSize, gp.tileSize);
-                attackLeft3 = setup("/player/attack_06", gp.tileSize, gp.tileSize);      // 32x16 px
+                attackLeft2 = setup("/player/attack_07", gp.tileSize, gp.tileSize);
+                attackLeft3 = setup("/player/attack_04", gp.tileSize, gp.tileSize);      // 32x16 px
                 attackLeft4 = setup("/player/attack_07", gp.tileSize, gp.tileSize);
                 attackRight1 = setup("/player/attack_12", gp.tileSize, gp.tileSize);    // 32x16 px
-                attackRight2 = setup("/player/attack_13", gp.tileSize, gp.tileSize);
-                attackRight3 = setup("/player/attack_14", gp.tileSize, gp.tileSize);    // 32x16 px
+                attackRight2 = setup("/player/attack_15", gp.tileSize, gp.tileSize);
+                attackRight3 = setup("/player/attack_12", gp.tileSize, gp.tileSize);    // 32x16 px
                 attackRight4 = setup("/player/attack_15", gp.tileSize, gp.tileSize);
                 }
                 break;
