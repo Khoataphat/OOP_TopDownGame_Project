@@ -833,6 +833,10 @@ public class Player extends Entity{
             startDialogue(this,0);
             levelUp = true;
             System.out.println("Leveluptrue");
+            life+=2;
+            life+=2;
+            gp.ui.addMessage("You got recovery due to level up!");
+
         }
     }
 
