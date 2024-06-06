@@ -3,6 +3,7 @@ import ai.PathFinder;
 import entity.Entity;
 import entity.Player;
 import environment.EnvironmentManager;
+import environment.Lighting;
 import tile.Map;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
@@ -54,7 +55,10 @@ public class GamePanel extends JPanel implements Runnable{
     public UI ui = new UI(this);
     Config config = new Config(this);
     public PathFinder pFinder = new PathFinder(this);
-    EnvironmentManager eManager = new EnvironmentManager(this);
+//    EnvironmentManager eManager =
+    // THE INTERFACE
+    Lighting lighting = new Lighting(this);
+
     Map map = new Map(this);
     SaveLoad saveLoad = new SaveLoad(this);
     public EntityGenerator eGenerator = new EntityGenerator(this);
@@ -122,7 +126,10 @@ public class GamePanel extends JPanel implements Runnable{
         aSetter.setNPC();
         aSetter.setMonster();
         aSetter.setInteractiveTile();
-        eManager.setup();
+        //The interface
+        lighting.setup();
+
+//        eManager.setup();
 
         /*playMusic(0);   // 0 = BlueBoyAdventure.wav
         stopMusic();*/
@@ -396,7 +403,8 @@ public class GamePanel extends JPanel implements Runnable{
             entityList.clear();
 
             //ENVIRONMENT
-            eManager.draw(g2);
+//            eManager.draw(g2);
+            lighting.draw(g2);
 
             //MINI MAP
             map.drawMiniMap(g2);

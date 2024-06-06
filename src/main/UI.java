@@ -91,7 +91,6 @@ public class UI {
         x += gp.tileSize;
         y += gp.tileSize;
 
-        //khoa
         if(npc.dialogues[npc.dialogueSet][npc.dialogueIndex] != null)
         {
             //currentDialogue = npc.dialogues[npc.dialogueSet][npc.dialogueIndex];//For display text once, enable this and disable letter by letter.(Letter by letter: The if statement below there)
@@ -630,33 +629,32 @@ public class UI {
         }
 
     }
-    public void drawSleepScreen()
-    {
-        counter++;
-        if(counter < 120)
-        {
-            gp.eManager.lighting.filterAlpha += 0.01f;
-            if(gp.eManager.lighting.filterAlpha > 1f)
-            {
-                gp.eManager.lighting.filterAlpha = 1f;
-            }
-        }
-        if(counter >= 120)
-        {
-            gp.eManager.lighting.filterAlpha -= 0.01f;
-            if(gp.eManager.lighting.filterAlpha <= 0f)
-            {
-                gp.eManager.lighting.filterAlpha = 0f;
-                counter = 0;
-                //gp.eManager.lighting.dayState = gp.eManager.lighting.day;
-                //
-                // gp.eManager.lighting.dayCounter = 0;
-                gp.gameState = gp.playState;
-                //Khoa
-                //gp.player.getImage();
-            }
-        }
-    }
+//    public void drawSleepScreen()
+//    {
+//        counter++;
+//        if(counter < 120)
+//        {
+//            gp.eManager.lighting.filterAlpha += 0.01f;
+//            if(gp.eManager.lighting.filterAlpha > 1f)
+//            {
+//                gp.eManager.lighting.filterAlpha = 1f;
+//            }
+//        }
+//        if(counter >= 120)
+//        {
+//            gp.eManager.lighting.filterAlpha -= 0.01f;
+//            if(gp.eManager.lighting.filterAlpha <= 0f)
+//            {
+//                gp.eManager.lighting.filterAlpha = 0f;
+//                counter = 0;
+//                gp.eManager.lighting.dayState = gp.eManager.lighting.day;
+//                gp.eManager.lighting.dayCounter = 0;
+//                gp.gameState = gp.playState;
+//                //Khoa
+//                //gp.player.getImage();
+//            }
+//        }
+//    }
     public int getItemIndexOnSlot(int slotCol, int slotRow)
     {
         int itemIndex = slotCol + (slotRow * 5);
@@ -883,7 +881,7 @@ public class UI {
             x = getXforCenteredText(text);
             y += gp.tileSize;
             g2.drawString(text,x,y);
-            if(commandNum == 2)
+            if(commandNum == 1)
             {
                 g2.drawString(">",x - gp.tileSize, y);
             }
@@ -1344,7 +1342,7 @@ public class UI {
             //SLEEP STATE
             if(gp.gameState == gp.sleepState)
             {
-                drawSleepScreen();
+//                drawSleepScreen();
             }
             if(gp.gameState == gp.levelupState)
             {

@@ -10,28 +10,34 @@ import java.awt.geom.Ellipse2D;
 import java.awt.RadialGradientPaint;
 
 
-public class Lighting {
+public class Lighting implements EnvironmentManager  {
 
     GamePanel gp;
     BufferedImage darknessFilter;
-    //public int dayCounter;
+    public int dayCounter;
     public float filterAlpha = 0f;
 
-    //public final int day = 0;
-    //public final int dusk = 1;
-    //public final int night = 2;
-    //public final int dawn = 3;
-    //public int dayState = day;
+    public final int day = 0;
+    public final int dusk = 1;
+    public final int night = 2;
+    public final int dawn = 3;
+    public int dayState = day;
 
-    public Lighting (GamePanel gp, int circleSize){
+
+//    public Lighting (GamePanel gp, int circleSize){
+public Lighting (GamePanel gp ){
+
+        this.gp = gp;
+        int circleSize = 350;
         darknessFilter = new BufferedImage(gp.screenWidth, gp.screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = (Graphics2D)darknessFilter.getGraphics();
 
         Area screenArea = new Area( new Rectangle2D.Double(0,0,gp.screenWidth,gp.screenHeight));
-
-        int centerX = gp.player.screenX +(gp.tileSize)/2;
-        int centerY = gp.player.screenY +(gp.tileSize)/2;
-
+//
+//        int centerX = gp.player.screenX +(gp.tileSize)/2;
+//        int centerY = gp.player.screenY +(gp.tileSize)/2;
+        int centerX = gp.screenWidth / 2;
+        int centerY = gp.screenHeight / 2;
 
         double x = centerX - (circleSize/2);
         double y = centerY - (circleSize/2);
@@ -72,8 +78,8 @@ public class Lighting {
 
         RadialGradientPaint gPaint = new RadialGradientPaint(centerX,centerY,(circleSize/2),fraction,color);
 
-        g2.setPaint(gPaint);
-        g2.fill(lightingArea);
+                g2.setPaint(gPaint);
+                g2.fill(lightingArea);
         g2.setColor(new Color(0,0,0,0.85f));
 
         g2.fill(screenArea);
@@ -82,5 +88,8 @@ public class Lighting {
     }
     public  void draw(Graphics2D g2){
         g2.drawImage(darknessFilter,0,0,null);
+    }
+    public  void setup(){
+//        lighting = new Lighting(gp,350);
     }
 }
