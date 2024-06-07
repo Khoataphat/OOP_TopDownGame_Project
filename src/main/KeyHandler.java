@@ -221,10 +221,12 @@ public class KeyHandler implements KeyListener {
                 gp.map.miniMapOn = false;
             }
         }
-        if(code == KeyEvent.VK_SPACE)
+    /*    if(code == KeyEvent.VK_SPACE)
         {
             spacePressed = true;
         }
+
+     */
 
         //DEBUG
         /*
@@ -583,9 +585,10 @@ public class KeyHandler implements KeyListener {
         {
             enterPressed = false;
         }
-        if(code == KeyEvent.VK_SPACE)
+    /*    if(code == KeyEvent.VK_SPACE)
         {
             spacePressed = false;
         }
+     */
     }
 }
