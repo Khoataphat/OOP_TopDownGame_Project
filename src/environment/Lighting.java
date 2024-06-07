@@ -142,14 +142,14 @@ public class Lighting {
         color[1] = new Color(0,0,0.08f,0.3f);
         color[2] = new Color(0,0,0.08f,0.32f);
         color[3] = new Color(0,0,0.08f,0.34f);
-        color[4] = new Color(0,0,0.08f,0.40f);
-        color[5] = new Color(0,0,0.08f,0.45f);
-        color[6] = new Color(0,0,0.08f,0.50f);
-        color[7] = new Color(0,0,0.08f,0.55f);
-        color[8] = new Color(0,0,0.08f,0.60f);
-        color[9] = new Color(0,0,0.08f,0.65f);
-        color[10] = new Color(0,0,0.08f,0.70f);
-        color[11] = new Color(0,0,0.08f,0.75f);  //Edge
+        color[4] = new Color(0,0,0.08f,0.50f);
+        color[5] = new Color(0,0,0.08f,0.55f);
+        color[6] = new Color(0,0,0.08f,0.60f);
+        color[7] = new Color(0,0,0.08f,0.65f);
+        color[8] = new Color(0,0,0.08f,0.70f);
+        color[9] = new Color(0,0,0.08f,0.75f);
+        color[10] = new Color(0,0,0.08f,0.80f);
+        color[11] = new Color(0,0,0.08f,0.85f);  //Edge
 
         //Distance between gradation
         fraction[0] = 0f;    //Center
@@ -172,7 +172,7 @@ public class Lighting {
         // Ensure entire screen is initially dark
         Area screenArea = new Area(new Rectangle2D.Double(0, 0, gp.screenWidth, gp.screenHeight));
 
-        int circleSize = 300;
+        int circleSize = 250;
 
         for (Entity lightSource : lightSource) {
             int centerX = lightSource.getScreenX() + (gp.tileSize)/2;
@@ -189,7 +189,7 @@ public class Lighting {
         }
 
         // Draw the remaining dark area
-        g2.setColor(new Color(0, 0, 0, 0.75f));
+        g2.setColor(new Color(0, 0, 0, 0.90f));
         g2.fill(screenArea);
 
         g2.dispose();

@@ -8,7 +8,7 @@ import java.awt.event.KeyListener;
 public class KeyHandler implements KeyListener {
 
     GamePanel gp;
-    public boolean upPressed, downPressed, leftPressed,rightPressed,enterPressed,shotKeyPressed;
+    public boolean upPressed, downPressed, leftPressed,rightPressed,enterPressed,shotKeyPressed, spacePressed;
     //DEBUG
     public boolean showDebugText = false;
     public boolean godModeOn = false;
@@ -221,7 +221,10 @@ public class KeyHandler implements KeyListener {
                 gp.map.miniMapOn = false;
             }
         }
-
+        if(code == KeyEvent.VK_SPACE)
+        {
+            spacePressed = true;
+        }
 
         //DEBUG
         /*
@@ -580,6 +583,9 @@ public class KeyHandler implements KeyListener {
         {
             enterPressed = false;
         }
-
+        if(code == KeyEvent.VK_SPACE)
+        {
+            spacePressed = false;
+        }
     }
 }
