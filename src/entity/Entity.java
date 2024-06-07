@@ -717,9 +717,9 @@ public class Entity {
     {
         boolean inCamera = false;
         if(     worldX + gp.tileSize*5 > gp.player.worldX - gp.player.screenX && //*5 because skeleton lord disappears when the top left corner isn't on the screen
-                worldX - gp.tileSize < gp.player.worldX + gp.player.screenX &&
+                worldX - gp.tileSize*5 < gp.player.worldX + gp.player.screenX &&
                 worldY + gp.tileSize*5 > gp.player.worldY - gp.player.screenY &&
-                worldY - gp.tileSize < gp.player.worldY + gp.player.screenY)
+                worldY - gp.tileSize*5 < gp.player.worldY + gp.player.screenY)
         {
             inCamera = true;
         }

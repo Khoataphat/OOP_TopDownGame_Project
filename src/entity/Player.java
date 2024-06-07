@@ -429,11 +429,7 @@ public class Player extends Entity{
         {
             attacking();
         }
-        else if(keyH.spacePressed == true)
-        {
-            guarding = true;
-            guardCounter++;
-        }
+
         else if(keyH.upPressed == true || keyH.downPressed == true ||
                 keyH.leftPressed == true || keyH.rightPressed == true || keyH.enterPressed == true)
         {
