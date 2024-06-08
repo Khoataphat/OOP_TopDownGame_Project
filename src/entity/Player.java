@@ -13,7 +13,7 @@ public class Player extends Entity{
 
     private final int characterChoice;
     KeyHandler keyH;
-    public final int screenX;
+    public int screenX;
     public final int screenY;
     int standCounter = 0;
     public boolean attackCanceled = false;

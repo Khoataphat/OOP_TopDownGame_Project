@@ -39,7 +39,7 @@ public class MON_SkeletonLord extends Entity {
         int size = gp.tileSize * 2;
         solidArea.x = 48;
         solidArea.y = 48;
-        solidArea.width = size + 48*3;
+        solidArea.width = size + 48*2;
         solidArea.height = size + 48*2 ;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
@@ -62,7 +62,7 @@ public class MON_SkeletonLord extends Entity {
     public void getImage()
     {
 
-        int i = 5;
+        int i = 7;
         if(inRage == false)
         {
         	up1 = setup("/monster/skeletonlord_up_1",gp.tileSize * i,gp.tileSize * i);
@@ -105,7 +105,7 @@ public class MON_SkeletonLord extends Entity {
     public void getAttackImage()
     {
 
-        int i = 5;
+        int i = 7;
 
         if(inRage == false)
         {
@@ -146,13 +146,17 @@ public class MON_SkeletonLord extends Entity {
             attackRight4 = setup("/monster/skeletonlord_phase2_attack_right_2",gp.tileSize * 2 * i, gp.tileSize * i);
         }
     }
+    /*
     public void setDialogue()
     {
         dialogues[0][0] = "No one can steal my treasure.";
         dialogues[0][1] = "You will die here.";
         dialogues[0][2] = "WELCOME TO YOUR DOOM!";
 
+
     }
+
+     */
     public void setAction()
     {
         if(inRage==false && life < 20 && life > 18)
@@ -167,25 +171,6 @@ public class MON_SkeletonLord extends Entity {
             speed = defaultSpeed + 10;
             attack *= 5;
         }
-        else if (life ==0 ){
-            //gp.stopMusic();
-            Progress.skeletonLordDefeated = true;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

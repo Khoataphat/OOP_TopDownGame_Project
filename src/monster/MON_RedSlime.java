@@ -38,25 +38,25 @@ public class MON_RedSlime extends Entity {
 
         getImage();
     }
-
+    int i = 2;
     public void getImage()
     {
-    	up1 = setup("/monster/redslime_down_1",gp.tileSize,gp.tileSize);
-        up2 = setup("/monster/redslime_down_2",gp.tileSize,gp.tileSize);
-        up3 = setup("/monster/redslime_down_3",gp.tileSize,gp.tileSize);
-        up4 = setup("/monster/redslime_down_4",gp.tileSize,gp.tileSize);
-        down1 = setup("/monster/redslime_down_1",gp.tileSize,gp.tileSize);
-        down2 = setup("/monster/redslime_down_2",gp.tileSize,gp.tileSize);
-        down3 = setup("/monster/redslime_down_3",gp.tileSize,gp.tileSize);
-        down4 = setup("/monster/redslime_down_4",gp.tileSize,gp.tileSize);
-        left1 = setup("/monster/redslime_down_1",gp.tileSize,gp.tileSize);
-        left2 = setup("/monster/redslime_down_2",gp.tileSize,gp.tileSize);
-        left3 = setup("/monster/redslime_down_3",gp.tileSize,gp.tileSize);
-        left4 = setup("/monster/redslime_down_4",gp.tileSize,gp.tileSize);
-        right1 = setup("/monster/redslime_down_1",gp.tileSize,gp.tileSize);
-        right2 = setup("/monster/redslime_down_2",gp.tileSize,gp.tileSize);
-        right3 = setup("/monster/redslime_down_3",gp.tileSize,gp.tileSize);
-        right4 = setup("/monster/redslime_down_4",gp.tileSize,gp.tileSize);
+    	up1 = setup("/monster/redslime_down_1",gp.tileSize*i,gp.tileSize*i);
+        up2 = setup("/monster/redslime_down_2",gp.tileSize*i,gp.tileSize*i);
+        up3 = setup("/monster/redslime_down_3",gp.tileSize*i,gp.tileSize*i);
+        up4 = setup("/monster/redslime_down_4",gp.tileSize*i,gp.tileSize*i);
+        down1 = setup("/monster/redslime_down_1",gp.tileSize*i,gp.tileSize*i);
+        down2 = setup("/monster/redslime_down_2",gp.tileSize*i,gp.tileSize*i);
+        down3 = setup("/monster/redslime_down_3",gp.tileSize*i,gp.tileSize*i);
+        down4 = setup("/monster/redslime_down_4",gp.tileSize*i,gp.tileSize*i);
+        left1 = setup("/monster/redslime_down_1",gp.tileSize*i,gp.tileSize*i);
+        left2 = setup("/monster/redslime_down_2",gp.tileSize*i,gp.tileSize*i);
+        left3 = setup("/monster/redslime_down_3",gp.tileSize*i,gp.tileSize*i);
+        left4 = setup("/monster/redslime_down_4",gp.tileSize*i,gp.tileSize*i);
+        right1 = setup("/monster/redslime_down_1",gp.tileSize*i,gp.tileSize*i);
+        right2 = setup("/monster/redslime_down_2",gp.tileSize*i,gp.tileSize*i);
+        right3 = setup("/monster/redslime_down_3",gp.tileSize*i,gp.tileSize*i);
+        right4 = setup("/monster/redslime_down_4",gp.tileSize*i,gp.tileSize*i);
     }
     public void setAction()
     {

@@ -49,6 +49,7 @@ public class CutsceneManager {
         }
 
     }
+
     public void scene_skeletonLord()
     {
         if(scenePhase == 0)
@@ -208,6 +209,9 @@ public class CutsceneManager {
 
         }
     }
+
+
+
     public void scene_ending()
     {
         if(scenePhase == 0)

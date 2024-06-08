@@ -48,32 +48,32 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
         gp.obj[mapNum][i].worldY = gp.tileSize * 11;
         i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 21;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 2;
-        i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 28;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 2;
-        i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 21;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 2;
+        //i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 28;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 2;
+        //i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 32;
         gp.obj[mapNum][i].worldY = gp.tileSize * 7;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 37;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 7;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 46;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 4;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 41;
         gp.obj[mapNum][i].worldY = gp.tileSize * 21;
         i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 40;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 29;
+        //i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 40;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 29;
-        i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 36;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 38;
         gp.obj[mapNum][i].worldY = gp.tileSize * 29;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
@@ -85,8 +85,8 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldY = gp.tileSize * 35;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 21;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 20;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 35;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 18;
@@ -100,22 +100,22 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 44;
         gp.obj[mapNum][i].worldY = gp.tileSize * 29;
         i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 50;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 29;
-        i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 50;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 29;
+        //i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 56;
         gp.obj[mapNum][i].worldY = gp.tileSize * 29;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 89;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 25;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 90;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 23;
         i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 93;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 25;
-        i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 93;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 25;
+        //i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 86;
         gp.obj[mapNum][i].worldY = gp.tileSize * 7;
@@ -125,29 +125,29 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldY = gp.tileSize * 7;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 89;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 50;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 90;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 49;
         i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 93;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 50;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 93;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 50;
+        //i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 72;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 59;
         i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 72;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 59;
-        i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 66;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 59;
-        i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 66;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 65;
-        i++;
-        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 71;
-        gp.obj[mapNum][i].worldY = gp.tileSize * 65;
-        i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 66;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 59;
+        //i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 66;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 65;
+        //i++;
+        //gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        //gp.obj[mapNum][i].worldX = gp.tileSize * 71;
+        //gp.obj[mapNum][i].worldY = gp.tileSize * 65;
+        //i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 61;
         gp.obj[mapNum][i].worldY = gp.tileSize * 59;
@@ -165,11 +165,11 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldY = gp.tileSize * 43;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 41;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 43;
         gp.obj[mapNum][i].worldY = gp.tileSize * 65;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 38;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 36;
         gp.obj[mapNum][i].worldY = gp.tileSize * 67;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
@@ -189,7 +189,7 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldY = gp.tileSize * 73;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
-        gp.obj[mapNum][i].worldX = gp.tileSize * 21;
+        gp.obj[mapNum][i].worldX = gp.tileSize * 24;
         gp.obj[mapNum][i].worldY = gp.tileSize * 84;
         i++;
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
@@ -241,6 +241,8 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 79;
         gp.obj[mapNum][i].worldY = gp.tileSize * 92;
         i++;
+        
+         */
         gp.obj[mapNum][i] = new OBJ_Lantern(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 84;
         gp.obj[mapNum][i].worldY = gp.tileSize * 88;
@@ -250,7 +252,7 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldY = gp.tileSize * 87;
         i++;
 
-         */
+
 /*
         gp.obj[mapNum][i] = new OBJ_Axe(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 33;
@@ -370,17 +372,17 @@ public class AssetSetter {
         i++;
         //chest
         gp.obj[mapNum][i] = new OBJ_Chest(gp);
-        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp)); //mở rương sẽ đc cái này
+        gp.obj[mapNum][i].setLoot(new OBJ_Heart(gp)); //mở rương sẽ đc cái này
         gp.obj[mapNum][i].worldX = gp.tileSize * 25;
         gp.obj[mapNum][i].worldY = gp.tileSize * 43;
         i++;
         gp.obj[mapNum][i] = new OBJ_Chest(gp);
-        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
+        gp.obj[mapNum][i].setLoot(new OBJ_Heart(gp));
         gp.obj[mapNum][i].worldX = gp.tileSize * 91;
         gp.obj[mapNum][i].worldY = gp.tileSize * 9;
         i++;
         gp.obj[mapNum][i] = new OBJ_Chest(gp);
-        gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
+        gp.obj[mapNum][i].setLoot(new OBJ_Heart(gp));
         gp.obj[mapNum][i].worldX = gp.tileSize * 42;
         gp.obj[mapNum][i].worldY = gp.tileSize * 49;
         i++;
@@ -436,6 +438,7 @@ public class AssetSetter {
     {
         int mapNum = 0;
 
+        i_Mon++;
         gp.monster[mapNum][i_Mon] = new MON_Bat(gp);
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*25;
         gp.monster[mapNum][i_Mon].worldY = gp.tileSize*6;
@@ -491,7 +494,7 @@ public class AssetSetter {
 
         gp.monster[mapNum][i_Mon] = new MON_RedSlime(gp);
         gp.monster[mapNum][i_Mon].worldX = gp.tileSize*73;
-        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*38;
+        gp.monster[mapNum][i_Mon].worldY = gp.tileSize*36;
         i_Mon++;
 
         gp.monster[mapNum][i_Mon] = new MON_RedSlime(gp);

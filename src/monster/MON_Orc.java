@@ -27,14 +27,14 @@ public class MON_Orc extends Entity {
         exp = 8;
         knockBackPower = 5;
 
-        solidArea.x = 4;
-        solidArea.y = 4;
-        solidArea.width = 40;
-        solidArea.height = 44;
+        solidArea.x = 4*4;
+        solidArea.y = 4*4;
+        solidArea.width = 40*2;
+        solidArea.height = 44*2;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
-        attackArea.width = 48;
-        attackArea.height = 48;
+        attackArea.width = 48*3;
+        attackArea.height = 48*3;
         motion1_duration = 40;
         motion2_duration = 85;
 
@@ -42,43 +42,44 @@ public class MON_Orc extends Entity {
         getAttackImage();
     }
 
+    int i = 2;
     public void getImage()
     {
-    	 up1 = setup("/monster/orc_up_1",gp.tileSize,gp.tileSize);
-         up2 = setup("/monster/orc_up_2",gp.tileSize,gp.tileSize);
-         up3 = setup("/monster/orc_up_1",gp.tileSize,gp.tileSize);
-         up4 = setup("/monster/orc_up_2",gp.tileSize,gp.tileSize);
-         down1 = setup("/monster/orc_down_1",gp.tileSize,gp.tileSize);
-         down2 = setup("/monster/orc_down_2",gp.tileSize,gp.tileSize);
-         down3 = setup("/monster/orc_down_1",gp.tileSize,gp.tileSize);
-         down4 = setup("/monster/orc_down_2",gp.tileSize,gp.tileSize);
-         left1 = setup("/monster/orc_left_1",gp.tileSize,gp.tileSize);
-         left2 = setup("/monster/orc_left_2",gp.tileSize,gp.tileSize);
-         left3 = setup("/monster/orc_left_1",gp.tileSize,gp.tileSize);
-         left4 = setup("/monster/orc_left_2",gp.tileSize,gp.tileSize);
-         right1 = setup("/monster/orc_right_1",gp.tileSize,gp.tileSize);
-         right2 = setup("/monster/orc_right_2",gp.tileSize,gp.tileSize);
-         right3 = setup("/monster/orc_right_1",gp.tileSize,gp.tileSize);
-         right4 = setup("/monster/orc_right_2",gp.tileSize,gp.tileSize);
+    	 up1 = setup("/monster/orc_up_1",gp.tileSize * i,gp.tileSize * i);
+         up2 = setup("/monster/orc_up_2",gp.tileSize * i,gp.tileSize * i);
+         up3 = setup("/monster/orc_up_1",gp.tileSize * i,gp.tileSize * i);
+         up4 = setup("/monster/orc_up_2",gp.tileSize * i,gp.tileSize * i);
+         down1 = setup("/monster/orc_down_1",gp.tileSize * i,gp.tileSize * i);
+         down2 = setup("/monster/orc_down_2",gp.tileSize * i,gp.tileSize * i);
+         down3 = setup("/monster/orc_down_1",gp.tileSize * i,gp.tileSize * i);
+         down4 = setup("/monster/orc_down_2",gp.tileSize * i,gp.tileSize * i);
+         left1 = setup("/monster/orc_left_1",gp.tileSize * i,gp.tileSize * i);
+         left2 = setup("/monster/orc_left_2",gp.tileSize * i,gp.tileSize * i);
+         left3 = setup("/monster/orc_left_1",gp.tileSize * i,gp.tileSize * i);
+         left4 = setup("/monster/orc_left_2",gp.tileSize * i,gp.tileSize * i);
+         right1 = setup("/monster/orc_right_1",gp.tileSize * i,gp.tileSize * i);
+         right2 = setup("/monster/orc_right_2",gp.tileSize * i,gp.tileSize * i);
+         right3 = setup("/monster/orc_right_1",gp.tileSize * i,gp.tileSize * i);
+         right4 = setup("/monster/orc_right_2",gp.tileSize * i,gp.tileSize * i);
     }
     public void getAttackImage()
     {
-    	 attackUp1 = setup("/monster/orc_attack_up_1",gp.tileSize, gp.tileSize * 2);
-         attackUp2 = setup("/monster/orc_attack_up_2",gp.tileSize, gp.tileSize * 2);
-         attackUp3 = setup("/monster/orc_attack_up_1",gp.tileSize, gp.tileSize * 2);
-         attackUp4 = setup("/monster/orc_attack_up_2",gp.tileSize, gp.tileSize * 2);
-         attackDown1 = setup("/monster/orc_attack_down_1",gp.tileSize, gp.tileSize * 2);
-         attackDown2 = setup("/monster/orc_attack_down_2",gp.tileSize, gp.tileSize * 2);
-         attackDown3 = setup("/monster/orc_attack_down_1",gp.tileSize, gp.tileSize * 2);
-         attackDown4 = setup("/monster/orc_attack_down_2",gp.tileSize, gp.tileSize * 2);
-         attackLeft1 = setup("/monster/orc_attack_left_1",gp.tileSize * 2, gp.tileSize);
-         attackLeft2 = setup("/monster/orc_attack_left_2",gp.tileSize * 2, gp.tileSize);
-         attackLeft3 = setup("/monster/orc_attack_left_1",gp.tileSize * 2, gp.tileSize);
-         attackLeft4 = setup("/monster/orc_attack_left_2",gp.tileSize * 2, gp.tileSize);
-         attackRight1 = setup("/monster/orc_attack_right_1",gp.tileSize * 2, gp.tileSize);
-         attackRight2 = setup("/monster/orc_attack_right_2",gp.tileSize * 2, gp.tileSize);
-         attackRight3 = setup("/monster/orc_attack_right_1",gp.tileSize * 2, gp.tileSize);
-         attackRight4 = setup("/monster/orc_attack_right_2",gp.tileSize * 2, gp.tileSize);
+    	 attackUp1 = setup("/monster/orc_attack_up_1",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackUp2 = setup("/monster/orc_attack_up_2",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackUp3 = setup("/monster/orc_attack_up_1",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackUp4 = setup("/monster/orc_attack_up_2",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackDown1 = setup("/monster/orc_attack_down_1",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackDown2 = setup("/monster/orc_attack_down_2",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackDown3 = setup("/monster/orc_attack_down_1",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackDown4 = setup("/monster/orc_attack_down_2",gp.tileSize * i, gp.tileSize  * i* 2);
+         attackLeft1 = setup("/monster/orc_attack_left_1",gp.tileSize * 2 * i, gp.tileSize * i);
+         attackLeft2 = setup("/monster/orc_attack_left_2",gp.tileSize * 2 * i, gp.tileSize * i);
+         attackLeft3 = setup("/monster/orc_attack_left_1",gp.tileSize * 2 * i, gp.tileSize * i);
+         attackLeft4 = setup("/monster/orc_attack_left_2",gp.tileSize * 2 * i, gp.tileSize * i);
+         attackRight1 = setup("/monster/orc_attack_right_1",gp.tileSize * 2 * i, gp.tileSize * i);
+         attackRight2 = setup("/monster/orc_attack_right_2",gp.tileSize * 2 * i, gp.tileSize * i);
+         attackRight3 = setup("/monster/orc_attack_right_1",gp.tileSize * 2 * i, gp.tileSize * i);
+         attackRight4 = setup("/monster/orc_attack_right_2",gp.tileSize * 2 * i, gp.tileSize * i);
     }
     public void setAction()
     {

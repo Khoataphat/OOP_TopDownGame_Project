@@ -60,7 +60,7 @@ public class GamePanel extends JPanel implements Runnable{
     Lighting lighting = new Lighting(this);
 
     Map map = new Map(this);
-    SaveLoad saveLoad = new SaveLoad(this);
+    //SaveLoad saveLoad = new SaveLoad(this);
     public EntityGenerator eGenerator = new EntityGenerator(this);
     public CutsceneManager csManager = new CutsceneManager(this);
     Thread gameThread;
