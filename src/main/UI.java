@@ -1264,12 +1264,12 @@ public class UI {
                         gp.lighting.lightSource.add(gp.obj[gp.currentMap][i]);
                         System.out.println("Add light");
                     }
-//                } else {
-//                    if (gp.lighting.getLightSource().contains(gp.obj[gp.currentMap][i])) {
-//                        gp.lighting.lightSource.remove(gp.obj[gp.currentMap][i]);
-//                        System.out.println("Delete light");
-//                    } else {
-//                    }
+                } else {
+                    if (gp.lighting.getLightSource().contains(gp.obj[gp.currentMap][i])) {
+                        gp.lighting.lightSource.remove(gp.obj[gp.currentMap][i]);
+                        System.out.println("Delete light");
+                    } else {
+                    }
                 }
             }
         }

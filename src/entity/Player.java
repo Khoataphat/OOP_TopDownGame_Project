@@ -13,7 +13,7 @@ public class Player extends Entity{
 
     private final int characterChoice;
     KeyHandler keyH;
-    public final int screenX;
+    public int screenX;
     public final int screenY;
     int standCounter = 0;
     public boolean attackCanceled = false;
@@ -53,8 +53,8 @@ public class Player extends Entity{
     public void setDefaultValues()
     {
         //Default Starting Positions
-        worldX = gp.tileSize * 36;
-        worldY = gp.tileSize * 89;
+        worldX = gp.tileSize * 6;
+        worldY = gp.tileSize * 8;
         gp.currentMap = 0;
         //gp.currentArea = gp.outside;
 

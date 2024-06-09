@@ -15,7 +15,7 @@ public class IT_AreaAttack extends InteractiveTile {
         this.worldY = gp.tileSize * row;
 
         name = itName;
-        down1 = setup("/tiles_interactive/metalplate",gp.tileSize,gp.tileSize);
+        down1 = setup("/tiles_interactive/002",gp.tileSize,gp.tileSize);
 
         // NO COLLISION
         solidArea.x = 0;

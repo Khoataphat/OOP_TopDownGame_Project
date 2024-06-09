@@ -97,6 +97,7 @@ public class KeyHandler implements KeyListener {
                     gp.ui.titleScreenState = 1; // Character class selection screen
                     //gp.gameState = gp.playState;
                 }
+                /*
                 if (gp.ui.commandNum == 1) {
                     //LOAD GAME
                     gp.saveLoad.load();
@@ -104,7 +105,9 @@ public class KeyHandler implements KeyListener {
                     gp.playMusic(0);
 
                 }
-                if (gp.ui.commandNum == 2) {
+
+                 */
+                if (gp.ui.commandNum == 1) {
                     System.exit(0);
                 }
             }

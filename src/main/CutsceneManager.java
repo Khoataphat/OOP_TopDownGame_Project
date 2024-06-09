@@ -36,7 +36,7 @@ public class CutsceneManager {
                 + "Minh Kha\n\n"
                 + "Thien Phu\n"
                 + "\n\n\n\n\n\n\n"
-                + "Thank you for uatching!";
+                + "Thank you for watching!";
     }
     public void draw(Graphics2D g2)
     {
@@ -49,6 +49,7 @@ public class CutsceneManager {
         }
 
     }
+
     public void scene_skeletonLord()
     {
         if(scenePhase == 0)
@@ -208,6 +209,9 @@ public class CutsceneManager {
 
         }
     }
+
+
+
     public void scene_ending()
     {
         if(scenePhase == 0)
