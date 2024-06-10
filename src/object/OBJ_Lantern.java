@@ -22,14 +22,4 @@ public class OBJ_Lantern extends Entity {
 
     }
 
-    public void renderLight(Graphics2D g2) {
-        // Vẽ hình tròn ánh sáng
-        g2.setColor(new Color(255, 255, 255, 100)); // Màu trắng trong suốt
-        g2.fillOval(
-                (int) (worldX + 6 - lightRadius / 2),
-                (int) (worldY + 10 - lightRadius / 2),
-                lightRadius,
-                lightRadius
-        );
-        }
 }

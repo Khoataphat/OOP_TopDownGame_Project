@@ -3,11 +3,11 @@ package object;
 import entity.Entity;
 import main.GamePanel;
 
-public class OBJ_thay_nghia extends Entity {
+public class OBJ_Thay_Nghia extends Entity {
 
     GamePanel gp;
     public static final String objName = "Blue Heart";
-    public OBJ_thay_nghia(GamePanel gp)
+    public OBJ_Thay_Nghia(GamePanel gp)
     {
         super(gp);
 

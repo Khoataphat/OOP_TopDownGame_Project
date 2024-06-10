@@ -51,6 +51,7 @@ public class OBJ_Fireball extends Projectile {
     {
         user.mana -= useCost;
     }
+
     public Color getParticleColor()
     {
         Color color = new Color(240,50,0);
@@ -71,4 +72,6 @@ public class OBJ_Fireball extends Projectile {
         int maxLife = 20;
         return maxLife;
     }
+
+
 }

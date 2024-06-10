@@ -48,8 +48,9 @@ public class EventHandler{
                 }
             }
         }
-        setDialogue();
+        //setDialogue();
     }
+
     public void setDialogue()
     {
         eventMaster.dialogues[0][0] = "You fall into a pit!";
@@ -57,6 +58,8 @@ public class EventHandler{
         eventMaster.dialogues[1][0] = "You drink the water.\nYour life and mana has been recovered.\n"+ "(The progress has been saved)";
         eventMaster.dialogues[1][1] = "Damn, this is good water.";
     }
+
+
     public void checkEvent()
     {
         //Check if the player character is more than 1 tile away from the last event

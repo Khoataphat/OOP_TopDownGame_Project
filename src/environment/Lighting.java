@@ -111,11 +111,7 @@ public class Lighting {
     BufferedImage darknessFilter;
     public int dayCounter;
     public float filterAlpha = 0f;
-
-    public final int day = 0;
-    public final int dusk = 1;
     public final int night = 2;
-    public final int dawn = 3;
     public int dayState = night;
     public List<Entity> lightSource = new ArrayList<>();
 
@@ -195,23 +191,6 @@ public class Lighting {
         g2.dispose();
     }
 
-    public void resetDay() {
-        dayState = night;
-        filterAlpha = 0f;
-    }
-
-    public void update() {
-        if (gp.player.lightUpdated) {
-            setLightSource();
-        }
-        if (dayState == night) {
-            dayCounter++;
-            if (dayCounter > 3600) { // 1 min night
-                dayState = night;
-                dayCounter = 0;
-            }
-        }
-    }
 
     public void draw(Graphics2D g2) {
         g2.drawImage(darknessFilter, 0, 0, null);

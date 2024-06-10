@@ -53,8 +53,8 @@ public class Player extends Entity{
     public void setDefaultValues()
     {
         //Default Starting Positions
-        worldX = gp.tileSize * 6;
-        worldY = gp.tileSize * 8;
+        worldX = gp.tileSize * 39;
+        worldY = gp.tileSize * 89;
         gp.currentMap = 0;
         //gp.currentArea = gp.outside;
 
@@ -69,19 +69,19 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 20;
+        maxLife = 12;
         life = maxLife;
         maxMana = 8;
         mana = maxMana;
         ammo = 10;
-        strength = 10;           // The more strenght he has, the more damage he gives.
+        strength = 5 ;           // The more strenght he has, the more damage he gives.
         dexterity = 99;          // The more dexterity he has, the less damage he receives.
         exp = 0;
         nextLevelExp = 4;
-        coin = 40;
+        coin = 10;
         invincible = false;
         currentWeapon = new OBJ_Sword_Normal(gp);
-        currentShield = new OBJ_Shield_Wood(gp);
+        //currentShield = new OBJ_Shield_Wood(gp);
         currentLight = null;
         projectile = new OBJ_Fireball(gp);
         //projectile = new OBJ_Rock(gp);
@@ -104,7 +104,7 @@ public class Player extends Entity{
         System.out.println(characterChoice);
         getImage(characterChoice);
         getAttackImage(characterChoice);
-        getGuardImage();
+        //getGuardImage();
         setItems();
         //setDialogue();
     }
@@ -115,10 +115,13 @@ public class Player extends Entity{
 //        worldY = gp.tileSize * 21;
         direction = "down";
     }
+    /*
     public void setDialogue()
     {
         dialogues[0][0] = "You are level " + level + " now!\n" + "You feel stronger!";
     }
+
+     */
     public void restoreStatus()
     {
         life = maxLife;
@@ -135,8 +138,8 @@ public class Player extends Entity{
     public void setItems()
     {
         inventory.clear(); //cuz if game restarts inventory must be cleared first
-        inventory.add(currentWeapon);
-        inventory.add(currentShield);
+        //inventory.add(currentWeapon);
+        //inventory.add(currentShield);
         /*inventory.add(new OBJ_Potion_Red(gp));
         inventory.add(new OBJ_Key(gp));
         inventory.add(new OBJ_Key(gp));
@@ -157,7 +160,7 @@ public class Player extends Entity{
 
     public int getDefense()
     {
-        return defense = dexterity * currentShield.defenseValue;
+        return defense = dexterity ;//* currentShield.defenseValue;
     }
     public int getCurrentWeaponSlot()
     {
@@ -249,7 +252,7 @@ public class Player extends Entity{
         }
 
     }
-
+/*
 
     public void getSleepingImage(BufferedImage image)
     {
@@ -270,6 +273,8 @@ public class Player extends Entity{
         right3 = image;
         right4 = image;
     }
+
+ */
     public void getAttackImage(int characterChoice)
     {
         switch (characterChoice) {
@@ -371,6 +376,7 @@ public class Player extends Entity{
                 break;
         }
     }
+    /*
     public void getGuardImage()
     {
         guardUp = setup("/player/boy_guard_up",gp.tileSize,gp.tileSize);
@@ -378,6 +384,8 @@ public class Player extends Entity{
         guardLeft = setup("/player/boy_guard_left",gp.tileSize,gp.tileSize);
         guardRight = setup("/player/boy_guard_right",gp.tileSize,gp.tileSize);
     }
+
+     */
     public void update() // Runs 60 times every seconds.
     {
         if(knockBack == true)
@@ -727,6 +735,7 @@ public class Player extends Entity{
             }
         }
     }
+
     public void damageInteractiveTile(int i)
     {
         if(i != 999 && gp.iTile[gp.currentMap][i].destructible == true && gp.iTile[gp.currentMap][i].isCorrectItem(this) == true && gp.iTile[gp.currentMap][i].invincible == false && !gp.iTile[gp.currentMap][i].name.equals(IT_AreaAttack.itName))
@@ -745,6 +754,8 @@ public class Player extends Entity{
                 }
             }
     }
+
+
 
     public boolean detectPlate() {
         ArrayList<Entity> playerList = new ArrayList<>();
@@ -824,14 +835,14 @@ public class Player extends Entity{
             attack = getAttack();
             defense = getDefense();
 
-            dialogues[0][0] = "You are level " + level + " now!\n" + "You feel stronger!";
+            //dialogues[0][0] = "You are level " + level + " now!\n" + "You feel stronger!";
             setDialogue();
             startDialogue(this,0);
             levelUp = true;
             System.out.println("Leveluptrue");
+            //life+=2;
             life+=2;
-            life+=2;
-            gp.ui.addMessage("You got recovery due to level up!");
+            //gp.ui.addMessage("You got recovery due to level up!");
 
         }
     }

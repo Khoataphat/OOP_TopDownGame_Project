@@ -1138,7 +1138,7 @@ public class UI {
         g2.fillRect(textX,textY,volumeWidth,24);
 
         //SAVE OPTIONS
-        gp.config.saveConfig();
+        //gp.config.saveConfig();
     }
     public void options_fullScreenNotification(int frameX, int frameY)
     {

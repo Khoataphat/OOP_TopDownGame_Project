@@ -20,7 +20,7 @@ public class OBJ_Rock extends Projectile {
         maxLife = 60;   //after 80 frames, projectile disappears
         life = maxLife;
         attack = 2;
-        useCost = 1; //spend 1 mana
+        useCost = 0; //spend 1 mana
         alive = false;
         getImage();
         price = 25;
@@ -62,7 +62,7 @@ public class OBJ_Rock extends Projectile {
     }
     public int getParticleSpeed()
     {
-        int speed = 1;
+        int speed = 2;
         return speed;
     }
     public int getParticleMaxLife()

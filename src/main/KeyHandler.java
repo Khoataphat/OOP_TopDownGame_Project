@@ -139,6 +139,7 @@ public class KeyHandler implements KeyListener {
                     //
                     //gp.gameState = gp.playState;
                     gp.playMusic(0);
+                    //System.out.println("Play music 0 1 in key hander");
                 }
                 //THIEF
                 if (gp.ui.commandNum == 1) {
@@ -151,6 +152,7 @@ public class KeyHandler implements KeyListener {
                     //
                     //gp.gameState = gp.playState;
                     gp.playMusic(0);
+                    //System.out.println("Play music 0 2 in key hander");
                 }
                 //SORCERER
                 if (gp.ui.commandNum == 2) {
@@ -163,6 +165,7 @@ public class KeyHandler implements KeyListener {
                     //
                     //gp.gameState = gp.playState;
                     gp.playMusic(0);
+                    //System.out.println("Play music 0 3 in key hander");
                 }
                 //BACK
                 if (gp.ui.commandNum == 3) {
@@ -384,7 +387,8 @@ public class KeyHandler implements KeyListener {
             {
                 gp.gameState = gp.playState;
                 gp.resetGame(false);
-                gp.playMusic(0);
+                //gp.playMusic(0);
+                //System.out.println("Play music 0 reset");
             }
             else if(gp.ui.commandNum == 1) //QUIT, reset everything
             {
@@ -420,19 +424,22 @@ public class KeyHandler implements KeyListener {
                 gp.player.maxLife += 2;
                 gp.player.life += 2;
                 gp.gameState = gp.playState;
-                gp.playMusic(0);
+                //gp.playMusic(0);
+                //System.out.println("Play music 0 1 in levelup");
             }
             else if(gp.ui.commandNum == 1) //QUIT, reset everything
             {
                 gp.player.strength++;
                 gp.gameState = gp.playState;
-                gp.playMusic(0);
+                //gp.playMusic(0);
+                //System.out.println("Play music 0 1 in levelup");
             }
             else if(gp.ui.commandNum == 2) //QUIT, reset everything
             {
                 gp.player.dexterity++;
                 gp.gameState = gp.playState;
-                gp.playMusic(0);
+                //gp.playMusic(0);
+                //System.out.println("Play music 0 1 in levelup");
             }
         }
     }

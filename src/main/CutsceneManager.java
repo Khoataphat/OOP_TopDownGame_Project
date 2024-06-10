@@ -1,8 +1,6 @@
 package main;
 
-import entity.PlayerDummy;
-import monster.MON_SkeletonLord;
-import object.OBJ_thay_nghia;
+import object.OBJ_Thay_Nghia;
 import object.OBJ_Door_Iron;
 
 import java.awt.*;
@@ -206,6 +204,7 @@ public class CutsceneManager {
             //Change the music
             gp.stopMusic();
             gp.playMusic(22);
+            //System.out.println("Play music 22 in sceneboss");
 
         }
     }
@@ -217,7 +216,7 @@ public class CutsceneManager {
         if(scenePhase == 0)
         {
             gp.stopMusic();
-            gp.ui.npc = new OBJ_thay_nghia(gp);
+            gp.ui.npc = new OBJ_Thay_Nghia(gp);
             scenePhase++;
         }
         if(scenePhase == 1)
@@ -279,6 +278,7 @@ public class CutsceneManager {
             if(counterReached(600) == true && alpha == 1f)
             {
                 gp.playMusic(0);
+                //System.out.println("Play music 0 in end");
                 alpha = 0;
                 scenePhase++;
             }

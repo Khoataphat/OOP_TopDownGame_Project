@@ -689,7 +689,7 @@ public class Entity {
             else
             {
                 //Not guarding
-                gp.playSE(6);   //receivedamage.wav
+                //gp.playSE(6);   //receivedamage.wav
                 if(damage < 1 )
                 {
                     damage = 1;
@@ -824,10 +824,19 @@ public class Entity {
             }
 
             g2.drawImage(image, tempScreenX, tempScreenY, null);
-
+/*
             //Reset graphics opacity / alpha
             changeAlpha(g2,1F);
+            if (inCamera()) {
+                g2.setColor(Color.YELLOW); // Chọn màu cho khung
+                g2.setStroke(new BasicStroke(2)); // Thiết lập độ dày của khung
+                g2.drawRect(tempScreenX, tempScreenY, image.getWidth(), image.getHeight());
+            }
+
+ */
+
         }
+
     }
     // Every 5 frames switch alpha between 0 and 1
     public void dyingAnimation(Graphics2D g2)

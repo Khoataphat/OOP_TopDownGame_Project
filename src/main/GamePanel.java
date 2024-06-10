@@ -2,12 +2,11 @@ package main;
 import ai.PathFinder;
 import entity.Entity;
 import entity.Player;
-import environment.EnvironmentManager;
 import environment.Lighting;
 import tile.Map;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
-import data.*;
+
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -53,7 +52,7 @@ public class GamePanel extends JPanel implements Runnable{
     public CollisionChecker cChecker = new CollisionChecker(this);
     public AssetSetter  aSetter = AssetSetter.getInstance(this); // Get the instance of AssetSetter
     public UI ui = new UI(this);
-    Config config = new Config(this);
+    //Config config = new Config(this);
     public PathFinder pFinder = new PathFinder(this);
 //    EnvironmentManager eManager =
     // THE INTERFACE
