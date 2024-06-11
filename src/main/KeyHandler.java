@@ -420,20 +420,18 @@ public class KeyHandler implements KeyListener {
                 gp.player.maxLife += 2;
                 gp.player.life += 2;
                 gp.gameState = gp.playState;
-                gp.playMusic(0);
-            }
-            else if(gp.ui.commandNum == 1) //QUIT, reset everything
+                gp.ui.addMessage("Max life +1!");
+            }else if(gp.ui.commandNum == 1)
             {
-                gp.player.strength++;
+                gp.player.strength += 5;
                 gp.gameState = gp.playState;
-                gp.playMusic(0);
-            }
-            else if(gp.ui.commandNum == 2) //QUIT, reset everything
+                gp.ui.addMessage("Strength +5!");
+            } else if(gp.ui.commandNum == 2)
             {
-                gp.player.dexterity++;
+                gp.player.maxMana++;
+                gp.player.mana += 1;
                 gp.gameState = gp.playState;
-                gp.playMusic(0);
-            }
+                gp.ui.addMessage("Max mana +1!");            }
         }
     }
     public void tradeState(int code)

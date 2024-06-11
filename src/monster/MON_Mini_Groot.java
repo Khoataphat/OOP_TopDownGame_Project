@@ -5,23 +5,22 @@ import main.GamePanel;
 import object.OBJ_Coin_Bronze;
 import object.OBJ_Heart;
 import object.OBJ_ManaCrystal;
-import object.OBJ_Rock;
 
 import java.util.Random;
 
-public class MON_GreenSlime extends Entity {
+public class MON_Mini_Groot extends Entity {
 
     GamePanel gp; // cuz of different package
-    public MON_GreenSlime(GamePanel gp) {
+    public MON_Mini_Groot(GamePanel gp) {
         super(gp);
 
         this.gp = gp;
 
         type = type_monster;
-        name = "Green Slime";
+        name = "Mini-Groot";
         defaultSpeed = 1;
         speed = defaultSpeed;
-        maxLife = 4;
+        maxLife = 30;
         life = maxLife;
         attack = 2;
         defense = 0;

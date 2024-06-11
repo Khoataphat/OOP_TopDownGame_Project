@@ -9,19 +9,19 @@ import object.OBJ_Rock;
 
 import java.util.Random;
 
-public class MON_RedSlime extends Entity {
+public class MON_One_Eye_Can_Fly extends Entity {
 
     GamePanel gp; // cuz of different package
-    public MON_RedSlime(GamePanel gp) {
+    public MON_One_Eye_Can_Fly(GamePanel gp) {
         super(gp);
 
         this.gp = gp;
 
         type = type_monster;
-        name = "Red Slime";
+        name = "One-Eye-Can-Fly";
         defaultSpeed = 2;
         speed = defaultSpeed;
-        maxLife = 8;
+        maxLife = 50;
         life = maxLife;
         attack = 4;
         defense = 0;

@@ -412,7 +412,7 @@ public class UI {
         g2.setFont(g2.getFont().deriveFont(50f));
         text = "Max Life";
         x = getXforCenteredText(text);
-        y += gp.tileSize * 4;
+        y += gp.tileSize * 3;
         g2.drawString(text, x, y);
         if (commandNum == 0) {
             g2.drawString(">", x - 40, y);
@@ -428,7 +428,7 @@ public class UI {
         }
 
         // Dexterity
-        text = "Dexterity";
+        text = "Max Mana";
         x = getXforCenteredText(text);
         y += 55;
         g2.drawString(text, x, y);
@@ -1138,7 +1138,7 @@ public class UI {
         g2.fillRect(textX,textY,volumeWidth,24);
 
         //SAVE OPTIONS
-        gp.config.saveConfig();
+        //gp.config.saveConfig();
     }
     public void options_fullScreenNotification(int frameX, int frameY)
     {

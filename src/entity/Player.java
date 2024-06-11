@@ -54,14 +54,8 @@ public class Player extends Entity{
     {
         //Default Starting Positions
         worldX = gp.tileSize * 6;
-        worldY = gp.tileSize * 8;
+        worldY = gp.tileSize * 10;
         gp.currentMap = 0;
-        //gp.currentArea = gp.outside;
-
-        //Blue Gem Start Position, mapNum = 3;
-//         worldX = gp.tileSize *25;
-//        worldY = gp.tileSize * 9;
-//        gp.currentMap = 3;
 
         defaultSpeed = 4;
         speed = defaultSpeed;
@@ -69,7 +63,7 @@ public class Player extends Entity{
 
         //PLAYER STATUS
         level = 1;
-        maxLife = 20;
+        maxLife = 6;
         life = maxLife;
         maxMana = 8;
         mana = maxMana;
@@ -81,7 +75,7 @@ public class Player extends Entity{
         coin = 40;
         invincible = false;
         currentWeapon = new OBJ_Sword_Normal(gp);
-        currentShield = new OBJ_Shield_Wood(gp);
+        //currentShield = new OBJ_Shield_Wood(gp);
         currentLight = null;
         projectile = new OBJ_Fireball(gp);
         //projectile = new OBJ_Rock(gp);
@@ -136,7 +130,7 @@ public class Player extends Entity{
     {
         inventory.clear(); //cuz if game restarts inventory must be cleared first
         inventory.add(currentWeapon);
-        inventory.add(currentShield);
+        //inventory.add(currentShield);
         /*inventory.add(new OBJ_Potion_Red(gp));
         inventory.add(new OBJ_Key(gp));
         inventory.add(new OBJ_Key(gp));
@@ -157,7 +151,7 @@ public class Player extends Entity{
 
     public int getDefense()
     {
-        return defense = dexterity * currentShield.defenseValue;
+        return defense = dexterity ;
     }
     public int getCurrentWeaponSlot()
     {
@@ -600,10 +594,11 @@ public class Player extends Entity{
             }
             levelUp = false;
         }
-        if (countTime <= 3600){
+        if (countTime <= 1800){
             countTime++;
         }else{
             mana ++;
+            life ++;
             countTime = 0;
         }
 
@@ -611,7 +606,6 @@ public class Player extends Entity{
             countTime1++;
         } else{
             detectPlate();
-            System.out.println(detectPlate());
             if (detectPlate()) {
                 life--;
             }
@@ -824,15 +818,10 @@ public class Player extends Entity{
             attack = getAttack();
             defense = getDefense();
 
-            dialogues[0][0] = "You are level " + level + " now!\n" + "You feel stronger!";
-            setDialogue();
-            startDialogue(this,0);
             levelUp = true;
-            System.out.println("Leveluptrue");
             life+=2;
-            life+=2;
-            gp.ui.addMessage("You got recovery due to level up!");
-
+            mana+=1;
+            gp.ui.addMessage("You are level up, you feel stronger!");
         }
     }
 

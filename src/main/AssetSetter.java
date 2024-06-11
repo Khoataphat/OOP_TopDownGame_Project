@@ -456,52 +456,52 @@ public class AssetSetter {
 
 
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i] = new MON_Mini_Groot(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*24;
         gp.monster[mapNum][i].worldY = gp.tileSize*30;
         i++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i] = new MON_Mini_Groot(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*31;
         gp.monster[mapNum][i].worldY = gp.tileSize*25;
         i++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i] = new MON_Mini_Groot(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*25;
         gp.monster[mapNum][i].worldY = gp.tileSize*40;
         i++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i] = new MON_Mini_Groot(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*25;
         gp.monster[mapNum][i].worldY = gp.tileSize*31;
         i++;
 
-        gp.monster[mapNum][i] = new MON_GreenSlime(gp);
+        gp.monster[mapNum][i] = new MON_Mini_Groot(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*26;
         gp.monster[mapNum][i].worldY = gp.tileSize*38;
         i++;
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i] = new MON_One_Eye_Can_Fly(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*63;
         gp.monster[mapNum][i].worldY = gp.tileSize*30;
         i++;
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i] = new MON_One_Eye_Can_Fly(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*75;
         gp.monster[mapNum][i].worldY = gp.tileSize*27;
         i++;
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i] = new MON_One_Eye_Can_Fly(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*73;
         gp.monster[mapNum][i].worldY = gp.tileSize*36;
         i++;
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i] = new MON_One_Eye_Can_Fly(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*70;
         gp.monster[mapNum][i].worldY = gp.tileSize*62;
         i++;
 
-        gp.monster[mapNum][i] = new MON_RedSlime(gp);
+        gp.monster[mapNum][i] = new MON_One_Eye_Can_Fly(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*69;
         gp.monster[mapNum][i].worldY = gp.tileSize*66;
         i++;
@@ -598,8 +598,10 @@ public class AssetSetter {
         }
     }
     public void setSummonCreeps(int worldX, int worldY) {
-        if(countTime == 30) {
-            if (i_Mon <= 10) {
+        System.out.println("1:"+countTime);
+        if(countTime == 20) {
+            if (i_Mon <= 5) {
+                System.out.println("2:"+countTime);
                 int mapNum = 0;
                 int[] location = randomLocation(worldX, worldY);
                 Random random = new Random();
@@ -607,13 +609,13 @@ public class AssetSetter {
 
                 switch (monsterType) {
                     case 0:
-                        gp.monster[mapNum][i_Mon] = new MON_GreenSlime(gp);
+                        gp.monster[mapNum][i_Mon] = new MON_Mini_Groot(gp);
                         break;
                     case 1:
                         gp.monster[mapNum][i_Mon] = new MON_Orc(gp);
                         break;
                     case 2:
-                        gp.monster[mapNum][i_Mon] = new MON_RedSlime(gp);
+                        gp.monster[mapNum][i_Mon] = new MON_One_Eye_Can_Fly(gp);
                         break;
                 }
 
@@ -621,11 +623,14 @@ public class AssetSetter {
                 gp.monster[mapNum][i_Mon].worldY = gp.tileSize * location[1];
                 i_Mon++;
                 countTime = 0;
+                System.out.println("i_Mon "+i_Mon);
+                System.out.println("3:"+countTime);
             } else {
                 countTime =0;
             }
         }else{
             countTime++;
+            System.out.println("4:"+countTime);
         }
     }
 

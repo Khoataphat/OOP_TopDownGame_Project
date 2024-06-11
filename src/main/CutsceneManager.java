@@ -1,7 +1,5 @@
 package main;
 
-import entity.PlayerDummy;
-import monster.MON_SkeletonLord;
 import object.OBJ_thay_nghia;
 import object.OBJ_Door_Iron;
 

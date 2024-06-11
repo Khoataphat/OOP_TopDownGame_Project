@@ -3,7 +3,12 @@ package main;
 import javax.swing.*;
 import java.awt.*;
 
-public class Main {
+public class
+
+
+
+
+Main {
 
     public static JFrame window;
 
@@ -16,7 +21,7 @@ public class Main {
         GamePanel gamePanel = new GamePanel();
         window.add(gamePanel);
 
-        gamePanel.config.loadConfig();
+        //gamePanel.config.loadConfig();
         if(gamePanel.fullScreenOn == true)
         {
             window.setUndecorated(true);
