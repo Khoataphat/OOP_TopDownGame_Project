@@ -49,10 +49,10 @@ public class NPC_OldMan extends Entity{
     }
     public void setDialogue()
     {
-        dialogues[0][0] = "Hello, gà.";
-        dialogues[0][1] = "Đi farm quái up level lên đi ba";
-        dialogues[0][2] = "Không m còn solo thua con ys 0175. \n";
-        dialogues[0][3] = "Well, good luck on you.";
+        dialogues[0][0] = "Hello, warrior.";
+        dialogues[0][1] = "My master is being held captive at the end of the dungeon.";
+        dialogues[0][2] = "Please rescue him.";
+        dialogues[0][3] = "He'll reward you with 100 OOP projects.";
         //dialogues[0][3] = "You can talk with me again when you're stuck.";
 
         //dialogues[1][0] = "If you become tired, rest at the water.";

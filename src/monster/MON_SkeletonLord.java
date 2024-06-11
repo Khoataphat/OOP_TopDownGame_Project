@@ -62,7 +62,7 @@ public class MON_SkeletonLord extends Entity {
     public void getImage()
     {
 
-        int i = 7;
+        int i = 5;
         if(inRage == false)
         {
         	up1 = setup("/monster/skeletonlord_up_1",gp.tileSize * i,gp.tileSize * i);
@@ -105,7 +105,7 @@ public class MON_SkeletonLord extends Entity {
     public void getAttackImage()
     {
 
-        int i = 7;
+        int i = 5;
 
         if(inRage == false)
         {
@@ -161,9 +161,26 @@ public class MON_SkeletonLord extends Entity {
     {
         if(inRage==false && life < 30 && life > 15)
         {
-            aSetter.setSummonCreeps(MON_SkeletonLord.instance.worldX/gp.tileSize, MON_SkeletonLord.instance.worldY/gp.tileSize);
+
+            aSetter.setSummonCreeps(MON_SkeletonLord.instance.worldX/gp.tileSize, MON_SkeletonLord.instance.worldY/gp.tileSize+4);
+            int i=0;
+            i++;
+            System.out.println(i);
+            System.out.println("1 Boss biến mất");
+
+            /*
+            System.out.println(MON_SkeletonLord.instance.worldX/gp.tileSize);
+            System.out.println(MON_SkeletonLord.instance.worldY/gp.tileSize);
+            System.out.println("inRage:" + inRage);
+            System.out.println("life:" + life);
+
+             */
+
         } else if (inRage == false && life <15 && life >10) {
+            System.out.println("2Boss biến mất");
             aSetter.setAreaAttack(gp.player.worldX / gp.tileSize, gp.player.worldY / gp.tileSize);
+            System.out.println("life:" + life);
+
         } else if (inRage == false && life <10){
             inRage = true;
             getImage();

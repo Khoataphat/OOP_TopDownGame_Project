@@ -179,7 +179,7 @@ public class UI {
         textY += lineHeight + 10;
         g2.drawString("Weapon", textX,textY);
         textY += lineHeight + 15;
-        g2.drawString("Shield", textX,textY);
+        //g2.drawString("Shield", textX,textY);
 
 
         // VALUES
@@ -844,7 +844,7 @@ public class UI {
             //TITLE NAME
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 96F));
             g2.drawImage(gp.player.mainInterface,0,0,gp.screenWidth,gp.screenHeight,null);
-            String text = "Blue Boy Adventure\n";
+            String text = "Saving Sir.Nghia\n";
             int x = getXforCenteredText(text);
             int y = gp.tileSize * 3;
             //SHADOW
@@ -922,11 +922,11 @@ public class UI {
             {
                 g2.drawString(">",x-gp.tileSize,y);
                 g2.drawImage(gp.player.down11,gp.player.screenX -gp.tileSize/2,gp.player.screenY-gp.tileSize*2,gp.tileSize*2,gp.tileSize*2,null);
-                g2.drawString("I'm turtle ninja!",gp.player.screenX+gp.tileSize*2,gp.player.screenY-gp.tileSize*2);
+                g2.drawString("I'm handsome warrior!",gp.player.screenX+gp.tileSize*2,gp.player.screenY-gp.tileSize*2);
             }
 
            ;
-            text = "Thief";
+            text = "Ninja";
             x = getXforCenteredText(text);
             y += gp.tileSize;
             g2.drawString(text,x,y);
@@ -934,7 +934,7 @@ public class UI {
             {
                 g2.drawString(">",x-gp.tileSize,y);
                 g2.drawImage(gp.player.down12,gp.player.screenX-gp.tileSize/2,gp.player.screenY-gp.tileSize*2,gp.tileSize*2,gp.tileSize*2,null);
-                g2.drawString("I'm handsome thief!",gp.player.screenX+gp.tileSize*2,gp.player.screenY-gp.tileSize*2);
+                g2.drawString("I'm turtle ninja!",gp.player.screenX+gp.tileSize*2,gp.player.screenY-gp.tileSize*2);
                 //gp.setCharacterChoice(2);
             }
 
