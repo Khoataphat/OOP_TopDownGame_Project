@@ -1,191 +1,197 @@
-# Blue Boy Adventure
+﻿<a name="_hlk155976484"></a><a name="_top"></a>**INTERNATIONAL UNIVERSITY**
 
-<h3> JAVA 2D ACTION RPG </h3> 
+**VIETNAM NATIONAL UNIVERSITY – HO CHI MINH CITY**
+
+**School of Computer Science and Engineering**
+
+![](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.002.png)
+
+
+## SAVING SIR. NGHIA
+
+## OBJECT-ORIENTED PROGRAMMING
+
+**-----\*\*\*-----** 
+
+**Team member**
+
+|No.|Full Name|Student’s ID|
+| :-: | :-: | :-: |
+|1|Đỗ Thanh Bảo Anh|ITDSIU22175|
+|2|Phạm Tuấn Đăng Khoa|ITITIU22087|
+|3|Nguyễn Minh Kha|ITITIU22079|
+|4|Trần Thiên Phú|ITITIU22124|
 
 ## Installation
-* Download ZIP and Extract "Blue-Boy-Adventure-master" to Desktop.
+* Download ZIP and Extract "OOP_TopDownGame_Project-master" to Desktop.
 
 * Open IntelliJ IDEA and Select Open Project.
 
-* Choose "Blue-Boy-Adventure-master" folder and Select "Yes" to ReUse Module Files.
+* Choose "OOP_TopDownGame_Project-master" folder and Select "Yes" to ReUse Module Files.
 
-* At this point, be sure you are opening the root folder (/Blue-Boy-Adventure-master).
+* At this point, be sure you are opening the root folder (/OOP_TopDownGame_Project-master).
 
 * Go src -> main folder -> Run Main
 
 * Lastly don't forget to Setup SDK if needed.
 
-</br > 
-
 ## Goal
-Kill monsters! Get stronger! Buy powerful items! Find the dungeon keys! Solve the dungeon puzzle! KILL THE BOSS!
+Kill monsters → Get stronger → Buy powerful items → Find the dungeon keys → KILL THE BOSS → Find Sir.Nghia → Win game
 
-</br > 
 
-## Controls
+## UML Diagram
 
-</br > 
+We provided the UML diagrams for the entire project and each group that was addressed to help you better understand the structure and methods.
 
-![BlueBoy Key Bindings](https://user-images.githubusercontent.com/72252419/210120664-1d54d2c5-d4eb-4892-8b67-d9acfd206113.jpg)
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.008.png)
 
-</br > 
+<a name="_toc155996347"></a>*Figure: Entity diagram*
 
-## Game Mechanics
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.009.png)
 
-<h3> Guard </h3>
+<a name="_toc155996349"></a>*Figure: Class extend from Entity diagram*
 
-* You block half the damage!
- 
-<h3> Parry </h3>    
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.010.png)
 
-* If you guard in 200 milliseconds before monster's attack, you parry attack!</br > 
-Then you get critical chance for 1 seconds. Critical hits give x2 damage.
+<a name="_toc155996350"></a>*Figure: Player diagram*
 
-<h3> Ninja </h3>   
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.011.png)
 
-* You can cut projectiles with your weapon. But be careful, you have to set the timing well.
-  
-<h3> Survivor </h3> 
+<a name="_toc155996352"></a>*Figure: Projectile diagram*
 
-*  Some of trees, some of walls can be destructible. Choose your weapons intelligently!
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.012.png)
 
-<h3> Pool </h3>  
+<a name="_toc155996351"></a>*Figure: Object diagram*
 
-*  You can recover your life/mana and save your progress. But monsters will spawn again.
-  
-<h3> Coin </h3>  
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.013.png)
 
-* Find the merchant, buy stronger items!
+*Figure: Monster diagram*
 
-<h3> Tent </h3>   
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.014.png)
 
-* You sleep until next day.
- 
-<h3> Lantern </h3>  
+*Figure: NPC diagram*
 
-*  When it gets dark you will realize how important lantern is.
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.015.png)
 
-</br > 
+*Figure: Map diagram*
 
-## Screenshots
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.016.png)
 
-</br > 
+*Figure: Path finding algorithm diagram*
 
-![npctalk](https://user-images.githubusercontent.com/72252419/210121262-8d547a5a-8d35-4751-b01d-a8096f382086.png)
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.017.png)
 
-</br > </br > 
+<a name="_toc155996346"></a>*Figure 12. InteractiveTile diagram*
 
-![healing pool](https://user-images.githubusercontent.com/72252419/210121379-8e4f7b78-bcbb-4d1a-a3f6-13b26e62e873.png)
 
-</br > </br >
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.018.png)
 
-![treecut](https://user-images.githubusercontent.com/72252419/210121247-cbbeb4d3-bf36-4fc5-bfed-ce88491d1e52.png)
+<a name="_toc155996353"></a>*Figure 13: Main diagram*
 
-</br > </br >
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.019.png)
 
-![orc](https://user-images.githubusercontent.com/72252419/210121255-b8bb8287-c225-4b18-b6ae-1bc46ad3a103.png)
+*Figure: Panel diagram*
 
-</br > </br >
+## ENTITY, NPCs, OTHER OBJECT DESIGN
 
-![game over](https://user-images.githubusercontent.com/72252419/210121407-db1f1245-fe92-4a05-95ce-97dffe591342.png)
+1. **<a name="_toc16992"></a><a name="_toc17979"></a>Player**
 
-</br > </br >
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.040.png)
 
-![cut projectiles](https://user-images.githubusercontent.com/72252419/210121289-e289bb7f-9e30-442d-a1f1-6371d4c35597.png)
+*Figure: Main Characters*
 
-</br > </br >
+The above characters are used for players during the game. With the purpose of diversifying characters and enhancing player experience, we have created 3 characters with 3 completely different formats so players can freely choose their favorite character.
 
-![inv](https://user-images.githubusercontent.com/72252419/210121272-24ceb1ef-c152-4728-954f-423d0a98800b.png)
+2. **<a name="_toc15434"></a><a name="_toc10732"></a>Enemy**
 
-</br > </br >
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.041.png)
 
-![merchant](https://user-images.githubusercontent.com/72252419/210121279-60c27944-58ff-4adb-8d87-cfdce1f6e8f3.png)
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.042.png)
 
-</br > </br >
+*Figure: Enemy Characters*
 
-![tent](https://user-images.githubusercontent.com/72252419/210121374-7d5f8b91-0469-4605-9853-28292df23a3c.png)
+- BAT: has a high ability in movement that is difficult for player to defeat. 
+- MINIGROOT: is weakest monster in this game, but the amount of monster is a problem. Player need to handle strong boss while a lot of MINIGROOT is around.
+- ORC: is one the the strongest monster with high damage, but restricted movement.
+- ONEEYECANFLY: have widely damage that increases challenging and emotion of playing game.
+- SKELETON LORD:the final boss with massive damage and dynamic movement. Player need to defeat the final to finish game and save Mr Nghia.
 
-</br > </br >
+3. **<a name="_toc11978"></a><a name="_toc15643"></a>NPCs**
 
-![map](https://user-images.githubusercontent.com/72252419/210121371-24a8c3fa-6914-466f-8efe-9b11c0828574.png)
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.043.png)
 
-</br > </br >
+*Figure: NPCs*
 
-![dungeon puzzle](https://user-images.githubusercontent.com/72252419/210121392-4b9afc95-dd2d-4cca-ac19-b61a814810ca.png)
+- The Old Man is a character who provides guidance and direction to the player's character.
+- The Merchant is a character who sells items, such as potions or other supplies, to the player.
+4. **<a name="_toc11320"></a><a name="_toc25925"></a>Other Object**
 
-</br > </br >
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.044.png)
 
-![dungeon boss](https://user-images.githubusercontent.com/72252419/210121394-e461ea1d-1e73-446a-91cc-5363a58cfa0a.png)
+*Figure: Other Object*
 
-</br > </br >
+- Chest: Grants reward to the player whether it will be a coin, weapon,... the first time the player comes in contact.
+- Door: Restricts players from entering other areas when they have not found the key.
+- Key: To open door.
+- Lantern: Helps players see in areas with limited light.
+- Heart: Helps players to recovery their missing health.
+- Mana-Crystal: Helps players to recovery their missing mana.
 
-![options](https://user-images.githubusercontent.com/72252419/210121413-2bbcaa74-2130-48ca-9861-9ac969838c8f.png)
 
-</br >
+## MAP DESIGN
 
-## Followed Steps
-1.  Mechanism of Game (GamePanel, Window, Thread...)
-2.  Game Loop & Key Inputs
-3.  Sprites & Animation
-4.  Drawing Tiles
-5.  World & Camera
-6.  Collision Detection
-7.  Object Placement
-8.  Object Interaction
-9.  Sound
-10. Basic UI
-11. Improving Rendering Performance (uTool)
-12. New Tileset
-13. Game State
-14. NPC
-15. Basic Dialogue System
-16. Custom Font
-17. Title Screen
-18. Player Life
-19. Basic Events (Damage Pit, Healing Pool, Teleport)
-20. Advanced Events
-21. Entity ArrayList (Render Order Revised)
-22. Monster
-23. Hit Detection
-24. Health Bar & Death Animation
-25. Character Status
-26. Scrolling Message, Leveling Up, Damage Calculation
-27. Inventory
-28. Equip & Use
-29. Projectiles
-30. Monster Projectiles and Mana
-31. Item Drops
-32. Breaking Objects
-33. Particles
-34. Full Screen Mode
-35. Options Menu
-36. Saving Config to a File
-37. Game Over
-38. Transition Between Maps
-39. Merchant NPC
-40. Pathfinding & Agroo Monsters (A* Algorithm)
-41. Cutting Projectiles & Knockback
-42. Object Detection & Loot
-43. Stackable Items
-44. Lightning Effect
-45. Switching the Lightning On/Off (Lantern)
-46. Day/Night Cycle
-47. Map Screen & Minimap
-48. Advanced Combat & Orc
-49. Guard & Perry
-50. Save & Load
-51. Advanced Dialogue System
-52. Dungeon
-53. Dungeon gimmicks
-54. Boss
-55. Boss Health Bar
-56. Boss Battle Cutscene
-57. Ending Cutscene
 
-</br > 
+![](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.048.png)
 
-## Special Thanks
+*Figure: Overview Map 100x100*
 
-The tutorial and all of assets are made by RyiSnow.
+## Game Play
 
-* <a href="https://www.youtube.com/@RyiSnow"><p>Check RyiSnow Youtube Channel</p></a>
+Player Controls:
+
+The following figure illustrates the input to control the player. We use keyboards key such as A,W,S,D to move the player and Enter to attack the enemies.
+
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.050.png)
+
+*Figure: Player Controls*
+
+Game Controls:
+
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.051.png)
+
+*Figure: Game Controls*
+
+
+## Some Screen
+
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.063.png)
+
+*Figure: Select player*
+
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.064.png)
+
+*Figure: Inventory*
+
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.065.png)
+
+*Figure: Level up*
+
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.066.png)
+
+*Figure: Game pause*
+
+![](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.067.png)
+
+*Figure: Game options*
+
+![IMG_256](screenshot_report/Aspose.Words.ac39a8bf-f1d8-481b-8bb5-3f90e7a1d3a6.068.png)
+
+*Figure: Game over*
+
+
+## DEMO
+
+[Click here to view](https://drive.google.com/file/d/1CLsoQxugP8uQHXMjLca8d3_UI-HAwY3w/view?usp=sharing)
+
+
+
